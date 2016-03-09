@@ -1,0 +1,6 @@
+#!/bin/sh
+rm intermine.log
+ant -Dsource=bean-genetics
+ant -Dsource=bean-genomics
+ant -Dsource=so
+ant -Dsource=entrez-organism
