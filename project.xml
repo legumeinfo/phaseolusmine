@@ -50,6 +50,7 @@
     <post-process name="transfer-sequences"/>
     <post-process name="populate-child-features"/>
     <post-process name="do-sources" dump="true"/>
+    <post-process name="create-location-range-index"/>
     <post-process name="create-location-overlap-index"/>
     <post-process name="create-overlap-view" />
     <post-process name="create-attribute-indexes"/>
