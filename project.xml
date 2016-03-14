@@ -18,7 +18,7 @@
     </source>
 
     <!-- Phaseolus vulgaris (common bean) + consensus genomics -->
-    <source name="bean-genomics" type="legfed" dump="true">
+    <source name="chado-genomics" type="legfed" dump="true">
       <property name="source.db.name" value="tripal"/>
       <!-- SPACE-delimited tax IDs! -->
       <property name="organisms" value="3885 3398"/>
