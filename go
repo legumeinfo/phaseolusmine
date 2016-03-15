@@ -2,11 +2,14 @@
 date > started
 cd dbmodel
 ./go
-cd ../integrate
+cd ..
+cd integrate
 ./go
-cd ../postprocess
+cd ..
+cd postprocess
 ./go
-cd ../webapp
+cd ..
+cd webapp
 ./go
 cd ..
 date > ended
