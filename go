@@ -1,8 +1,8 @@
 #!/bin/sh
 date > started
-cd dbmodel
-./go
-cd ..
+#cd dbmodel
+#./go
+#cd ..
 cd integrate
 ./go
 cd ..

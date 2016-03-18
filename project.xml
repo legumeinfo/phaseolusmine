@@ -27,7 +27,22 @@
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
       <property name="processors" value="org.intermine.bio.dataconversion.SequenceProcessor"/>
     </source>
-      
+
+    <!-- gene ontology -->
+    <source name="go" type="go">
+        <property name="src.data.file" location="/home/intermine/data/go-annotation/go.obo"/>
+    </source>
+
+    <!-- GO annotation -->
+    <source name="chado-go" type="legfed" dump="true">
+      <property name="source.db.name" value="tripal"/>
+      <property name="organisms" value="3885"/>
+      <property name="dataSetTitle" value="LegFed Phaseolus vulgaris (3885) data"/>
+      <property name="dataSourceName" value="LegFed Tripal database"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
+      <property name="processors" value="org.intermine.bio.dataconversion.GOProcessor"/>
+    </source>
+    
     <!-- sequence ontology -->
     <source name="so" type="so">
       <property name="src.data.file" location="../../bio/sources/so/so.obo"/>
