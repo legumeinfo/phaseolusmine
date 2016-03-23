@@ -1,5 +1,5 @@
 #!/bin/sh
-#ant -Dsource=go
+# ant -Dsource=go
 ant clean
 ant -Dsource=chado-go
 ant -Dsource=chado-genetics
