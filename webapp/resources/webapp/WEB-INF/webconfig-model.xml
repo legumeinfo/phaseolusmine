@@ -122,7 +122,9 @@
     <fields>
       <fieldconfig fieldExpr="relationship"/>
       <fieldconfig fieldExpr="parentTerm.identifier"/>
+      <fieldconfig fieldExpr="parentTerm.name"/>
       <fieldconfig fieldExpr="childTerm.identifier"/>
+      <fieldconfig fieldExpr="childTerm.name"/>
     </fields>
   </class>
 
@@ -257,44 +259,44 @@
   <!-- report displayers -->
   <reportdisplayers>
 
-    <!-- no GO annotation (yet)
-         <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneOntologyDisplayer"
-                          jspName="model/geneOntologyDisplayer.jsp"
-                          replacesFields="goAnnotation,ontologyAnnotations"
-                          placement="Genomics"
-                          types="Gene"/>
-         -->
+    <!-- this appears to be broken, but using it to avoid duplicating Ontology Annotations display for now -->
+    <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneOntologyDisplayer"
+                     jspName="model/geneOntologyDisplayer.jsp"
+                     replacesFields="ontologyAnnotations"
+                     placement="other"
+                     types="Gene"/>
+    
+    <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneStructureDisplayer"
+                     jspName="model/geneStructureDisplayer.jsp"
+                     replacesFields="transcripts,exons,CDSs,introns,UTRs,fivePrimeUTR,threePrimeUTR"
+                     placement="Genomics"
+                     types="Gene,Transcript,Exon,Intron,UTR,CDS"/>
+    
+    <reportdisplayer javaClass="org.intermine.bio.web.displayer.SequenceFeatureDisplayer"
+                     jspName="model/sequenceFeatureDisplayer.jsp"
+                     replacesFields="chromosome,chromosomeLocation,sequence,length,sequenceOntologyTerm,locations,cytoLocation"
+                     placement="summary"
+                     types="SequenceFeature"/>
 
-         <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneStructureDisplayer"
-                          jspName="model/geneStructureDisplayer.jsp"
-                          replacesFields="transcripts,exons,CDSs,introns,UTRs,fivePrimeUTR,threePrimeUTR"
-                          placement="Genomics"
-                          types="Gene,Transcript,Exon,Intron,UTR,CDS"/>
+    <!-- no Uniprot data
+    <reportdisplayer javaClass="org.intermine.bio.web.displayer.UniProtCommentsDisplayer"
+                     jspName="model/uniProtCommentsDisplayer.jsp"
+                     replacesFields=""
+                     placement="Proteins"
+                     types="Gene,Protein"/>
+    -->
 
-         <reportdisplayer javaClass="org.intermine.bio.web.displayer.SequenceFeatureDisplayer"
-                          jspName="model/sequenceFeatureDisplayer.jsp"
-                          replacesFields="chromosome,chromosomeLocation,sequence,length,sequenceOntologyTerm,locations,cytoLocation"
-                          placement="summary"
-                          types="SequenceFeature"/>
-
-         <!-- no Uniprot data
-              <reportdisplayer javaClass="org.intermine.bio.web.displayer.UniProtCommentsDisplayer"
-                               jspName="model/uniProtCommentsDisplayer.jsp"
-                               replacesFields=""
-                               placement="Proteins"
-                               types="Gene,Protein"/>
-              -->
-
-              <reportdisplayer javaClass="org.intermine.bio.web.displayer.JBrowseDisplayer"
-                               jspName="model/jbrowseDisplayer.jsp"
-                               replacesFields=""
-                               placement="Genomics"
-                               types="SequenceFeature"/>
+    <reportdisplayer javaClass="org.intermine.bio.web.displayer.JBrowseDisplayer"
+                     jspName="model/jbrowseDisplayer.jsp"
+                     replacesFields=""
+                     placement="Genomics"
+                     types="SequenceFeature"/>
 
   </reportdisplayers>
 
   <!-- widgets -->
   <widgets>
+
     <graphdisplayer id="chromosome_distribution_for_gene"
                     title="Chromosome Distribution"
                     description="Actual: number of items in this list found on each chromosome.  Expected: given the total number of items on the chromosome and the number of items in this list, the number of items expected to be found on each chromosome."
@@ -311,6 +313,29 @@
                     constraints="organism.name=[Organism]"
                     views="primaryIdentifier, symbol, secondaryIdentifier, organism.name, chromosome.primaryIdentifier,
                            chromosomeLocation.start, chromosomeLocation.end, chromosomeLocation.strand"/>
+
+    <!-- skip biological_process, molecular_function and cellular_component -->
+    <enrichmentwidgetdisplayer id="go_enrichment_for_gene"
+                               title="Gene Ontology Enrichment"
+                               description="GO terms enriched for items in this list."
+                               label="GO Term"
+                               filterLabel="Ontology"
+                               filters="biological_process,cellular_component,molecular_function"
+                               startClass="Gene"
+                               startClassDisplay="primaryIdentifier"
+                               enrich="goAnnotation.ontologyTerm.parents.name"
+                               enrichIdentifier="goAnnotation.ontologyTerm.parents.identifier"
+                               constraints="goAnnotation.ontologyTerm.parents.namespace=[Ontology],organism.name=[list],
+                                            primaryIdentifier != null, goAnnotation.qualifier = null,
+                                            goAnnotation.ontologyTerm.parents.identifier != go:0008150,
+                                            goAnnotation.ontologyTerm.parents.identifier != go:0003674,
+                                            goAnnotation.ontologyTerm.parents.identifier != go:0005575"
+                               typeClass="Gene"
+                               views="secondaryIdentifier,symbol,primaryIdentifier,organism.name,
+                                      goAnnotation.ontologyTerm.identifier, goAnnotation.ontologyTerm.name,
+                                      goAnnotation.ontologyTerm.parents.identifier,goAnnotation.ontologyTerm.parents.name"
+                               externalLink="http://amigo.geneontology.org/cgi-bin/amigo/term_details?term=" />
+
     
   </widgets>
   

@@ -1,4 +1,5 @@
 #!/bin/sh
+
 date > started
 #cd dbmodel
 #./go
