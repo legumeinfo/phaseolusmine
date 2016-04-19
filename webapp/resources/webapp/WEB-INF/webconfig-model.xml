@@ -206,6 +206,11 @@
   </class>
 
   <class className="org.intermine.model.bio.LinkageGroup">
+    <headerconfig>
+      <titles>
+        <title mainTitles="primaryIdentifier" numberOfMainTitlesToShow="1" />
+      </titles>
+    </headerconfig>
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier"/>
       <fieldconfig fieldExpr="length" label="Length (cM)" />
@@ -223,6 +228,7 @@
     <fields>
       <fieldconfig fieldExpr="begin" label="Begin (cM)"/>
       <fieldconfig fieldExpr="end" label="End (cM)"/>
+      <fieldconfig fieldExpr="length" label="Length (cM)"/>
       <fieldconfig fieldExpr="linkageGroup.primaryIdentifier" label="Linkage Group"/>
     </fields>
   </class>
@@ -251,6 +257,18 @@
       <fieldconfig fieldExpr="chromosomeLocation.end" showInInlineCollection="false" showInSummary="false" />
     </fields>
   </class>
+
+  <class className="org.intermine.model.bio.QTL">
+    <headerconfig>
+      <titles>
+        <title mainTitles="symbol|primaryIdentifier" numberOfMainTitlesToShow="1" subTitles="*organism.shortName*" />
+      </titles>
+    </headerconfig>
+    <fields>
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
+    </fields>
+  </class>
+
 
   <!-- exporters -->
   <tableExportConfig id="sequence" className="org.intermine.bio.web.export.SequenceHttpExporter"/>

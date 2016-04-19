@@ -1,2 +1,3 @@
 #!/bin/sh
+echo "********** beanmine/dbmodel **********"
 ant clean build-db
