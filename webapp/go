@@ -1,2 +1,4 @@
 #!/bin/sh
-ant clean default remove-webapp release-webapp
+echo "********** beanmine/webapp **********"
+tomcat-clean beanmine
+ant clean default release-webapp

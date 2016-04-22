@@ -293,7 +293,7 @@
     
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.SequenceFeatureDisplayer"
                      jspName="model/sequenceFeatureDisplayer.jsp"
-                     replacesFields="chromosome,chromosomeLocation,sequence,length,sequenceOntologyTerm,locations,cytoLocation"
+                     replacesFields="chromosome,chromosomeLocation,sequence,length,sequenceOntologyTerm,locations,cytoLocation,supercontig,supercontigLocation"
                      placement="summary"
                      types="SequenceFeature"/>
 

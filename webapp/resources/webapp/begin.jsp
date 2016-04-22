@@ -106,10 +106,12 @@
                                             <center>
                                                 <c:choose>
                                                     <c:when test="${!isNewUser && !empty (WEB_PROPERTIES['begin.thirdBox.visitedLink'])}">
-                                                        <a class="button gray" href="<c:out value="${WEB_PROPERTIES['begin.thirdBox.visitedLink']}" />" >
+                                                        <a class="button gray" href="<c:out value="${WEB_PROPERTIES['begin.thirdBox.visitedLink']}" />"
+                                                        onclick="javascript:window.open('<c:out value="${WEB_PROPERTIES['begin.thirdBox.visitedLink']}" />','_help','toolbar=0,scrollbars=1,location=1,statusbar=1,menubar=0,resizable=1,width=800,height=600');return false">
                                                     </c:when>
                                                     <c:otherwise>
-                                                        <a class="button gray" href="<c:out value="${WEB_PROPERTIES['begin.thirdBox.link']}" />" >
+                                                        <a class="button gray" href="<c:out value="${WEB_PROPERTIES['begin.thirdBox.link']}" />"
+                                                        onclick="javascript:window.open('<c:out value="${WEB_PROPERTIES['begin.thirdBox.link']}" />','_help','toolbar=0,scrollbars=1,location=1,statusbar=1,menubar=0,resizable=1,width=800,height=600');return false">
                                                     </c:otherwise>
                                                 </c:choose>
                                                         <div>
@@ -132,8 +134,11 @@
                 </div>
         </div>
 
-        <div style="clear:both"></div>
-
+        <div style="clear:both">
+            <h3><c:out value="${WEB_PROPERTIES['begin.updates.heading']}" escapeXml="false" /></h3>
+            <c:out value="${WEB_PROPERTIES['begin.updates.description']}" escapeXml="false" />
+        </div>
+        
         <div id="bottom-wrap">
             <c:if test="${!empty tabs}">
                 <div id="templates">
@@ -210,33 +215,33 @@
         </div>
     </c:if>
 
-                <div id="low">
-                        <div id="rss" style="display:none;">
-                                <h4>News<span>&nbsp;&amp;&nbsp;</span>Updates</h4>
-                                <table id="articles"></table>
-                                <c:if test="${!empty WEB_PROPERTIES['links.blog']}">
-                                    <p class="more"><a target="new" href="${WEB_PROPERTIES['links.blog']}">More news</a></p>
-                                </c:if>
-                        </div>
+                <!-- <div id="low"> -->
+                <!--         <div id="rss" style="display:none;"> -->
+                <!--                 <h4>News<span>&nbsp;&amp;&nbsp;</span>Updates</h4> -->
+                <!--                 <table id="articles"></table> -->
+                <!--                 <c:if test="${!empty WEB_PROPERTIES['links.blog']}"> -->
+                <!--                     <p class="more"><a target="new" href="${WEB_PROPERTIES['links.blog']}">More news</a></p> -->
+                <!--                 </c:if> -->
+                <!--         </div> -->
 
-                        <div id="api">
-                                <h4>Perl, Python, Ruby and Java API</h4>
-                                <img src="images/begin/java-perl-python-ruby-2.png" alt="perl java python ruby" />
-                                <p>
-                                        Access our <c:out value="${WEB_PROPERTIES['project.title']}"/> data via
-                                        our Application Programming Interface (API) too!
-                                        We provide client libraries in the following languages:
-                                </p>
-                                <ul id="api-langs">
-                                        <li><a href="<c:out value="${WEB_PROPERTIES['path']}" />api.do?subtab=perl">Perl</a>
-                                        <li><a href="<c:out value="${WEB_PROPERTIES['path']}" />api.do?subtab=python">Python</a>
-                                        <li><a href="<c:out value="${WEB_PROPERTIES['path']}" />api.do?subtab=ruby">Ruby</a>
-                                        <li><a href="<c:out value="${WEB_PROPERTIES['path']}" />api.do?subtab=java">Java</a>
-                                </ul>
-                        </div>
+                <!--         <div id="api"> -->
+                <!--                 <h4>Perl, Python, Ruby and Java API</h4> -->
+                <!--                 <img src="images/begin/java-perl-python-ruby-2.png" alt="perl java python ruby" /> -->
+                <!--                 <p> -->
+                <!--                         Access our <c:out value="${WEB_PROPERTIES['project.title']}"/> data via -->
+                <!--                         our Application Programming Interface (API) too! -->
+                <!--                         We provide client libraries in the following languages: -->
+                <!--                 </p> -->
+                <!--                 <ul id="api-langs"> -->
+                <!--                         <li><a href="<c:out value="${WEB_PROPERTIES['path']}" />api.do?subtab=perl">Perl</a> -->
+                <!--                         <li><a href="<c:out value="${WEB_PROPERTIES['path']}" />api.do?subtab=python">Python</a> -->
+                <!--                         <li><a href="<c:out value="${WEB_PROPERTIES['path']}" />api.do?subtab=ruby">Ruby</a> -->
+                <!--                         <li><a href="<c:out value="${WEB_PROPERTIES['path']}" />api.do?subtab=java">Java</a> -->
+                <!--                 </ul> -->
+                <!--         </div> -->
 
-                        <div style="clear:both;"></div>
-                </div>
+                <!--         <div style="clear:both;"></div> -->
+                <!-- </div> -->
         </div>
 </div>
 
