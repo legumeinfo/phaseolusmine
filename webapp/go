@@ -1,4 +1,3 @@
 #!/bin/sh
 echo "********** beanmine/webapp **********"
-tomcat-clean beanmine
 ant clean default release-webapp
