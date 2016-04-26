@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "********** beanmine/integrate **********"
-ant -Dsource=go
-ant -Dsource=so
+#ant -Dsource=go
+#ant -Dsource=so
 ant clean
 ant -Dsource=chado-genomics
 ant -Dsource=chado-genetics

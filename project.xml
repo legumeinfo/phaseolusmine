@@ -10,7 +10,6 @@
     <!-- chado genomics - has merge priority, so run first -->
     <source name="chado-genomics" type="legfed" dump="true">
       <property name="source.db.name" value="tripal"/>
-      <!-- SPACE-delimited tax IDs! -->
       <property name="organisms" value="3885 3398"/>
       <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
       <property name="dataSourceName" value="LIS Tripal database"/>
