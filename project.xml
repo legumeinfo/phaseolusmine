@@ -7,7 +7,7 @@
 
   <sources>
 
-    <!-- chado genomics - has merge priority, so run first -->
+    <!-- chado genomics - initiates SequenceFeatures, so run first -->
     <source name="chado-genomics" type="legfed" dump="true">
       <property name="source.db.name" value="tripal"/>
       <property name="organisms" value="3885 3398"/>
@@ -17,7 +17,7 @@
       <property name="processors" value="org.intermine.bio.dataconversion.SequenceProcessor"/>
     </source>
 
-    <!-- chado genetics -->
+    <!-- chado genetics - initiates other genetic items, so run second -->
     <source name="chado-genetics" type="legfed" dump="true">
       <property name="source.db.name" value="tripal"/>
       <property name="organisms" value="3885 3398"/>
