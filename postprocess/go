@@ -1,4 +1,19 @@
 #!/bin/sh
 echo "********** beanmine/postprocess **********"
 ant clean
-ant
+#ant -Daction=populate-located-features
+#ant -Daction=create-references 
+#ant -Daction=create-chromosome-locations-and-lengths
+#ant -Daction=create-intergenic-region-features
+#ant -Daction=transfer-sequences
+#ant -Daction=populate-child-features
+#ant -Daction=do-sources
+ant -Daction=create-location-range-index
+ant -Daction=create-location-overlap-index
+ant -Daction=create-overlap-view 
+ant -Daction=create-attribute-indexes
+ant -Daction=summarise-objectstore
+ant -Daction=create-autocomplete-index
+ant -Daction=create-search-index
+
+

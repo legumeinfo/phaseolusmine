@@ -1,4 +1,5 @@
 #!/bin/sh
+rm */*.log
 cd dbmodel
 ant clean
 cd ..
