@@ -8,7 +8,7 @@
   <sources>
 
     <!-- chado genomics - initiates SequenceFeatures, so run first -->
-    <source name="chado-genomics" type="legfed" dump="true">
+    <source name="chado-genomics" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="tripal"/>
       <property name="organisms" value="3885 3398"/>
       <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
@@ -18,34 +18,34 @@
     </source>
 
     <!-- chado genetics - initiates other genetic items, so run second -->
-    <!-- <source name="chado-genetics" type="legfed" dump="true"> -->
-    <!--   <property name="source.db.name" value="tripal"/> -->
-    <!--   <property name="organisms" value="3885 3398"/> -->
-    <!--   <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/> -->
-    <!--   <property name="dataSourceName" value="LIS Tripal database"/> -->
-    <!--   <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/> -->
-    <!--   <property name="processors" value="org.intermine.bio.dataconversion.GeneticProcessor"/> -->
-    <!-- </source> -->
+    <source name="chado-genetics" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="tripal"/>
+      <property name="organisms" value="3885 3398"/>
+      <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
+      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
+      <property name="processors" value="org.intermine.bio.dataconversion.GeneticProcessor"/>
+    </source>
 
     <!-- chado GO annotation -->
-    <!-- <source name="chado-go" type="legfed" dump="true"> -->
-    <!--   <property name="source.db.name" value="tripal"/> -->
-    <!--   <property name="organisms" value="3885"/> -->
-    <!--   <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/> -->
-    <!--   <property name="dataSourceName" value="LIS Tripal database"/> -->
-    <!--   <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/> -->
-    <!--   <property name="processors" value="org.intermine.bio.dataconversion.GOProcessor"/> -->
-    <!-- </source> -->
+    <source name="chado-go" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="tripal"/>
+      <property name="organisms" value="3885"/>
+      <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
+      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
+      <property name="processors" value="org.intermine.bio.dataconversion.GOAnnotationProcessor"/>
+    </source>
 
     <!-- chado featureprop attributes -->
-    <!-- <source name="chado-featureprop" type="legfed" dump="true"> -->
-    <!--   <property name="source.db.name" value="tripal"/> -->
-    <!--   <property name="organisms" value="3885"/> -->
-    <!--   <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/> -->
-    <!--   <property name="dataSourceName" value="LIS Tripal database"/> -->
-    <!--   <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/> -->
-    <!--   <property name="processors" value="org.intermine.bio.dataconversion.FeaturePropProcessor"/> -->
-    <!-- </source> -->
+    <source name="chado-featureprop" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="tripal"/>
+      <property name="organisms" value="3885"/>
+      <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
+      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
+      <property name="processors" value="org.intermine.bio.dataconversion.FeaturePropProcessor"/>
+    </source>
 
     <!-- gene ontology -->
     <source name="go" type="go">
@@ -66,6 +66,10 @@
 
   <post-processing>
 
+    <!-- legfed -->
+    <post-process name="populate-gene-spanning-qtls" dump="true"/>
+    <post-process name="create-polypeptide-gene-references" dump="true"/>
+    
     <!-- order matters here -->
     <post-process name="populate-located-features"/>
     <post-process name="create-references" />
