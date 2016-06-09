@@ -19,7 +19,7 @@
 
   <class className="org.intermine.model.bio.Chromosome">
     <fields>
-      <fieldconfig fieldExpr="primaryIdentifier"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
     </fields>
@@ -27,7 +27,7 @@
 
   <class className="org.intermine.model.bio.Supercontig">
     <fields>
-      <fieldconfig fieldExpr="primaryIdentifier"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
     </fields>
@@ -68,9 +68,9 @@
   <class className="org.intermine.model.bio.Gene">
     <fields>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
-      <fieldconfig fieldExpr="secondaryIdentifier"/>
-      <fieldconfig fieldExpr="note"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
+      <fieldconfig fieldExpr="note"/>
     </fields>
   </class>
 
@@ -78,7 +78,7 @@
   <class className="org.intermine.model.bio.SequenceFeature">
     <fields>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
-      <fieldconfig fieldExpr="primaryIdentifier"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
       <fieldconfig fieldExpr="chromosome.primaryIdentifier" showInInlineCollection="true" showInSummary="false" label="Chromosome" />
       <fieldconfig fieldExpr="chromosomeLocation.start" showInInlineCollection="true" showInSummary="false" label="Start" />
@@ -91,7 +91,7 @@
 
   <class className="org.intermine.model.bio.Polypeptide">
     <fields>
-      <fieldconfig fieldExpr="primaryIdentifier"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
     </fields>
   </class>
@@ -192,7 +192,7 @@
 
   <class className="org.intermine.model.bio.Transcript">
     <fields>
-      <fieldconfig fieldExpr="primaryIdentifier"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
       <!-- <fieldconfig fieldExpr="chromosomeLocation" displayer="/model/chromosomeLocDisplayer.jsp" showInResults="false"/> -->
       <fieldconfig fieldExpr="chromosome.primaryIdentifier" showInInlineCollection="true" showInSummary="false" label="Chromosome" />
@@ -211,7 +211,7 @@
       </titles>
     </headerconfig>
     <fields>
-      <fieldconfig fieldExpr="primaryIdentifier"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" label="Length (cM)" />
     </fields>
   </class>
@@ -246,7 +246,7 @@
 
   <class className="org.intermine.model.bio.GeneticMarker">
     <fields>
-      <fieldconfig fieldExpr="primaryIdentifier" />
+      <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="type" label="Type"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
       <!-- <fieldconfig fieldExpr="chromosomeLocation" displayer="/model/chromosomeLocDisplayer.jsp" showInResults="false" /> -->
