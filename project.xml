@@ -40,7 +40,7 @@
     <!-- chado featureprop attributes -->
     <source name="chado-featureprop" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="tripal"/>
-      <property name="organisms" value="3885"/>
+      <property name="organisms" value="3885 3398"/>
       <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
       <property name="dataSourceName" value="LIS Tripal database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
