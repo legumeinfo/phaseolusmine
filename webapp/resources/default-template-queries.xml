@@ -20,7 +20,7 @@
     <tag name="im:hidden" objectIdentifier="Evidence.relations" type="collection"></tag>
     <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Gene" type="class"></tag>
     <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.GeneticMarker" type="class"></tag>
-    <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Polypeptide" type="class"></tag>
+    <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Protein" type="class"></tag>
     <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.QTL" type="class"></tag>
     <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.LinkageGroup" type="class"></tag>
     <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Supercontig" type="class"></tag>

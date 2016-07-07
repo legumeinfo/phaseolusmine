@@ -74,6 +74,13 @@
     </fields>
   </class>
 
+  <class className="org.intermine.model.bio.Homologue">
+    <fields>
+      <fieldconfig fieldExpr="homologue.organism.name" label="Organism"/>
+      <fieldconfig fieldExpr="homologue.primaryIdentifier" label="DB indentifier"/>
+    </fields>
+  </class>
+
   <!-- supercontig breaks the list on the list analysis page for items other than genes, but it's important to show it since not all features are on chromosomes -->
   <class className="org.intermine.model.bio.SequenceFeature">
     <fields>
@@ -89,7 +96,7 @@
     </fields>
   </class>
 
-  <class className="org.intermine.model.bio.Polypeptide">
+  <class className="org.intermine.model.bio.Protein">
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
@@ -192,9 +199,9 @@
 
   <class className="org.intermine.model.bio.Transcript">
     <fields>
+      <fieldconfig fieldExpr="organism.name" label="Organism"/>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
-      <!-- <fieldconfig fieldExpr="chromosomeLocation" displayer="/model/chromosomeLocDisplayer.jsp" showInResults="false"/> -->
       <fieldconfig fieldExpr="chromosome.primaryIdentifier" showInInlineCollection="true" showInSummary="false" label="Chromosome" />
       <fieldconfig fieldExpr="chromosomeLocation.start" showInInlineCollection="true" showInSummary="false" label="Start" />
       <fieldconfig fieldExpr="chromosomeLocation.end" showInInlineCollection="true" showInSummary="false" label="End" />
