@@ -9,7 +9,7 @@
 
     <!-- chado genomics - initiates SequenceFeatures, so run first -->
     <source name="chado-genomics" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="tripal"/>
+      <property name="source.db.name" value="chado"/>
       <property name="organisms" value="3885 3398"/>
       <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
       <property name="dataSourceName" value="LIS Tripal database"/>
@@ -19,7 +19,7 @@
 
     <!-- chado genetics - initiates other genetic items, so run second -->
     <source name="chado-genetics" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="tripal"/>
+      <property name="source.db.name" value="chado"/>
       <property name="organisms" value="3885 3398"/>
       <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
       <property name="dataSourceName" value="LIS Tripal database"/>
@@ -29,7 +29,7 @@
 
     <!-- chado GO annotation -->
     <source name="chado-go" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="tripal"/>
+      <property name="source.db.name" value="chado"/>
       <property name="organisms" value="3885"/>
       <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
       <property name="dataSourceName" value="LIS Tripal database"/>
@@ -39,7 +39,7 @@
 
     <!-- chado featureprop attributes -->
     <source name="chado-featureprop" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="tripal"/>
+      <property name="source.db.name" value="chado"/>
       <property name="organisms" value="3885 3398"/>
       <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
       <property name="dataSourceName" value="LIS Tripal database"/>
@@ -49,7 +49,7 @@
 
     <!-- chado homology attributes -->
     <source name="chado-homology" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="tripal"/>
+      <property name="source.db.name" value="chado"/>
       <property name="organisms" value="3885"/>
       <property name="homologue.organisms" value="3702 3847 3880 3885 130453 130454"/>
       <property name="phytozome.version" value="phytozome_10_2"/>
@@ -61,7 +61,7 @@
 
     <!-- chado + reactome file -->
     <source name="chado-reactome-file" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="tripal"/>
+      <property name="source.db.name" value="chado"/>
       <property name="reactome.filename" location="/home/intermine/data/plant-reactome/reactome.txt"/>
       <property name="organisms" value="3885"/>
       <property name="dataSetTitle" value="LIS Phaseolus vulgaris (3885) data"/>
