@@ -2,4 +2,4 @@
 echo "********** beanmine/integrate **********"
 #ant -Dsource=so,go
 ant clean
-ant -Dsource=chado-genomics,chado-genetics,chado-featureprop,chado-go,chado-homology,chado-reactome-file,entrez-organism
+ant -Dsource=chado-genomics,chado-genetics,chado-featureprop,chado-go,chado-homology,chado-reactome-file,pvgea-expression,entrez-organism

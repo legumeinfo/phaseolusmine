@@ -5,7 +5,7 @@
     <icon-image>model/images/genomics.gif</icon-image>
     <large-image>model/images/genomics.gif</large-image>
     <intro-text>
-      The gene structure and other genome annotation in BeanMine are loaded from
+      The gene structure and other genome annotation in LegFed mines are loaded from
 	the chado database which powers the LIS site.
     </intro-text>
     <tile-name>model/genomics.jsp</tile-name>
@@ -17,7 +17,7 @@
     <icon-image>model/images/proteins.png</icon-image>
     <large-image>model/images/proteins.png</large-image>
     <intro-text>
-      Protein annotation (including protein domains and protein matches) are loaded from the chado database which powers the LIS site.
+      Protein annotation (including protein domains and protein matches) is loaded from the chado database which powers the LIS site.
     </intro-text>
     <tile-name>model/proteins.jsp</tile-name>
     <aspect-source name="LIS" url="http://legumeinfo.org/"/>
