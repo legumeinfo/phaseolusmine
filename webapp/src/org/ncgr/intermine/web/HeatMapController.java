@@ -10,7 +10,6 @@ package org.ncgr.intermine.web;
  *
  */
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -59,9 +58,6 @@ public class HeatMapController extends TilesAction {
     
     protected static final Logger LOG = Logger.getLogger(HeatMapController.class);
 
-    // expression value format
-    static DecimalFormat df = new DecimalFormat("#.##");
-            
     /**
      * {@inheritDoc}
      */

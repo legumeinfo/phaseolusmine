@@ -9,7 +9,7 @@
 
 <tiles:importAttribute />
 
-<c:set var="MAX_CLUSTER" value="250" />
+<c:set var="MAX_CLUSTER" value="100" />
 <c:set var="MAX_MAP" value="600" />
 <c:set var="MAX_DEFAULT_OPEN" value="100" />
 
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="model/canvasXpress.min.js"></script>
 <!--[if IE]><script type="text/javascript" src="model/canvasXpress/js/excanvas.js"></script><![endif]-->
 
-<div class="body" id="expression_div">
+<div id="expression_div">
 
     <script type="text/javascript" charset="utf-8">
      jQuery(document).ready(function () {
@@ -65,16 +65,22 @@
 
         <div id="heatmapGraph" style="display:block">
 
-            <c:if test="${FeatureCount>MAX_CLUSTER}">
-                <p>
-                    Please note that clustering functions are not available for lists with more than ${MAX_CLUSTER} elements.
-                </p>
-            </c:if>
-
-            <div id="heatmapContainer">
-
-                <div style="width:350px; text-align:center; margin:5px 0px 5px 200px; padding:3px; border:1px solid gray; background-color:#eee;">
-                    <c:if test="${FeatureCount>4}">
+            <div style="width:500px; margin:5px 0px 5px 100px;">
+                
+                <c:if test="${FeatureCount>MAX_CLUSTER}">
+                    <p>
+                        Please note that clustering functions are not available for lists with more than ${MAX_CLUSTER} transcripts.
+                    </p>
+                </c:if>
+                
+                <c:if test="${ConditionCount>MAX_CLUSTER}">
+                    <p>
+                        Please note that clustering functions are not available for more than ${MAX_CLUSTER} tissue samples.
+                    </p>
+                </c:if>
+            
+                <div style="width:350px; margin:auto; text-align:center; padding:3px; border:1px solid gray; background-color:#eee;">
+                    <c:if test="${FeatureCount>4 && FeatureCount<=MAX_CLUSTER}">
                         Expression K-means:
                         <select id="smps-km">
                             <option value="2" selected>2</option>
@@ -83,27 +89,29 @@
                             </c:forEach>
                         </select>
                     </c:if>
-                    Tissue K-means:
-                    <select id="vars-km">
-                        <option value="2" selected>2</option>
-                        <c:forEach begin="3" end="${ConditionCount}" var="val">
-                            <option value="${val}">${val}</option>
-                        </c:forEach>
-                    </select>
+                    <c:if test="${ConditionCount>4 && ConditionCount<=MAX_CLUSTER}">
+                        Tissue K-means:
+                        <select id="vars-km">
+                            <option value="2" selected>2</option>
+                            <c:forEach begin="3" end="${ConditionCount}" var="val">
+                                <option value="${val}">${val}</option>
+                            </c:forEach>
+                        </select>
+                    </c:if>
                 </div>
 
-                <canvas id="canvasx" width="${WEB_PROPERTIES['heatmap.width']}" height="${WEB_PROPERTIES['heatmap.height']}"></canvas>
-
-            </div>
-
-            <div id="description_div" style="clear:both; padding-left:10px; font-weight:bold; background-color:gray; color:white;">
-                More information <img src="images/undisclosed.gif" id="co">
             </div>
             
-            <div id="description" style="padding:5px">${WEB_PROPERTIES['heatmap.description']}</div>
-
+            <canvas id="canvasx" width="${WEB_PROPERTIES['heatmap.width']}" height="${WEB_PROPERTIES['heatmap.height']}"></canvas>
+            
         </div>
         
+        <div id="description_div" style="clear:both; padding-left:10px; font-weight:bold; background-color:gray; color:white;">
+            More information <img src="images/undisclosed.gif" id="co">
+        </div>
+        
+        <div id="description" style="padding:5px">${WEB_PROPERTIES['heatmap.description']}</div>
+
     </div>
     
 </div>
@@ -189,29 +197,33 @@
                                }
      );
 
-     // show k-means on conditions
-     hm.kmeansVariables(true);
-
-     // show k-means on features if enough features; else disable k-means selector
-     if (feature_count>4) {
+     // show k-means on features if enough features and less than max_cluster; else disable
+     if (feature_count>4 && feature_count<max_cluster) {
          hm.kmeansSamples(true);
+     } else {
+         jQuery("#smps-km").attr('disabled', true);
+     }
+
+     // show k-means on conditions if enough and less than max_cluster; else disable
+     if (condition_count>4 && condition_count<max_cluster) {
+         hm.kmeansVariables(true);
      } else {
          jQuery("#vars-km").attr('disabled', true);
      }
 
-     // respond to vars-km change
-     jQuery("#vars-km").change(
-         function() {
-             hm.kmeansVarClusters = parseInt(this.value);
-             hm.kmeansVariables(true);
-         }
-     );
-
-     // respond to smps-km change
+     // respond to smps-km change (features)
      jQuery("#smps-km").change(
          function() {
              hm.kmeansSmpClusters = parseInt(this.value);
              hm.kmeansSamples(true);
+         }
+     );
+
+     // respond to vars-km change (conditions)
+     jQuery("#vars-km").change(
+         function() {
+             hm.kmeansVarClusters = parseInt(this.value);
+             hm.kmeansVariables(true);
          }
      );
 
