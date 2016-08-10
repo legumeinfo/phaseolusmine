@@ -19,25 +19,6 @@
 
 <div id="expression_div">
 
-    <script type="text/javascript" charset="utf-8">
-     jQuery(document).ready(function () {
-         var feature_count = parseInt(${FeatureCount});
-         if (feature_count > 100) {
-             jQuery("#heatmapGraph").hide();
-         } else {
-             jQuery("#heatmapGraph").show();
-         }
-         jQuery("#bro").click(function () {
-             if(jQuery("#heatmapGraph").is(":hidden")) {
-                 jQuery("#oc").attr("src", "images/disclosed.gif");
-             } else {
-                 jQuery("#oc").attr("src", "images/undisclosed.gif");
-             }
-             jQuery("#heatmapGraph").toggle("slow");
-         });
-     })
-    </script>
-
     <h2>${WEB_PROPERTIES['heatmap.heading']}</h2>
     <h3>${WEB_PROPERTIES['heatmap.subheading']}</h3>
     
@@ -122,6 +103,27 @@
  var condition_count = parseInt(${ConditionCount});
  var max_cluster = parseInt(${MAX_CLUSTER});
  var max_map = parseInt(${MAX_MAP});
+ var max_default_open = parseInt(${MAX_DEFAULT_OPEN});
+
+ jQuery(document).ready(
+     function () {
+         if (feature_count>max_default_open) {
+             jQuery("#heatmapGraph").hide();
+         } else {
+             jQuery("#heatmapGraph").show();
+         }
+         jQuery("#bro").click(
+             function () {
+                 if (jQuery("#heatmapGraph").is(":hidden")) {
+                     jQuery("#oc").attr("src", "images/disclosed.gif");
+                 } else {
+                     jQuery("#oc").attr("src", "images/undisclosed.gif");
+                 }
+                 jQuery("#heatmapGraph").toggle("slow");
+             }
+         );
+     }
+ );
 
  if (${fn:length(expressionValueJSON)}<10) {
      
@@ -172,10 +174,6 @@
                                    "heatmapIndicatorHistogram": ${WEB_PROPERTIES['heatmap.heatmapIndicatorHistogram']},
                                    "heatmapIndicatorHeight": ${WEB_PROPERTIES['heatmap.heatmapIndicatorHeight']},
                                    "heatmapIndicatorWidth": ${WEB_PROPERTIES['heatmap.heatmapIndicatorWidth']},
-                                   "imputeMethod": "median",
-                                   "distance": "euclidian",
-                                   "centerData": true,
-                                   "linkage": "complete",
                                    "showSmpDendrogram": false,
                                    "showVarDendrogram": false,
                                    "kmeansSmpClusters": 2,
@@ -198,14 +196,14 @@
      );
 
      // show k-means on features if enough features and less than max_cluster; else disable
-     if (feature_count>4 && feature_count<max_cluster) {
+     if (feature_count>4 && feature_count<=max_cluster) {
          hm.kmeansSamples(true);
      } else {
          jQuery("#smps-km").attr('disabled', true);
      }
 
      // show k-means on conditions if enough and less than max_cluster; else disable
-     if (condition_count>4 && condition_count<max_cluster) {
+     if (condition_count>4 && condition_count<=max_cluster) {
          hm.kmeansVariables(true);
      } else {
          jQuery("#vars-km").attr('disabled', true);
