@@ -209,7 +209,6 @@
     </fields>
   </class>
 
-  <!-- add the heat map to Transcript bags; drop supercontig so the list analysis page shows chromosomal mRNAs at least -->
   <class className="org.intermine.model.bio.Transcript">
     <fields>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
@@ -232,6 +231,9 @@
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" label="Length (cM)" />
     </fields>
+    <bagdisplayers>
+      <displayer src="linkageGroupDiagram.tile" showOnLeft="true"/>
+    </bagdisplayers>
   </class>
 
   <class className="org.intermine.model.bio.LinkageGroupPosition">
