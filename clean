@@ -12,5 +12,3 @@ cd ..
 cd webapp
 ant clean
 cd ..
-rm started
-rm ended

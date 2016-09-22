@@ -1,5 +1,4 @@
 #!/bin/sh
 echo "********** beanmine/integrate **********"
-#ant -Dsource=so,go
 ant clean
-ant -Dsource=chado-genomics,chado-genetics,chado-featureprop,chado-go,chado-homology,chado-reactome-file,pvgea-expression,entrez-organism
+ant -Dsource=so,go,chado-genomics,chado-genetics,chado-featureprop,chado-homology,chado-reactome-file,chado-go,beans-expression,entrez-organism

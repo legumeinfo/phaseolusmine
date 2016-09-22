@@ -71,7 +71,7 @@
     </source>
 
     <!-- PvGEA expression -->
-    <source name="pvgea-expression" type="legfed-expression" dump="true">
+    <source name="beans-expression" type="legfed-expression" dump="true">
       <property name="src.data.dir" location="/home/intermine/data/beans-expression"/>
     </source>
     
@@ -103,19 +103,23 @@
     <post-process name="create-protein-domain-references" dump="true"/>
     <post-process name="populate-interpro-data" dump="true"/>
     
-    <!-- genomic processing -->
+    <!-- add features -->
+    <post-process name="create-intron-features"/>
+    <post-process name="create-intergenic-region-features"/>
+    <post-process name="create-gene-flanking-features"/> 
+   
+    <!-- create various references and collections -->
     <post-process name="populate-located-features"/>
+    <post-process name="populate-child-features"/>
     <post-process name="create-references" />
     <post-process name="create-chromosome-locations-and-lengths"/>
-    <post-process name="create-intergenic-region-features"/>
     <post-process name="transfer-sequences"/>
-    <post-process name="populate-child-features"/>
+
+    <!-- views and indexes, after all data is set -->
     <post-process name="create-location-range-index"/>
     <post-process name="create-location-overlap-index"/>
     <post-process name="create-overlap-view" />
     <post-process name="create-attribute-indexes"/>
-
-    <!-- these must be last since they process overall data -->
     <post-process name="summarise-objectstore"/>
     <post-process name="create-autocomplete-index"/>
     <post-process name="create-search-index"/>

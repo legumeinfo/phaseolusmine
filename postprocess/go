@@ -1,4 +1,4 @@
 #!/bin/sh
 echo "********** beanmine/postprocess **********"
 ant clean
-ant
+ant -v

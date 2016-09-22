@@ -9,10 +9,6 @@
 
 <tiles:importAttribute />
 
-<c:set var="MAX_CLUSTER" value="100" />
-<c:set var="MAX_MAP" value="600" />
-<c:set var="MAX_DEFAULT_OPEN" value="100" />
-
 <link rel="stylesheet" href="model/canvasXpress.css" type="text/css"/>
 <script type="text/javascript" src="model/canvasXpress.min.js"></script>
 <!--[if IE]><script type="text/javascript" src="model/canvasXpress/js/excanvas.js"></script><![endif]-->
