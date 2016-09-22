@@ -68,11 +68,13 @@ public class MemeController extends TilesAction {
     
     protected static final Logger LOG = Logger.getLogger(MemeController.class);
 
-    public static final int MAX_SIZE = 100000; // max size of fasta file
-    public static final int MAX_WAITS = 30;    // max number of waits for Meme job to finish
-    public static final int WAIT_SECONDS = 2;  // number of seconds to wait between each wait period
+    private Map<String,String> paramMap;            // set by calling action in Struts2 XML, but we're still on Struts1
 
-    private Map<String,String> paramMap;       // supposed to be set by calling action in Struts2 XML
+    // these should be all be set in paramMap, if/when we switch to Struts2
+    public static final String SERVICE_URL = "http://intermine.ncgr.org/opal2/services/meme";
+    public static final int MAX_SIZE = 100000;      // max size of fasta file
+    public static final int MAX_WAIT_SECONDS = 600; // max time to wait for Meme job to finish
+    public static final int WAIT_SECONDS = 5;       // number of seconds to wait between each wait period
 
     /**
      * {@inheritDoc}
@@ -131,13 +133,13 @@ public class MemeController extends TilesAction {
             return null;
         }
 
-        // submit the FASTA data to the MEME web service
-        //
-        // TO DO -- figure out how to get serviceURL in from a file
-        //
-        String serviceURL = "http://intermine.ncgr.org/opal2/services/meme";
-        if (paramMap!=null && paramMap.containsKey("serviceURL")) serviceURL = paramMap.get("serviceURL");
+        // use static vars for now since we're on Struts 1 and can't get them (easily) from the struts XML
+        String serviceURL = SERVICE_URL;
+        int maxSize = MAX_SIZE;
+        int maxWaitSeconds = MAX_WAIT_SECONDS; 
+        int waitSeconds = WAIT_SECONDS;
 
+        // submit the FASTA data to the MEME web service
         try {
 
             MemeClient mc = new MemeClient(serviceURL);
@@ -152,9 +154,10 @@ public class MemeController extends TilesAction {
 
             // loop until finished or we're tired of waiting
             boolean finished = false;
+            int maxWaits = maxWaitSeconds/waitSeconds;
             int waits = 0;
-            while (!finished && waits<MAX_WAITS) {
-                TimeUnit.SECONDS.sleep(WAIT_SECONDS);
+            while (!finished && waits<maxWaits) {
+                TimeUnit.SECONDS.sleep(waitSeconds);
                 status = mc.queryStatus(jobID);
                 int code = status.getCode();
                 finished = (code==GramJob.STATUS_DONE || code==GramJob.STATUS_FAILED || code==GramJob.STATUS_SUSPENDED || code==GramJob.STATUS_UNSUBMITTED);
