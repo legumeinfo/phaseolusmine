@@ -53,3 +53,7 @@
   <put name="body" value="linkageGroupDiagram.tile"/>
   <put name="pageName" value="linkageGroupDiagram"/>
 </definition>
+
+<!-- MEME Analysis -->
+<definition name="memeAnalysis.tile" path="/model/memeAnalysis.jsp"
+            controllerUrl="/initMemeAnalysis.do" />
