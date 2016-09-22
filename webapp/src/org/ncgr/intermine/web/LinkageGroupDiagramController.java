@@ -134,10 +134,6 @@ public class LinkageGroupDiagramController extends TilesAction {
             qtlMap.put(lgPI, qtls);
         }
 
-        // output scalar vars
-        request.setAttribute("tracksCount", lgMap.size());
-        request.setAttribute("maxLGLength", maxLGLength);
-
         // JSON data - non-labeled array - order matters!
         List<Object> trackData = new LinkedList<Object>();
         for (String lgPI : lgMap.keySet()) {
@@ -205,6 +201,10 @@ public class LinkageGroupDiagramController extends TilesAction {
             trackData.add(qtlsTrack);
                         
         }
+
+        // output scalar vars
+        request.setAttribute("tracksCount", lgMap.size());
+        request.setAttribute("maxLGLength", maxLGLength);
 
         // entire thing is in a single tracks JSON array
         Map<String,Object> tracks = new LinkedHashMap<String,Object>();
