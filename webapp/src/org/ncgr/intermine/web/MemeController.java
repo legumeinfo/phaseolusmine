@@ -95,7 +95,7 @@ public class MemeController extends TilesAction {
         // list all desired sequence features here!
         String expressionType = bag.getType();
         if (!expressionType.equals("GeneFlankingRegion")) {
-            request.setAttribute("errorMessage", "MEME analysis is currently enabled for GeneFlankingRegion only.");
+            request.setAttribute("errorMessage", "---"); // flag to not show MEME analysis at all
             return null;
         }
 
