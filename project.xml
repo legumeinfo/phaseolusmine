@@ -116,7 +116,6 @@
     <post-process name="transfer-sequences"/>
 
     <!-- views and indexes, after all data is set -->
-    <post-process name="create-location-range-index"/>
     <post-process name="create-location-overlap-index"/>
     <post-process name="create-overlap-view" />
     <post-process name="create-attribute-indexes"/>

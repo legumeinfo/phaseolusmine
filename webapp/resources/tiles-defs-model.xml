@@ -57,3 +57,7 @@
 <!-- MEME Analysis -->
 <definition name="memeAnalysis.tile" path="/model/memeAnalysis.jsp"
             controllerUrl="/initMemeAnalysis.do" />
+
+<!-- Motif Search -->
+<definition name="motifSearch.tile" path="/model/motifSearch.jsp"
+            controllerUrl="/initMotifSearch.do" />

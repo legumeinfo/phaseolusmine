@@ -61,4 +61,8 @@
 <action path="/initMemeAnalysis"
         type="org.ncgr.intermine.web.MemeController" />
 
-<!-- Struts2 required for this: <param name="serviceURL">http://intermine.ncgr.org/opal2/services</param> -->
+<!-- Motif Search -->
+<action path="/initMotifSearch"
+        type="org.ncgr.intermine.web.MotifSearchController" />
+
+
