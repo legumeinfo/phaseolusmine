@@ -265,9 +265,11 @@
 
             <div class="container_12">
 
-                <c:set value="${fn:length(CATEGORIES)}" var="aspectCount" /> <c:set
-                                                                               var="templateIdPrefix" value="reportTemplate${objectType}" /> <c:set
-                                                                                                                                               var="miscId" value="reportMisc${objectType}" /> <%-- All other references and collections --%>
+                <c:set value="${fn:length(CATEGORIES)}" var="aspectCount" />
+                <c:set var="templateIdPrefix" value="reportTemplate${objectType}" />
+                <c:set var="miscId" value="reportMisc${objectType}" />
+
+                <%-- All other references and collections --%>
 
                 <script type="text/javascript">
                  //<![CDATA[
@@ -289,18 +291,19 @@
 
                     <%-- block friendly links from all but gene reports --%>
                     <c:set var="getFriendly" value="no"></c:set>
-                    <c:if test="${fn:endsWith(fn:toLowerCase(object.type), 'gene')}">
+                    <c:if test="${fn:contains(object.class, 'GeneShadow')}">
                         <c:set var="getFriendly" value="yes"></c:set>
                     </c:if>
                     
                     <div id="external-links">
-                        <c:if test="${getFriendly == 'yes'}">
+                        <c:if test="${getFriendly=='yes'}">
                             <tiles:insert name="otherMinesLink.tile" />
                         </c:if>
                         <tiles:insert name="attributeLinks.tile" >
                             <tiles:put name="reportObject" beanName="object" />
                         </tiles:insert>
                     </div>
+                    
                     <c:set var="object" value="${object_bk}"/>
 
                     <%-- shown in a sidebar displayers --%>
