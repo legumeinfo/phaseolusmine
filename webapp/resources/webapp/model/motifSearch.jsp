@@ -20,16 +20,6 @@
 
 <c:if test="${errorMessage==null}">
 
-    <!-- jquery.dataTables needs a current jquery version -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-    <!-- jquery.dataTables plugin -->
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-
-    <!-- reload this because it is broken by JS loads above; used by bagDetails.jsp -->
-    <script type="text/javascript" src="js/textarea-resize.js"></script>
-
     <div id="motifSearch_toggle" style="clear:both; padding-left:10px; font-weight:bold; background-color:gray; color:white;">
         Click to toggle Shared Motif Search <img src="images/disclosed.gif" id="motifToggle" />
     </div>
@@ -124,25 +114,25 @@
          } );
      } );
      
-     jQuery("#motifSearch_toggle").click(function () {
-         if (jQuery("#motifSearch").is(":hidden")) {
-             jQuery("#motifToggle").attr("src", "images/disclosed.gif");
+     $("#motifSearch_toggle").click(function () {
+         if ($("#motifSearch").is(":hidden")) {
+             $("#motifToggle").attr("src", "images/disclosed.gif");
          } else {
-             jQuery("#motifToggle").attr("src", "images/undisclosed.gif");
+             $("#motifToggle").attr("src", "images/undisclosed.gif");
          }
-         jQuery("#motifSearch").toggle("slow");
+         $("#motifSearch").toggle("slow");
      } );
 
-     jQuery("#description").hide();
+     $("#description").hide();
 
-     jQuery("#description_div").click(
+     $("#description_div").click(
          function () {
-             if (jQuery("#description").is(":hidden")) {
-                 jQuery("#co").attr("src", "images/disclosed.gif");
+             if ($("#description").is(":hidden")) {
+                 $("#co").attr("src", "images/disclosed.gif");
              } else {
-                 jQuery("#co").attr("src", "images/undisclosed.gif");
+                 $("#co").attr("src", "images/undisclosed.gif");
              }
-             jQuery("#description").toggle("slow");
+             $("#description").toggle("slow");
          }
      );
      
