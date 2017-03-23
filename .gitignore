@@ -1,1 +1,6 @@
 *~
+*.log
+cp-*
+go-*
+*/build/
+*/dist/
