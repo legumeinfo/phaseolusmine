@@ -91,8 +91,8 @@
 
      var seqHitsObject = JSON.parse('${seqHitsJSON}');
      
-     $(document).ready(function() {
-         $('#motifs').dataTable( {
+     jQuery(document).ready(function() {
+         jQuery('#motifs').dataTable( {
              order: [[3,'desc']],
              columns: [
                  { data: "sequence" },
@@ -114,25 +114,25 @@
          } );
      } );
      
-     $("#motifSearch_toggle").click(function () {
-         if ($("#motifSearch").is(":hidden")) {
-             $("#motifToggle").attr("src", "images/disclosed.gif");
+     jQuery("#motifSearch_toggle").click(function () {
+         if (jQuery("#motifSearch").is(":hidden")) {
+             jQuery("#motifToggle").attr("src", "images/disclosed.gif");
          } else {
-             $("#motifToggle").attr("src", "images/undisclosed.gif");
+             jQuery("#motifToggle").attr("src", "images/undisclosed.gif");
          }
-         $("#motifSearch").toggle("slow");
+         jQuery("#motifSearch").toggle("slow");
      } );
 
-     $("#description").hide();
+     jQuery("#description").hide();
 
-     $("#description_div").click(
+     jQuery("#description_div").click(
          function () {
-             if ($("#description").is(":hidden")) {
-                 $("#co").attr("src", "images/disclosed.gif");
+             if (jQuery("#description").is(":hidden")) {
+                 jQuery("#co").attr("src", "images/disclosed.gif");
              } else {
-                 $("#co").attr("src", "images/undisclosed.gif");
+                 jQuery("#co").attr("src", "images/undisclosed.gif");
              }
-             $("#description").toggle("slow");
+             jQuery("#description").toggle("slow");
          }
      );
      
