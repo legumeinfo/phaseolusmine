@@ -1,4 +1,12 @@
 #!/bin/sh
 echo "********** beanmine/integrate **********"
+pg_restore --verbose -h butler -p 5433 -U intermine -d beanmine ~/dumps/so-go.dat
 ant clean
-ant -Dsource=so,go,chado-genomics,chado-genetics,chado-featureprop,chado-homology,chado-reactome-file,chado-go,beans-expression,entrez-organism
+# chado sources will import original chado primary and secondary identifiers
+ant -v -Dsource=chado-genomics,chado-genetics,chado-featureprop,chado-homology,chado-reactome-file,chado-go
+# we need to switch primary<->secondary identifiers and drop the phavu. prefix from the new primary before loading expression
+psql-im gene-identifiers.sql
+# now we run expression
+ant -v -Dsource=beans-expression
+# entrez-organism is NOT run since it's a pain with organism.variety; run organism.sql instead
+psql-im organism.sql

@@ -33,4 +33,16 @@
 	<aspect-source name="Plant Reactome" url="http://plantreactome.gramene.org/"/>
   </aspect>
 
+  <aspect name="Expression">
+    <subtitle>Gene expression</subtitle>
+    <icon-image>model/images/genomics.gif</icon-image>
+    <large-image>model/images/genomics.gif</large-image>
+    <intro-text>
+      Gene expression is carried over from the LIS site.
+    </intro-text>
+    <tile-name>model/expresssion.jsp</tile-name>
+    <aspect-source name="LIS" url="http://legumeinfo.org/"/>
+  </aspect>
+
+
 </aspects>

@@ -397,17 +397,23 @@
                      placement="Genomics"
                      types="SequenceFeature"/>
 
-    <reportdisplayer javaClass="org.intermine.bio.web.displayer.LinkageGroupDisplayer"
+    <reportdisplayer javaClass="org.ncgr.intermine.bio.web.displayer.LinkageGroupDisplayer"
                      jspName="model/linkageGroupDiagram.jsp"
                      replacesFields="QTLs,geneticMarkers"
                      placement="summary"
                      types="LinkageGroup"/>
 
-    <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneticMapDisplayer"
+    <reportdisplayer javaClass="org.ncgr.intermine.bio.web.displayer.GeneticMapDisplayer"
                      jspName="model/linkageGroupDiagram.jsp"
                      replacesFields="linkageGroups,geneticMarkers"
                      placement="summary"
                      types="GeneticMap"/>
+
+    <reportdisplayer javaClass="org.ncgr.intermine.bio.web.displayer.GeneHeatmapDisplayer"
+                     jspName="model/geneHeatmapDisplayer.jsp"
+                     replacesFields="expressionValues"
+                     placement="Expression"
+                     types="Gene"/>
 
   </reportdisplayers>
 

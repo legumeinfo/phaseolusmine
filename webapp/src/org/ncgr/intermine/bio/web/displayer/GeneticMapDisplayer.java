@@ -1,4 +1,4 @@
-package org.intermine.bio.web.displayer;
+package org.ncgr.intermine.bio.web.displayer;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

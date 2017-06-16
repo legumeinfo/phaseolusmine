@@ -46,7 +46,7 @@ import org.intermine.web.logic.session.SessionMethods;
 import org.json.JSONObject;
 
 /**
- * Class that generates heatMap data for a list of transcripts.
+ * Class that generates heatMap data for a list of genes.
  * It is assumed that only one expression series is in the database - all ExpressionSample records are queried for the list of conditions.
  * Based on the modmine HeatMapController written by Sergio and Fengyuan Hu, but heavily modified.
  *
@@ -73,9 +73,13 @@ public class HeatMapController extends TilesAction {
         Profile profile = SessionMethods.getProfile(session);
         PathQueryExecutor executor = im.getPathQueryExecutor(profile);
 
-        // check that we've got a list of mRNAs or transcripts or genes
+        // check that we've got a list of genes
         String expressionType = bag.getType();
         LOG.info("called on a bag of type:"+expressionType);
+        if (!expressionType.toLowerCase().equals("gene")) {
+            // it ain't genes, bail
+            return null;
+        }
         
         // query the conditions, put them in a list
         List<String> conditions = new ArrayList<String>();
@@ -103,20 +107,11 @@ public class HeatMapController extends TilesAction {
             return null;
         }
 
-        // set up the expression values query, depending on the input bag type
-        PathQuery valuesQuery;
-        if (expressionType.toLowerCase().equals("mrna") || expressionType.toLowerCase().equals("transcript")) {
-            // query the mRNA/transcript bag for expression values
-            valuesQuery = queryExpressionValuesFromTranscripts(model, bag);
-        } else if (expressionType.toLowerCase().equals("gene")) {
-            // query the gene bag for expression values
-            valuesQuery = queryExpressionValuesFromGenes(model, bag);
-        } else {
-            // abort, we don't have a bag of useful objects
-            return null;
-        }            
+        // set up the expression values query
+        PathQuery valuesQuery = queryExpressionValuesFromGenes(model, bag);
+        LOG.info(valuesQuery.toXml());
             
-        // Key: mRNA primaryIdentifier; Value: list of ExpressionValue objs
+        // Key: Gene.primaryIdentifier; Value: list of ExpressionValue objs
         Map<String, List<ExpressionValue>> expressionValueMap = new LinkedHashMap<String, List<ExpressionValue>>();
         ExportResultsIterator valuesResult;
         try {
@@ -148,7 +143,7 @@ public class HeatMapController extends TilesAction {
             return null;
         }
 
-        // canvasXpress "smps" = mRNAs
+        // canvasXpress "smps" = genes
         List<String> smps =  new ArrayList<String>(expressionValueMap.keySet());
         double[][] data = new double[smps.size()][conditions.size()];
         for (int i=0; i<smps.size(); i++) {
@@ -222,32 +217,6 @@ public class HeatMapController extends TilesAction {
     }
 
     /**
-     * Create a path query to retrieve gene expression values from a bag of mRNAs or Transcripts.
-     *
-     * @param model the model
-     * @param bag   the bag of mRNAs/transcripts from which to get the mRNA IDs, etc.
-     * @return the path query
-     */
-    private PathQuery queryExpressionValuesFromTranscripts(Model model, InterMineBag bag) {
-        PathQuery query = new PathQuery(model);
-        // Add views
-        query.addViews(
-                       "MRNA.primaryIdentifier",
-                       "MRNA.expressionValues.expressionSample.num",
-                       "MRNA.expressionValues.expressionSample.primaryIdentifier",
-                       "MRNA.expressionValues.value"
-                       );
-
-        // Add orderby
-        query.addOrderBy("MRNA.primaryIdentifier", OrderDirection.ASC);
-        query.addOrderBy("MRNA.expressionValues.expressionSample.num", OrderDirection.ASC);
-        // Add constraints and you can edit the constraint values below
-        query.addConstraint(Constraints.in("MRNA", bag.getName()));
-        query.addConstraint(Constraints.isNotNull("MRNA.expressionValues.value"));
-        return query;
-    }
-
-    /**
      * Create a path query to retrieve gene expression values from a bag of genes.
      *
      * @param model the model
@@ -258,17 +227,17 @@ public class HeatMapController extends TilesAction {
         PathQuery query = new PathQuery(model);
         // Add views
         query.addViews(
-                       "MRNA.primaryIdentifier",
-                       "MRNA.expressionValues.expressionSample.num",
-                       "MRNA.expressionValues.expressionSample.primaryIdentifier",
-                       "MRNA.expressionValues.value"
+                       "Gene.primaryIdentifier",
+                       "Gene.expressionValues.sample.num",
+                       "Gene.expressionValues.sample.primaryIdentifier",
+                       "Gene.expressionValues.value"
                        );
         // Add orderby
-        query.addOrderBy("MRNA.primaryIdentifier", OrderDirection.ASC);
-        query.addOrderBy("MRNA.expressionValues.expressionSample.num", OrderDirection.ASC);
+        query.addOrderBy("Gene.primaryIdentifier", OrderDirection.ASC);
+        query.addOrderBy("Gene.expressionValues.sample.num", OrderDirection.ASC);
         // Add constraints and you can edit the constraint values below
-        query.addConstraint(Constraints.in("MRNA.gene", bag.getName()));
-        query.addConstraint(Constraints.isNotNull("MRNA.expressionValues.value"));
+        query.addConstraint(Constraints.in("Gene", bag.getName()));
+        query.addConstraint(Constraints.isNotNull("Gene.expressionValues.value"));
         return query;
     }
 
