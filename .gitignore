@@ -4,3 +4,6 @@ cp-*
 go-*
 */build/
 */dist/
+sql/
+webapp/resources/webapp/model/
+webapp/src/
