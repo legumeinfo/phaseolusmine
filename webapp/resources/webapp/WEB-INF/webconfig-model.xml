@@ -132,7 +132,7 @@
 
   <class className="org.intermine.model.bio.OntologyAnnotation">
     <fields>
-      <fieldconfig fieldExpr="subject.primaryIdentifier" label="Gene"/>
+      <fieldconfig fieldExpr="subject.primaryIdentifier" label="Subject"/>
       <fieldconfig fieldExpr="ontologyTerm.identifier" label="Identifier"/>
       <fieldconfig fieldExpr="ontologyTerm.name" label="Name"/>
       <fieldconfig fieldExpr="ontologyTerm.description" label="Description"/>
