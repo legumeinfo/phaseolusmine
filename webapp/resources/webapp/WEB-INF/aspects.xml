@@ -40,7 +40,6 @@
     <intro-text>
       Gene expression is carried over from the LIS site.
     </intro-text>
-    <tile-name>model/expresssion.jsp</tile-name>
     <aspect-source name="LIS" url="http://legumeinfo.org/"/>
   </aspect>
 

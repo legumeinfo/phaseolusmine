@@ -410,8 +410,8 @@
                      placement="summary"
                      types="GeneticMap"/>
 
-    <reportdisplayer javaClass="org.ncgr.intermine.bio.web.displayer.GeneHeatmapDisplayer"
-                     jspName="model/geneHeatmapDisplayer.jsp"
+    <reportdisplayer javaClass="org.ncgr.intermine.bio.web.displayer.GeneBarchartDisplayer"
+                     jspName="model/geneBarchartDisplayer.jsp"
                      replacesFields="expressionValues"
                      placement="Expression"
                      types="Gene"/>
