@@ -51,7 +51,7 @@
     <source name="chado-genefamilies" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="chado"/>
       <property name="organisms" value="3885_G19833"/>
-      <property name="homologue.organisms" value="3920_IT97K-499-35 3847_Williams82 3880_Mt4.0 3885_G19833 130453_V14167 130454_K30076 3827_CDCFrontier 3827_ICC4958 157791_VC1973A 57577_MilvusB 3914_Gyeongwon 3821_ICPL87119 3871_Tanjil 34305_MG20"/>
+      <property name="homologue.organisms" value="3920_IT97K-499-35 3847_Williams82 3880_A17 3885_G19833 130453_V14167 130454_K30076 3827_CDCFrontier 3827_ICC4958 157791_VC1973A 57577_MilvusB 3914_Gyeongwon 3821_ICPL87119 3871_Tanjil 34305_MG20"/>
       <property name="dataSetTitle" value="LIS chado data"/>
       <property name="dataSourceName" value="LIS Tripal database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
@@ -73,7 +73,7 @@
     <!-- chado + reactome file -->
     <source name="chado-reactome-file" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="chado"/>
-      <property name="reactome.filename" location="/home/shokin/data/plant-reactome/reactome.txt"/>
+      <property name="reactome.filename" location="/home/shokin/intermine-data/plant-reactome/reactome.txt"/>
       <property name="organisms" value="3885_G19833"/>
       <property name="dataSetTitle" value="LIS chado data"/>
       <property name="dataSourceName" value="LIS Tripal database"/>
@@ -82,18 +82,19 @@
     </source>
 
     <!-- QTL TO terms -->
-    <source name="beans-qtl-toterms" type="legfed-qtlto-file" dump="true">
-	<property name="src.data.dir" location="/home/shokin/data/bean-qtl-toterms"/>
+    <source name="beans-qtl-ontology" type="legfed-qtl-ontology-file" dump="true">
+	<property name="src.data.dir" location="/home/shokin/intermine-data/bean-qtl-ontology"/>
     </source>
 
     <!-- PvGEA expression -->
     <source name="beans-expression" type="legfed-expression" dump="true">
-      <property name="src.data.dir" location="/home/shokin/data/bean-expression"/>
+      <property name="src.data.dir" location="/home/shokin/intermine-data/bean-expression"/>
     </source>
+
     
     <!-- gene ontology -->
     <source name="go" type="go">
-        <property name="src.data.file" location="/home/shokin/data/go-annotation/go.obo"/>
+        <property name="src.data.file" location="/home/shokin/intermine-data/go-annotation/go.obo"/>
     </source>
 
     <!-- sequence ontology -->
@@ -103,15 +104,15 @@
 
     <!-- trait ontology -->
     <source name="to" type="trait-ontology">
-      <property name="src.data.file" location="/home/shokin/data/plant-trait-ontology/to.obo"/>
+      <property name="src.data.file" location="/home/shokin/intermine-data/plant-trait-ontology/to.obo"/>
       <property name="ontology.prefix" value="TO"/>
     </source>
 
-    <!-- update organism records -->
-    <!-- BROKEN BY Organism.variety -->
-<!-- <source name="entrez-organism" type="entrez-organism"> -->
-<!--   <property name="src.data.file" location="build/organisms.xml"/> -->
-<!-- </source> -->
+    <!-- plant ontology -->
+    <source name="po" type="plant-ontology">
+      <property name="src.data.file" location="/home/shokin/intermine-data/plant-ontology/po.obo"/>
+      <property name="ontology.prefix" value="PO"/>
+    </source>
 
   </sources>
 
@@ -121,6 +122,7 @@
     <post-process name="do-sources" dump="true"/>
 
     <!-- legfed -->
+    <!-- <post-process name="populate-qtl-linkagegroups" dump="true"/> -->
     <post-process name="populate-gene-spanning-qtls" dump="true"/>
     <post-process name="create-protein-gene-references" dump="true"/>
     <post-process name="create-protein-domain-references" dump="true"/>

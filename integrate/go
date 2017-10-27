@@ -1,27 +1,24 @@
 #!/bin/sh
 echo "********** beanmine/integrate **********"
+ant clean
 
-#ant clean
-
-#dropdb beanmine
-#createdb -O intermine beanmine
-
-#pg_restore -d beanmine /home/analysis/shokin/dumps/beanmine.so-go-to.dat
-#ant -v -Dsource=so,go,to
-#pg_dump -Fc beanmine > /home/analysis/shokin/dumps/beanmine.so-go-to.dat
+#pg_restore -d beanmine /home/analysis/shokin/dumps/beanmine.ontologies.dat
+#ant -v -Dsource=go,so,to,po
+#pg_dump -Fc beanmine > /home/analysis/shokin/dumps/beanmine.ontologies.dat
 
 #pg_restore -d beanmine /home/analysis/shokin/dumps/beanmine.chado.dat
 #ant -v -Dsource=chado-genomics,chado-genetics,chado-go,chado-featureprop,chado-genefamilies,chado-homology,chado-reactome-file
-#pg_dump -Fc beanmine > /home/analysis/shokin/dumps/beanmine.chado.dat
+ant -v -Dsource=chado-featureprop,chado-genefamilies,chado-homology,chado-reactome-file
+pg_dump -Fc beanmine > /home/analysis/shokin/dumps/beanmine.chado.dat
 
 # ALL of the chado loaders must be DONE before continuing, because identifiers are changed by SQL below
-#psql beanmine -f ../dbmodel/build/model/add-update-triggers.sql
-#psql beanmine -f ../sql/update-organisms.sql
-#psql beanmine -f ../sql/update-identifiers.sql
-#psql beanmine -f ../dbmodel/build/model/remove-update-triggers.sql
+psql beanmine -f ../dbmodel/build/model/add-update-triggers.sql
+psql beanmine -f ../sql/update-organisms.sql
+psql beanmine -f ../sql/update-identifiers.sql
+psql beanmine -f ../dbmodel/build/model/remove-update-triggers.sql
 
 # now we load expression, which uses normal identifiers
-#ant -v -Dsource=beans-expression
+ant -v -Dsource=beans-expression
 
 # and put some TO terms on our QTLs
-#ant -v -Dsource=beans-qtl-toterms
+ant -v -Dsource=beans-qtl-ontology
