@@ -1,11 +1,15 @@
 #!/bin/sh
 echo "********** beanmine/postprocess **********"
+ant clean
 
 # the whole kaboodle kit
 ant -v
 
 # or the LG/QTL stuff
 #ant -v -Daction=populate-gene-spanning-qtls
+
+# ontology stuff
+#ant -v -Daction=create-ontology-parent-annotations
 
 # genomic range overlap stuff
 #ant -v -Daction=create-location-overlap-index

@@ -21,6 +21,7 @@
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
+      <fieldconfig fieldExpr="organism.variety" label="Variety"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
     </fields>
   </class>
@@ -29,6 +30,7 @@
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
+      <fieldconfig fieldExpr="organism.variety" label="Variety"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
     </fields>
   </class>
@@ -69,6 +71,7 @@
   <class className="org.intermine.model.bio.Gene">
     <fields>
       <fieldconfig fieldExpr="organism.name" label="Organism" />
+      <fieldconfig fieldExpr="organism.variety" label="Variety" />
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier" />
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true" />
       <fieldconfig fieldExpr="description"/>
@@ -92,6 +95,7 @@
   <class className="org.intermine.model.bio.Homologue">
     <fields>
       <fieldconfig fieldExpr="homologue.organism.name" label="Organism"/>
+      <fieldconfig fieldExpr="organism.variety" label="Variety"/>
       <fieldconfig fieldExpr="homologue.primaryIdentifier" label="DB identifier"/>
     </fields>
   </class>
@@ -99,6 +103,7 @@
   <class className="org.intermine.model.bio.SequenceFeature">
     <fields>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
+      <fieldconfig fieldExpr="organism.variety" label="Variety"/>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true" />
       <fieldconfig fieldExpr="chromosome.primaryIdentifier" showInInlineCollection="true" showInSummary="false" label="Chromosome" />
@@ -172,11 +177,12 @@
   <class className="org.intermine.model.bio.Organism">
     <headerconfig>
       <titles>
-        <title mainTitles="name"/>
+        <title mainTitles="name|variety"/>
       </titles>
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="name"/>
+      <fieldconfig fieldExpr="variety"/>
       <fieldconfig fieldExpr="taxonId" />
     </fields>
   </class>

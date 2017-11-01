@@ -8,3 +8,4 @@ go-*
 sql
 webapp/resources/webapp/model
 webapp/src
+logfile
