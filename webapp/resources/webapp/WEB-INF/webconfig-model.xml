@@ -379,12 +379,12 @@
   <!-- report displayers -->
   <reportdisplayers>
 
-    <!-- this appears to be broken, but using it to avoid duplicating Ontology Annotations display for now -->
-    <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneOntologyDisplayer"
-                     jspName="model/geneOntologyDisplayer.jsp"
-                     replacesFields="ontologyAnnotations"
-                     placement="other"
-                     types="Gene"/>
+    <!-- I don't get why genes need their own ontology displayer -->
+    <!-- <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneOntologyDisplayer" -->
+    <!--                  jspName="model/geneOntologyDisplayer.jsp" -->
+    <!--                  replacesFields="ontologyAnnotations" -->
+    <!--                  placement="other" -->
+    <!--                  types="Gene"/> -->
     
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneStructureDisplayer"
                      jspName="model/geneStructureDisplayer.jsp"
@@ -445,6 +445,27 @@
                            chromosomeLocation.start, chromosomeLocation.end, chromosomeLocation.strand"/>
 
     <!-- constraints skip biological_process, molecular_function and cellular_component GO terms -->
+    <!-- <enrichmentwidgetdisplayer id="go_enrichment_for_gene" -->
+    <!--                            title="Gene Ontology Enrichment" -->
+    <!--                            description="GO terms enriched for items in this list." -->
+    <!--                            label="GO Term" -->
+    <!--                            filterLabel="Ontology" -->
+    <!--                            filters="biological_process,cellular_component,molecular_function" -->
+    <!--                            startClass="Gene" -->
+    <!--                            typeClass="Gene" -->
+    <!--                            startClassDisplay="primaryIdentifier" -->
+    <!--                            enrich="goAnnotation.ontologyTerm.parents.name" -->
+    <!--                            enrichIdentifier="goAnnotation.ontologyTerm.parents.identifier" -->
+    <!--                            constraints="goAnnotation.ontologyTerm.parents.namespace=[Ontology],organism.name=[list], -->
+    <!--                                         primaryIdentifier != null, goAnnotation.qualifier = null, -->
+    <!--                                         goAnnotation.ontologyTerm.parents.identifier != go:0008150, -->
+    <!--                                         goAnnotation.ontologyTerm.parents.identifier != go:0003674, -->
+    <!--                                         goAnnotation.ontologyTerm.parents.identifier != go:0005575" -->
+    <!--                            views="secondaryIdentifier,symbol,primaryIdentifier,organism.name, -->
+    <!--                                   goAnnotation.ontologyTerm.identifier, goAnnotation.ontologyTerm.name, -->
+    <!--                                   goAnnotation.ontologyTerm.parents.identifier,goAnnotation.ontologyTerm.parents.name" -->
+    <!--                            externalLink="http://amigo.geneontology.org/cgi-bin/amigo/term_details?term=" /> -->
+
     <enrichmentwidgetdisplayer id="go_enrichment_for_gene"
                                title="Gene Ontology Enrichment"
                                description="GO terms enriched for items in this list."
@@ -454,18 +475,32 @@
                                startClass="Gene"
                                typeClass="Gene"
                                startClassDisplay="primaryIdentifier"
-                               enrich="goAnnotation.ontologyTerm.parents.name"
-                               enrichIdentifier="goAnnotation.ontologyTerm.parents.identifier"
-                               constraints="goAnnotation.ontologyTerm.parents.namespace=[Ontology],organism.name=[list],
-                                            primaryIdentifier != null, goAnnotation.qualifier = null,
-                                            goAnnotation.ontologyTerm.parents.identifier != go:0008150,
-                                            goAnnotation.ontologyTerm.parents.identifier != go:0003674,
-                                            goAnnotation.ontologyTerm.parents.identifier != go:0005575"
+                               enrich="ontologyAnnotations.ontologyTerm.name"
+                               enrichIdentifier="ontologyAnnotations.ontologyTerm.identifier"
+                               constraints="ontologyAnnotations.ontologyTerm.namespace=[Ontology],organism.name=[list],
+                                            primaryIdentifier!=null,
+                                            ontologyAnnotations.ontologyTerm.identifier!=GO:0008150,
+                                            ontologyAnnotations.ontologyTerm.identifier!=GO:0003674,
+                                            ontologyAnnotations.ontologyTerm.identifier!=GO:0005575"
                                views="secondaryIdentifier,symbol,primaryIdentifier,organism.name,
-                                      goAnnotation.ontologyTerm.identifier, goAnnotation.ontologyTerm.name,
-                                      goAnnotation.ontologyTerm.parents.identifier,goAnnotation.ontologyTerm.parents.name"
+                                      ontologyAnnotations.ontologyTerm.identifier,
+                                      ontologyAnnotations.ontologyTerm.name"
                                externalLink="http://amigo.geneontology.org/cgi-bin/amigo/term_details?term=" />
 
+    <enrichmentwidgetdisplayer id="to_enrichment_for_qtl"
+                               title="Plant Trait Ontology Enrichment"
+                               description="TO terms enriched for items in this list."
+                               label="TO Term"
+                               startClass="QTL"
+                               typeClass="QTL"
+                               startClassDisplay="primaryIdentifier"
+                               enrich="ontologyAnnotations.ontologyTerm.name"
+                               enrichIdentifier="ontologyAnnotations.ontologyTerm.identifier"
+                               views="secondaryIdentifier,symbol,primaryIdentifier,organism.name,
+                                      ontologyAnnotations.ontologyTerm.identifier,
+                                      ontologyAnnotations.ontologyTerm.name"
+                               externalLink="http://archive.gramene.org/db/ontology/search?id=" />
+    
     
   </widgets>
   
