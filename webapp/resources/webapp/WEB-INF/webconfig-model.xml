@@ -67,7 +67,7 @@
     </fields>
   </class>
 
-  <!-- have to have a Gene entry so the gene enrichment widget works; yanked supercontig so the list analysis page shows chromosomal genes at least -->
+  <!-- have to have a Gene entry for the list analysis heat map -->
   <class className="org.intermine.model.bio.Gene">
     <fields>
       <fieldconfig fieldExpr="organism.name" label="Organism" />
@@ -370,7 +370,6 @@
   </class>
 
 
-
   <!-- exporters -->
   <tableExportConfig id="sequence" className="org.intermine.bio.web.export.SequenceHttpExporter"/>
   <tableExportConfig id="gff3" className="org.intermine.bio.web.export.GFF3HttpExporter"/>
@@ -379,13 +378,6 @@
   <!-- report displayers -->
   <reportdisplayers>
 
-    <!-- I don't get why genes need their own ontology displayer -->
-    <!-- <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneOntologyDisplayer" -->
-    <!--                  jspName="model/geneOntologyDisplayer.jsp" -->
-    <!--                  replacesFields="ontologyAnnotations" -->
-    <!--                  placement="other" -->
-    <!--                  types="Gene"/> -->
-    
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneStructureDisplayer"
                      jspName="model/geneStructureDisplayer.jsp"
                      replacesFields="transcripts,exons,CDSs,introns,UTRs,fivePrimeUTR,threePrimeUTR"
@@ -445,27 +437,6 @@
                            chromosomeLocation.start, chromosomeLocation.end, chromosomeLocation.strand"/>
 
     <!-- constraints skip biological_process, molecular_function and cellular_component GO terms -->
-    <!-- <enrichmentwidgetdisplayer id="go_enrichment_for_gene" -->
-    <!--                            title="Gene Ontology Enrichment" -->
-    <!--                            description="GO terms enriched for items in this list." -->
-    <!--                            label="GO Term" -->
-    <!--                            filterLabel="Ontology" -->
-    <!--                            filters="biological_process,cellular_component,molecular_function" -->
-    <!--                            startClass="Gene" -->
-    <!--                            typeClass="Gene" -->
-    <!--                            startClassDisplay="primaryIdentifier" -->
-    <!--                            enrich="goAnnotation.ontologyTerm.parents.name" -->
-    <!--                            enrichIdentifier="goAnnotation.ontologyTerm.parents.identifier" -->
-    <!--                            constraints="goAnnotation.ontologyTerm.parents.namespace=[Ontology],organism.name=[list], -->
-    <!--                                         primaryIdentifier != null, goAnnotation.qualifier = null, -->
-    <!--                                         goAnnotation.ontologyTerm.parents.identifier != go:0008150, -->
-    <!--                                         goAnnotation.ontologyTerm.parents.identifier != go:0003674, -->
-    <!--                                         goAnnotation.ontologyTerm.parents.identifier != go:0005575" -->
-    <!--                            views="secondaryIdentifier,symbol,primaryIdentifier,organism.name, -->
-    <!--                                   goAnnotation.ontologyTerm.identifier, goAnnotation.ontologyTerm.name, -->
-    <!--                                   goAnnotation.ontologyTerm.parents.identifier,goAnnotation.ontologyTerm.parents.name" -->
-    <!--                            externalLink="http://amigo.geneontology.org/cgi-bin/amigo/term_details?term=" /> -->
-
     <enrichmentwidgetdisplayer id="go_enrichment_for_gene"
                                title="Gene Ontology Enrichment"
                                description="GO terms enriched for items in this list."
