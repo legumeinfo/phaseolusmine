@@ -8,78 +8,70 @@
   <sources>
 
     <!-- chado genomics - initiates SequenceFeatures, so run first -->
-    <source name="chado-genomics" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="chado"/>
+    <source name="lis-genomics" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="lis-chado"/>
       <property name="organisms" value="3885_G19833"/>
-      <property name="dataSetTitle" value="LIS chado data"/>
-      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="dataSetTitle" value="LIS chado genomics data"/>
+      <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
       <property name="processors" value="org.intermine.bio.dataconversion.SequenceProcessor"/>
     </source>
 
     <!-- chado genetics - initiates other genetic items, so run second -->
-    <source name="chado-genetics" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="chado"/>
+    <source name="lis-genetics" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="lis-chado"/>
       <property name="organisms" value="3885_G19833"/>
-      <property name="dataSetTitle" value="LIS chado data"/>
-      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="dataSetTitle" value="LIS chado genetics data"/>
+      <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
       <property name="processors" value="org.intermine.bio.dataconversion.GeneticProcessor"/>
     </source>
 
-    <!-- chado GO annotation -->
-    <source name="chado-go" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="chado"/>
-      <property name="organisms" value="3885_G19833"/>
-      <property name="dataSetTitle" value="LIS chado data"/>
-      <property name="dataSourceName" value="LIS Tripal database"/>
-      <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
-      <property name="processors" value="org.intermine.bio.dataconversion.GOAnnotationProcessor"/>
-    </source>
-
     <!-- chado featureprop attributes -->
-    <source name="chado-featureprop" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="chado"/>
+    <source name="lis-featureprop" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="lis-chado"/>
       <property name="organisms" value="3885_G19833"/>
-      <property name="dataSetTitle" value="LIS chado data"/>
-      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="dataSetTitle" value="LIS chado feature properties"/>
+      <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
       <property name="processors" value="org.intermine.bio.dataconversion.FeaturePropProcessor"/>
     </source>
 
         <!-- chado gene families and resulting homology - based on featureprop -->
-    <source name="chado-genefamilies" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="chado"/>
+    <source name="lis-genefamilies" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="lis-chado"/>
       <property name="organisms" value="3885_G19833"/>
       <property name="homologue.organisms" value="3920_IT97K-499-35 3847_Williams82 3880_A17 3885_G19833 130453_V14167 130454_K30076 3827_CDCFrontier 3827_ICC4958 157791_VC1973A 57577_MilvusB 3914_Gyeongwon 3821_ICPL87119 3871_Tanjil 34305_MG20"/>
-      <property name="dataSetTitle" value="LIS chado data"/>
-      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="dataSetTitle" value="LIS chado gene families"/>
+      <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
       <property name="processors" value="org.intermine.bio.dataconversion.GeneFamilyProcessor"/>
     </source>
 
     <!-- chado gene families and homology - based on phylotree - to pick up Arabidopsis -->
-    <source name="chado-homology" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="chado"/>
+    <source name="lis-homology" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="lis-chado"/>
       <property name="organisms" value="3885_G19833"/>
       <property name="homologue.organisms" value="3702_Col0"/>
       <property name="phytozome.version" value="phytozome_10_2"/>
-      <property name="dataSetTitle" value="LIS Cicer arietinum (kabuli,desi) data"/>
-      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="dataSetTitle" value="LIS Arabidopsis homology"/>
+      <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
       <property name="processors" value="org.intermine.bio.dataconversion.HomologyProcessor"/>
     </source>
 
     <!-- chado + reactome file -->
-    <source name="chado-reactome-file" type="legfed-chado-db" dump="true">
-      <property name="source.db.name" value="chado"/>
+    <source name="lis-reactome-file" type="legfed-chado-db" dump="true">
+      <property name="source.db.name" value="lis-chado"/>
       <property name="reactome.filename" location="/home/shokin/intermine-data/plant-reactome/reactome.txt"/>
       <property name="organisms" value="3885_G19833"/>
-      <property name="dataSetTitle" value="LIS chado data"/>
-      <property name="dataSourceName" value="LIS Tripal database"/>
+      <property name="dataSetTitle" value="LIS protein data + plant reactome"/>
+      <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
       <property name="processors" value="org.intermine.bio.dataconversion.ReactomeProcessor"/>
     </source>
+
+    <!-- NON-CHADO -->
 
     <!-- QTL TO terms -->
     <source name="beans-qtl-ontology" type="legfed-qtl-ontology-file" dump="true">
@@ -91,6 +83,7 @@
       <property name="src.data.dir" location="/home/shokin/intermine-data/bean-expression"/>
     </source>
 
+    <!-- ONTOLOGIES -->
     
     <!-- gene ontology -->
     <source name="go" type="go">
@@ -122,12 +115,16 @@
     <post-process name="do-sources" dump="true"/>
 
     <!-- legfed -->
-    <post-process name="populate-gene-spanning-qtls" dump="true"/>
+    <post-process name="create-go-annotations" dump="true"/>
     <post-process name="create-protein-gene-references" dump="true"/>
     <post-process name="create-protein-domain-references" dump="true"/>
-    <post-process name="populate-interpro-data" dump="true"/>
     <post-process name="create-ontology-parent-annotations" dump="true"/>
-    
+    <post-process name="populate-publications" dump="true"/>
+    <post-process name="populate-linkagegroup-lengths" dump="true"/>
+    <post-process name="populate-qtl-linkagegroups" dump="true"/>
+    <post-process name="populate-gene-spanning-qtls" dump="true"/>
+    <post-process name="populate-interpro-data" dump="true"/>
+
     <!-- add features -->
     <post-process name="create-intron-features"/>
     <post-process name="create-intergenic-region-features"/>

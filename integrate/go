@@ -3,10 +3,17 @@ echo "********** beanmine/integrate **********"
 ant clean
 
 #ant -v -Dsource=go,so,to,po
-#pg_restore -d beanmine /home/analysis/shokin/dumps/beanmine.ontologies.dat
+#pg_restore -d beanmine /home/shokin/dumps/beanmine.ontologies.dat
 
-#ant -v -Dsource=chado-genomics,chado-genetics,chado-go,chado-featureprop,chado-genefamilies,chado-homology,chado-reactome-file
-#pg_restore -d beanmine /home/analysis/shokin/dumps/beanmine.chado.dat
+# whole chado kaboodle kit
+#ant -v -Dsource=lis-genomics
+#ant -v -Dsource=lis-genetics
+#ant -v -Dsource=lis-featureprop
+#ant -v -Dsource=lis-reactome-file
+#ant -v -Dsource=lis-genefamilies
+#ant -v -Dsource=lis-homology
+
+#pg_restore -d beanmine /home/shokin/dumps/beanmine.chado.dat
 
 # ALL of the chado loaders must be DONE before continuing, because identifiers are changed by SQL below
 psql beanmine -f ../dbmodel/build/model/add-update-triggers.sql
@@ -14,8 +21,6 @@ psql beanmine -f ../sql/update-organisms.sql
 psql beanmine -f ../sql/update-identifiers.sql
 psql beanmine -f ../dbmodel/build/model/remove-update-triggers.sql
 
-# now we load expression, which uses normal identifiers
+# non-chado loads
 ant -v -Dsource=beans-expression
-
-# and put some TO terms on our QTLs
 ant -v -Dsource=beans-qtl-ontology
