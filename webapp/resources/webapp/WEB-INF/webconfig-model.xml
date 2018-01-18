@@ -138,6 +138,11 @@
   </class>
 
   <class className="org.intermine.model.bio.OntologyAnnotation">
+    <headerconfig>
+      <titles>
+        <title mainTitles="subject.primaryIdentifier|ontologyTerm.identifier" subTitles="ontologyTerm.name" />
+      </titles>
+    </headerconfig>
     <fields>
       <fieldconfig fieldExpr="subject.primaryIdentifier" label="Subject"/>
       <fieldconfig fieldExpr="ontologyTerm.identifier" label="Identifier"/>
