@@ -75,7 +75,7 @@
 
     <!-- QTL TO terms -->
     <source name="beans-qtl-ontology" type="legfed-qtl-ontology-file" dump="true">
-	<property name="src.data.dir" location="/home/shokin/intermine-data/bean-qtl-ontology"/>
+	<property name="src.data.dir" location="/home/shokin/intermine-data/bean-qtl-trait-ontology"/>
     </source>
 
     <!-- PvGEA expression -->
@@ -87,7 +87,7 @@
     
     <!-- gene ontology -->
     <source name="go" type="go">
-        <property name="src.data.file" location="/home/shokin/intermine-data/go-annotation/go.obo"/>
+        <property name="src.data.file" location="/home/shokin/intermine-data/gene-ontology/go-basic.obo"/>
     </source>
 
     <!-- sequence ontology -->
@@ -128,7 +128,7 @@
     <!-- add features -->
     <post-process name="create-intron-features"/>
     <post-process name="create-intergenic-region-features"/>
-    <post-process name="create-gene-flanking-features"/> 
+    <post-process name="create-gene-flanking-features"/>
    
     <!-- create various references and collections -->
     <post-process name="populate-located-features"/>

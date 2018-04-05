@@ -2,10 +2,10 @@
 echo "********** beanmine/integrate **********"
 ant clean
 
+## ontologies load reasonably fast using go-basic.obo
 #ant -v -Dsource=go,so,to,po
-#pg_restore -d beanmine /home/shokin/dumps/beanmine.ontologies.dat
 
-# whole chado kaboodle kit
+## whole chado kaboodle kit
 #ant -v -Dsource=lis-genomics
 #ant -v -Dsource=lis-genetics
 #ant -v -Dsource=lis-featureprop
@@ -15,12 +15,13 @@ ant clean
 
 #pg_restore -d beanmine /home/shokin/dumps/beanmine.chado.dat
 
-# ALL of the chado loaders must be DONE before continuing, because identifiers are changed by SQL below
-psql beanmine -f ../dbmodel/build/model/add-update-triggers.sql
-psql beanmine -f ../sql/update-organisms.sql
-psql beanmine -f ../sql/update-identifiers.sql
-psql beanmine -f ../dbmodel/build/model/remove-update-triggers.sql
+## ALL of the chado loaders must be DONE before continuing, because identifiers are changed by SQL below
+#psql beanmine -f ../dbmodel/build/model/add-update-triggers.sql
+#psql beanmine -f ../sql/update-organism-genus-species.sql
+#psql beanmine -f ../sql/update-organism-comments.sql
+#psql beanmine -f ../sql/update-identifiers.sql
+#psql beanmine -f ../dbmodel/build/model/remove-update-triggers.sql
 
-# non-chado loads
-ant -v -Dsource=beans-expression
-ant -v -Dsource=beans-qtl-ontology
+## non-chado loads
+#ant -v -Dsource=beans-qtl-ontology
+#ant -v -Dsource=beans-expression
