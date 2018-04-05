@@ -38,7 +38,7 @@
   <class className="org.intermine.model.bio.Comment">
     <fields>
       <fieldconfig fieldExpr="type"/>
-      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="description" doNotTruncate="true" />
     </fields>
   </class>
 
@@ -75,7 +75,7 @@
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier" />
       <fieldconfig fieldExpr="secondaryIdentifier" label="Alternate identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true" />
-      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="description" doNotTruncate="true" />
     </fields>
     <bagdisplayers>
       <displayer src="heatMap.tile" showOnLeft="true" />
@@ -147,7 +147,7 @@
       <fieldconfig fieldExpr="subject.primaryIdentifier" label="Subject"/>
       <fieldconfig fieldExpr="ontologyTerm.identifier" label="Identifier"/>
       <fieldconfig fieldExpr="ontologyTerm.name" label="Name"/>
-      <fieldconfig fieldExpr="ontologyTerm.description" label="Description"/>
+      <fieldconfig fieldExpr="ontologyTerm.description" label="Description" doNotTruncate="true" />
     </fields>
   </class>
 
@@ -160,7 +160,7 @@
     <fields>
       <fieldconfig fieldExpr="identifier" />
       <fieldconfig fieldExpr="name" />
-      <fieldconfig fieldExpr="description" doNotTruncate="false" />
+      <fieldconfig fieldExpr="description" doNotTruncate="true" />
     </fields>
   </class>
 
@@ -279,7 +279,7 @@
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="Name"/>
-      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="description" doNotTruncate="true" />
     </fields>
   </class>
 
@@ -291,7 +291,7 @@
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="Name"/>
-      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="description" doNotTruncate="true" />
     </fields>
   </class>
 
@@ -360,7 +360,7 @@
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="Name"/>
-      <fieldconfig fieldExpr="description" label="Description"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true" />
     </fields>
   </class>
 
@@ -368,7 +368,7 @@
     <fields>
       <fieldconfig fieldExpr="expressionSample.source.primaryIdentifier" label="Source"/>
       <fieldconfig fieldExpr="expressionSample.primaryIdentifier" label="Sample"/>
-      <fieldconfig fieldExpr="expressionSample.description" label="Description"/>
+      <fieldconfig fieldExpr="expressionSample.description" label="Description" doNotTruncate="true" />
       <fieldconfig fieldExpr="value" label="Value"/>
       <fieldconfig fieldExpr="unit" label="Unit"/>
     </fields>
