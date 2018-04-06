@@ -17,13 +17,13 @@
             <tr>
                 <td><a target="_new" href="https://usda.gov/" title="USDA"><img style="border:0" src="model/images/USDA-92x67.png"/></a></td>
                 <td>
-                    The <a  target="_new" href="https://legumeinfo.org/">Legume Information System (LIS)</a> is a research project of the
+                    The <a  target="_new" href="https://legumeinfo.org/">Legume Information System (LIS)</a> is a research project of the <br/>
                     <a target="_new" href="https://www.ars.usda.gov/midwest-area/ames/cicgru/" title="USDA-ARS">USDA-ARS:Corn Insects and Crop Genetics Research</a>
                     in Ames, IA.
                 </td>
                 <td><a target="_new" href="https://nsf.gov/" title="NSF"><img style="border:0" src="model/images/nsf1.png"/></a></td>
                 <td>
-                    Mine development is also supported by the <a  target="_new" href="https://legumefederation.org/">Legume Federation</a>,
+                    Mine development is also supported by the <a  target="_new" href="https://legumefederation.org/">Legume Federation</a>, <br/>
                     an <a target="_new" href="https://nsf.gov/">NSF</a> project to federate legume resources around the world.
                 </td>
             </tr>
