@@ -12,9 +12,34 @@
     <!-- funding -->
     <div id="funding-footer">
         <fmt:message key="funding" />
-        <br/>
-        <!-- powered -->
-        Powered by <a target="new" href="http://intermine.org" title="InterMine"><img src="images/icons/intermine-footer-logo.png" alt="InterMine logo" /></a>
+
+        <table>
+            <tr>
+                <td><a target="_new" href="https://usda.gov/" title="USDA"><img style="border:0" src="model/images/USDA-92x67.png"/></a></td>
+                <td>
+                    The <a  target="_new" href="https://legumeinfo.org/">Legume Information System (LIS)</a> is a research project of the
+                    <a target="_new" href="https://www.ars.usda.gov/midwest-area/ames/cicgru/" title="USDA-ARS">USDA-ARS:Corn Insects and Crop Genetics Research</a>
+                    in Ames, IA.
+                </td>
+                <td><a target="_new" href="https://nsf.gov/" title="NSF"><img style="border:0" src="model/images/nsf1.png"/></a></td>
+                <td>
+                    Mine development is also supported by the <a  target="_new" href="https://legumefederation.org/">Legume Federation</a>,
+                    an <a target="_new" href="https://nsf.gov/">NSF</a> project to federate legume resources around the world.
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <!-- LegFed member -->
+                    <a target="_new" href="https://legumefederation.org/" title="Legume Federation"><img src="model/images/legfed-member.png"/></a>
+                </td>
+                <td>
+                    <!-- powered -->
+                    Powered by <a target="new" href="http://intermine.org/" title="InterMine"><img src="images/icons/intermine-footer-logo.png" alt="InterMine logo" /></a>
+                </td>
+            </tr>
+        </table>
     </div>
 
 </div>
@@ -41,7 +66,7 @@
             </c:choose>
         </c:forEach>
 
-        <!-- LIS and relevant mines -->
+        <!-- LIS/LegFed mines -->
         <li><a href="http://mines.legumeinfo.org/beanmine/begin.do" target="_blank">LIS BeanMine (common bean)</a></li>
         <li><a href="http://mines.legumeinfo.org/chickpeamine/begin.do" target="_blank">LIS ChickpeaMine (desi and kabuli varieties)</a></li>
         <li><a href="http://mines.legumeinfo.org/cowpeamine/begin.do" target="_blank">LIS CowpeaMine</a></li>
