@@ -12,7 +12,6 @@
     <!-- funding -->
     <div id="funding-footer">
         <fmt:message key="funding" />
-
         <table>
             <tr>
                 <td><a target="_new" href="https://usda.gov/" title="USDA"><img style="border:0" src="model/images/USDA-92x67.png"/></a></td>
