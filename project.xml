@@ -85,6 +85,18 @@
 
     <!-- ONTOLOGIES -->
     
+    <!-- trait ontology -->
+    <source name="to" type="legfed-trait-ontology">
+      <property name="src.data.file" location="/home/shokin/intermine-data/plant-trait-ontology/to.obo"/>
+      <property name="ontology.prefix" value="TO"/>
+    </source>
+
+    <!-- plant ontology -->
+    <source name="po" type="legfed-plant-ontology">
+      <property name="src.data.file" location="/home/shokin/intermine-data/plant-ontology/po.obo"/>
+      <property name="ontology.prefix" value="PO"/>
+    </source>
+
     <!-- gene ontology -->
     <source name="go" type="go">
         <property name="src.data.file" location="/home/shokin/intermine-data/gene-ontology/go-basic.obo"/>
@@ -93,18 +105,6 @@
     <!-- sequence ontology -->
     <source name="so" type="so">
       <property name="src.data.file" location="../../bio/sources/so/so.obo"/>
-    </source>
-
-    <!-- trait ontology -->
-    <source name="to" type="trait-ontology">
-      <property name="src.data.file" location="/home/shokin/intermine-data/plant-trait-ontology/to.obo"/>
-      <property name="ontology.prefix" value="TO"/>
-    </source>
-
-    <!-- plant ontology -->
-    <source name="po" type="plant-ontology">
-      <property name="src.data.file" location="/home/shokin/intermine-data/plant-ontology/po.obo"/>
-      <property name="ontology.prefix" value="PO"/>
     </source>
 
   </sources>
