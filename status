@@ -1,9 +1,7 @@
-# run git status in the appropriate dirs
+#!/bin/sh
+echo "----- MINE -----"
 git status
-cd sql
-git status
-cd ../webapp/src
-git status
-cd ../resources/webapp/model
-git status
-cd ../../../..
+echo "----- WEBAPP MODEL -----"
+cd webapp/src/main/webapp/model; git status; cd -
+echo "----- WEBAPP JAVA -----"
+cd webapp/src/main/java; git status; cd -

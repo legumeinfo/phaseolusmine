@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "----- MINE -----"
+git pull
+echo "----- WEBAPP MODEL -----"
+cd webapp/src/main/webapp/model; git pull; cd -
+echo "----- WEBAPP JAVA -----"
+cd webapp/src/main/java; git pull; cd -
