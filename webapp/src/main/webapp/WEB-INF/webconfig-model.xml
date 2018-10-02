@@ -220,10 +220,9 @@
     <fields>
       <fieldconfig fieldExpr="residues" fieldExporter="org.intermine.bio.web.export.ResidueFieldExporter"
                    sectionOnRight="true" sectionTitle="Residues" openByDefault="true"
-		   showInSummary="false" showInResults="true" showInInlineCollection="true" doNotTruncate="true" />
-      <fieldconfig fieldExpr="length"/>
+        	   showInSummary="false" showInResults="true" showInInlineCollection="true" doNotTruncate="true" />
     </fields>
-    <tabledisplayer src="/model/sequenceShortDisplayer.jsp"/>
+    <tabledisplayer src="/model/sequenceShortDisplayerWithField.jsp"/>
   </class>
 
   <class className="org.intermine.model.bio.Synonym">
