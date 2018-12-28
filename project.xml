@@ -8,7 +8,8 @@
     <!-- chado genomics - initiates SequenceFeatures, so run first -->
     <source name="lis-genomics" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="lis-chado"/>
-      <property name="organisms" value="3885_G19833"/>
+      <property name="organisms" value="3885"/>
+      <property name="strains" value="G19833"/>
       <property name="dataSetTitle" value="LIS chado genomics data"/>
       <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
@@ -18,17 +19,19 @@
     <!-- chado proteins -->
     <source name="lis-proteins" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="lis-chado"/>
-      <property name="organisms" value="3885_G19833"/>
+      <property name="organisms" value="3885"/>
+      <property name="strains" value="G19833"/>
       <property name="dataSetTitle" value="LIS chado protein data"/>
       <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
       <property name="processors" value="org.intermine.bio.dataconversion.ProteinProcessor"/>
     </source>
 
-    <!-- chado genetics - initiates other genetic items, so run second -->
+    <!-- chado genetics -->
     <source name="lis-genetics" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="lis-chado"/>
-      <property name="organisms" value="3885_G19833"/>
+      <property name="organisms" value="3885"/>
+      <property name="strains" value="G19833"/>
       <property name="dataSetTitle" value="LIS chado genetics data"/>
       <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
@@ -38,7 +41,8 @@
     <!-- chado featureprop attributes -->
     <source name="lis-featureprop" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="lis-chado"/>
-      <property name="organisms" value="3885_G19833"/>
+      <property name="organisms" value="3885"/>
+      <property name="strains" value="G19833"/>
       <property name="dataSetTitle" value="LIS chado feature properties"/>
       <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
@@ -48,8 +52,10 @@
     <!-- chado gene families and resulting homology - based on featureprop -->
     <source name="lis-genefamilies" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="lis-chado"/>
-      <property name="organisms" value="3885_G19833"/>
-      <property name="homologue.organisms" value="3920_IT97K-499-35 3847_Williams82 3880_A17 3885_G19833 130453_V14167 130454_K30076 3827_CDCFrontier 3827_ICC4958 157791_VC1973A 57577_MilvusB 3914_Gyeongwon 3821_ICPL87119 3871_Tanjil 34305_MG20"/>
+      <property name="organisms" value="3885"/>
+      <property name="strains" value="G19833"/>
+      <property name="homologue.organisms" value="3920 3847 3880 3885 130453 130454 3827 3827 157791 57577 3914 3821 3871 34305"/>
+      <property name="homologue.strains" value="IT97K-499-35 Williams82 A17 G19833 V14167 K30076 CDCFrontier ICC4958 VC1973A MilvusB Gyeongwon ICPL87119 Tanjil MG20"/>
       <property name="dataSetTitle" value="LIS chado gene families"/>
       <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
@@ -60,7 +66,8 @@
     <source name="lis-reactome-file" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="lis-chado"/>
       <property name="reactome.filename" value="/home/shokin/legfed-intermine-data/plant-reactome/gene_ids_by_pathway_and_species.tab"/>
-      <property name="organisms" value="3885_G19833"/>
+      <property name="organisms" value="3885"/>
+      <property name="strains" value="G19833"/>
       <property name="dataSetTitle" value="LIS protein data + plant reactome"/>
       <property name="dataSourceName" value="LIS chado database"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
@@ -79,7 +86,7 @@
       <property name="src.data.dir" location="/home/shokin/legfed-intermine-data/bean-expression"/>
     </source>
 
-    <!-- ONTOLOGIES -->
+    <!-- <!-\- ONTOLOGIES -\-> -->
     
     <!-- gene ontology -->
     <source name="go" type="go">
@@ -88,7 +95,7 @@
 
     <!-- sequence ontology -->
     <source name="so" type="so">
-	<property name="src.data.file" location="/home/shokin/SO-Ontologies/so-simple.obo"/>
+        <property name="src.data.file" location="/home/shokin/SO-Ontologies/so-simple.obo"/>
     </source>
 
     <!-- trait ontology -->
@@ -102,7 +109,6 @@
       <property name="src.data.file" location="/home/shokin/legfed-intermine-data/plant-ontology/po.obo"/>
       <property name="ontology.prefix" value="PO"/>
     </source>
-
 
   </sources>
 
@@ -147,4 +153,3 @@
   </post-processing>
 
 </project>
-

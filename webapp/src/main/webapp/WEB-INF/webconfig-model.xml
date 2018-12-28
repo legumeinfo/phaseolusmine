@@ -21,7 +21,6 @@
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
-      <fieldconfig fieldExpr="organism.variety" label="Variety"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
     </fields>
   </class>
@@ -30,7 +29,6 @@
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
-      <fieldconfig fieldExpr="organism.variety" label="Variety"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
     </fields>
   </class>
@@ -70,10 +68,10 @@
   <!-- have to have a Gene entry for the list analysis heat map -->
   <class className="org.intermine.model.bio.Gene">
     <fields>
-      <fieldconfig fieldExpr="organism.name" label="Organism" />
-      <fieldconfig fieldExpr="organism.variety" label="Variety" />
+	    <fieldconfig fieldExpr="organism.name" label="Organism" />
+	    <fieldconfig fieldExpr="strain.primaryIdentifier" label="Strain" />
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier" />
-      <fieldconfig fieldExpr="secondaryIdentifier" label="Alternate identifier"/>
+      <fieldconfig fieldExpr="secondaryIdentifier" label="Alt identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true" />
       <fieldconfig fieldExpr="description" doNotTruncate="true" />
     </fields>
@@ -96,16 +94,14 @@
   <class className="org.intermine.model.bio.Homologue">
     <fields>
       <fieldconfig fieldExpr="homologue.organism.name" label="Organism"/>
-      <fieldconfig fieldExpr="homologue.organism.variety" label="Variety"/>
       <fieldconfig fieldExpr="homologue.primaryIdentifier" label="DB identifier"/>
-      <fieldconfig fieldExpr="homologue.secondaryIdentifier" label="Alternate identifier"/>
+      <fieldconfig fieldExpr="homologue.secondaryIdentifier" label="Alt identifier"/>
     </fields>
   </class>
 
   <class className="org.intermine.model.bio.SequenceFeature">
     <fields>
       <fieldconfig fieldExpr="organism.name" label="Organism"/>
-      <fieldconfig fieldExpr="organism.variety" label="Variety"/>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true" />
       <fieldconfig fieldExpr="chromosome.primaryIdentifier" showInInlineCollection="true" showInSummary="false" label="Chromosome" />
@@ -118,7 +114,6 @@
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
-      <fieldconfig fieldExpr="gene.primaryIdentifier" label="Gene"/>
     </fields>
   </class>
 
@@ -185,12 +180,11 @@
   <class className="org.intermine.model.bio.Organism">
     <headerconfig>
       <titles>
-        <title mainTitles="name|variety"/>
+        <title mainTitles="name"/>
       </titles>
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="name"/>
-      <fieldconfig fieldExpr="variety"/>
       <fieldconfig fieldExpr="taxonId" />
     </fields>
   </class>
