@@ -68,8 +68,8 @@
   <!-- have to have a Gene entry for the list analysis heat map -->
   <class className="org.intermine.model.bio.Gene">
     <fields>
-	    <fieldconfig fieldExpr="organism.name" label="Organism" />
-	    <fieldconfig fieldExpr="strain.primaryIdentifier" label="Strain" />
+      <fieldconfig fieldExpr="organism.name" label="Organism" />
+      <fieldconfig fieldExpr="strain.primaryIdentifier" label="Strain" />
       <fieldconfig fieldExpr="primaryIdentifier" label="DB identifier" />
       <fieldconfig fieldExpr="secondaryIdentifier" label="Alt identifier"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true" />
@@ -186,9 +186,22 @@
     <fields>
       <fieldconfig fieldExpr="name"/>
       <fieldconfig fieldExpr="taxonId" />
+      <fieldconfig fieldExpr="description" doNotTruncate="true" />
     </fields>
   </class>
 
+  <class className="org.intermine.model.bio.Strain">
+    <headerconfig>
+      <titles>
+        <title mainTitles="name"/>
+      </titles>
+    </headerconfig>
+    <fields>
+      <fieldconfig fieldExpr="name" />
+      <fieldconfig fieldExpr="organism.name" />
+      <fieldconfig fieldExpr="description" doNotTruncate="true" />
+    </fields>
+  </class>
 
   <class className="org.intermine.model.bio.Publication">
     <headerconfig>
