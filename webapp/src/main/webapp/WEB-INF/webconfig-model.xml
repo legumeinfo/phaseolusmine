@@ -322,7 +322,7 @@
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="Name"/>
       <fieldconfig fieldExpr="phenotype.primaryIdentifier" label="Phenotype"/>
-      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="description" doNotTruncate="true" />
     </fields>
   </class>
 
