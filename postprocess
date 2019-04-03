@@ -36,9 +36,9 @@ echo "##########################################################################
 
 # ## these must be run after any data is changed
 # ./gradlew postprocess -Pprocess=create-attribute-indexes --stacktrace
-./gradlew postprocess -Pprocess=summarise-objectstore
+# ./gradlew postprocess -Pprocess=summarise-objectstore
 
 ## these require Solr server
-./gradlew postprocess -Pprocess=create-autocomplete-index
-./gradlew postprocess -Pprocess=create-search-index
+# ./gradlew postprocess -Pprocess=create-autocomplete-index
+# ./gradlew postprocess -Pprocess=create-search-index
 
