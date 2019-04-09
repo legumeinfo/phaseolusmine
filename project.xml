@@ -76,6 +76,11 @@
 
     <!-- NON-CHADO -->
 
+    <!-- synteny from GFF files -->
+    <source name="beans-synteny" type="legfed-synteny-gff" dump="true">
+      <property name="src.data.dir" location="/home/shokin/legfed-intermine-data/bean-synteny"/>
+    </source>
+
     <!-- QTL TO terms -->
     <source name="beans-qtl-ontology" type="legfed-qtl-ontology-file" dump="true">
         <property name="src.data.dir" location="/home/shokin/legfed-intermine-data/bean-qtl-trait-ontology"/>

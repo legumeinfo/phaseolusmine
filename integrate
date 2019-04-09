@@ -37,5 +37,6 @@ echo "##########################################################################
 # psql beanmine-dev -f dbmodel/build/resources/main/remove-update-triggers.sql
 
 # ## file sources
-# ./gradlew integrate -Psource=beans-qtl-ontology --stacktrace
 # ./gradlew integrate -Psource=beans-expression --stacktrace
+# ./gradlew integrate -Psource=beans-synteny --stacktrace
+# ./gradlew integrate -Psource=beans-qtl-ontology --stacktrace
