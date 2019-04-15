@@ -15,12 +15,12 @@
 <im:headResources section="all"/>
 
 <!-- jquery.dataTables plugin -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css" />
+<script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
 
 <!-- buttons.dataTables plugin -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css" />
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/buttons.dataTables.min.css" />
+<script type="text/javascript" charset="utf8" src="js/dataTables.buttons.min.js"></script>
 
 <!-- canvasXpress -->
 <link rel="stylesheet" type="text/css" href="css/canvasXpress.css" />
