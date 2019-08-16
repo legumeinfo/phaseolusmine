@@ -65,7 +65,7 @@
     <!-- chado + reactome file -->
     <source name="lis-reactome-file" type="legfed-chado-db" dump="true">
       <property name="source.db.name" value="lis-chado"/>
-      <property name="reactome.filename" value="/home/shokin/legfed-intermine-data/plant-reactome/gene_ids_by_pathway_and_species.tab"/>
+      <property name="reactome.filename" value="/data/legfed-intermine-data/plant-reactome/gene_ids_by_pathway_and_species.tab"/>
       <property name="organisms" value="3885"/>
       <property name="strains" value="G19833"/>
       <property name="dataSetTitle" value="LIS protein data + plant reactome"/>
@@ -78,40 +78,40 @@
 
     <!-- synteny from GFF files -->
     <source name="beans-synteny" type="legfed-synteny-gff" dump="true">
-      <property name="src.data.dir" location="/home/shokin/legfed-intermine-data/bean-synteny"/>
+      <property name="src.data.dir" location="/data/legfed-intermine-data/bean-synteny"/>
     </source>
 
     <!-- QTL TO terms -->
     <source name="beans-qtl-ontology" type="legfed-qtl-ontology-file" dump="true">
-        <property name="src.data.dir" location="/home/shokin/legfed-intermine-data/bean-qtl-trait-ontology"/>
+        <property name="src.data.dir" location="/data/legfed-intermine-data/bean-qtl-trait-ontology"/>
     </source>
 
     <!-- PvGEA expression -->
     <source name="beans-expression" type="legfed-expression" dump="true">
-      <property name="src.data.dir" location="/home/shokin/legfed-intermine-data/bean-expression"/>
+      <property name="src.data.dir" location="/data/legfed-intermine-data/bean-expression"/>
     </source>
 
-    <!-- <!-\- ONTOLOGIES -\-> -->
+    <!-- ONTOLOGIES -->
     
     <!-- gene ontology -->
     <source name="go" type="go">
-        <property name="src.data.file" location="/home/shokin/legfed-intermine-data/gene-ontology/go-basic.obo"/>
+        <property name="src.data.file" location="/data/gene-ontology/go-basic.obo"/>
     </source>
 
     <!-- sequence ontology -->
     <source name="so" type="so">
-        <property name="src.data.file" location="/home/shokin/SO-Ontologies/so-simple.obo"/>
+        <property name="src.data.file" location="/data/SO-Ontologies/so-simple.obo"/>
     </source>
 
     <!-- trait ontology -->
     <source name="to" type="legfed-trait-ontology">
-      <property name="src.data.file" location="/home/shokin/plant-trait-ontology/to.obo"/>
+      <property name="src.data.file" location="/data/plant-trait-ontology/to.obo"/>
       <property name="ontology.prefix" value="TO"/>
     </source>
 
     <!-- plant ontology -->
     <source name="po" type="legfed-plant-ontology">
-      <property name="src.data.file" location="/home/shokin/legfed-intermine-data/plant-ontology/po.obo"/>
+      <property name="src.data.file" location="/data/legfed-intermine-data/plant-ontology/po.obo"/>
       <property name="ontology.prefix" value="PO"/>
     </source>
 
