@@ -2,6 +2,7 @@
   <property name="target.model" value="genomic"/>
   <property name="common.os.prefix" value="common"/>
   <property name="intermine.properties.file" value="beanmine.properties"/>
+  <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
   <sources>
 
     <!-- Gene_families/legume.genefam.fam1.M65K/ -->
@@ -24,10 +25,28 @@
       <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/about_this_collection"/>
     </source>
 
-    <!-- mixed.map1.7PMp -->
-    <!-- ├── phavu.mixed.map1.7PMp.lg.txt -->
-    <!-- ├── phavu.mixed.map1.7PMp.map.gff3 -->
-    <!-- └── phavu.mixed.map1.7PMp.markers.txt -->
+    <!-- mixed.map.7PMp/ -->
+    <!-- ├── phavu.mixed.map.7PMp.BAT93_x_JALOEEP558_b.expt.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.BAT93_x_JALOEEP558_b.mrk.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.BAT93_x_JALOEEP558_c.expt.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.BAT93_x_JALOEEP558_c.mrk.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.Cerinza_x_G24404_a.expt.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.Cerinza_x_G24404_a.mrk.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.DOR364_x_BAT477_a.expt.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.DOR364_x_BAT477_a.mrk.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.PvConsensus_GaleanoFernandez2011_a.expt.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.PvConsensus_GaleanoFernandez2011_a.mrk.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.PvCookUCDavis2009.expt.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.PvCookUCDavis2009.mrk.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.PvMcCleanNDSU2007.expt.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.PvMcCleanNDSU2007.mrk.tsv -->
+    <!-- ├── phavu.mixed.map.7PMp.Stampede_x_RedHawk_F2_a.expt.tsv -->
+    <!-- └── phavu.mixed.map.7PMp.Stampede_x_RedHawk_F2_a.mrk.tsv -->
+    <source name="phavu.mixed-geneticmap" type="lis-geneticmap" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/mixed.map.7PMp/"/>
+      <property name="dataSetDescription" value="Phaseolus vulgaris genetic maps"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/mixed.map.7PMp"/>
+    </source>
 
     <!-- ############################## -->
     <!-- Phaseolus vulgaris G19833.gnm1 -->
@@ -48,7 +67,7 @@
       <property name="lis-fasta.includes" value="phavu.G19833.gnm1.zBnF.genome_main.fna"/>
       <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/G19833.gnm1.zBnF"/>
     </source>
-
+    
     <!-- G19833.gnm1.ann1.pScz/ -->
     <!-- ├── phavu.G19833.gnm1.ann1.pScz.cds_primaryTranscript.fna -->
     <!-- ├── phavu.G19833.gnm1.ann1.pScz.gene_models_main.gff3 -->
@@ -116,14 +135,27 @@
       <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/G19833.gnm1.ann1.pScz"/>
     </source>
 
-    <!-- G19833.gnm1.ann1.samplesetN.expr1.4ZDQ -->
-    <!-- ├── phavu.G19833.gnm1.ann1.samplesetN.expr1.4ZDQ.exprSamples.tsv -->
-    <!-- ├── phavu.G19833.gnm1.ann1.samplesetN.expr1.4ZDQ.exprSource.tsv -->
-    <!-- └── phavu.G19833.gnm1.ann1.samplesetN.expr1.4ZDQ.genesSamplesTpm.tsv -->
+    <!-- G19833.gnm1.mrk.7KYW/ -->
+    <!-- └── phavu.G19833.gnm1.mrk.7KYW.PvCookUCDavis2009.gff3 -->
+    <source name="phavu.G19833.gnm1.mrk-gff" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="phavu.G19833.gnm1.mrk.7KYW.PvCookUCDavis2009.gff3"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/G19833.gnm1.mrk.7KYW/"/>
+      <property name="gff3.dataSetDescription" value="Illumina GoldenGate SNP positions on the phavu.G19833.gnm1 genome assembly"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/G19833.gnm1.mrk.7KYW"/>
+    </source>
+    
+    <!-- G19833.gnm1.ann1.expr.4ZDQ -->
+    <!-- ├── phavu.G19833.gnm1.ann1.expr.4ZDQ.samples.tsv -->
+    <!-- ├── phavu.G19833.gnm1.ann1.expr.4ZDQ.source.tsv -->
+    <!-- └── phavu.G19833.gnm1.ann1.expr.4ZDQ.values.tsv -->
     <source name="phavu.G19833.gnm1.ann1-expression" type="lis-expression" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/G19833.gnm1.ann1.samplesetN.expr1.4ZDQ/"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/G19833.gnm1.ann1.expr.4ZDQ/"/>
       <property name="dataSetDescription" value="Phaseolus vulgaris cv. Negro jamapa gene expression atlas from O'Rourke, et al. (2014)."/>
-      <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/G19833.gnm1.ann1.samplesetN.expr1.4ZDQ"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/G19833.gnm1.ann1.expr.4ZDQ"/>
     </source>
 
     <!-- G19833.gnm1.ann1.syn1.xQ7F -->
@@ -170,6 +202,7 @@
     <!-- ├── phavu.G19833.gnm2.ann1.PB8d.info_annot.txt -->
     <!-- ├── phavu.G19833.gnm2.ann1.PB8d.protein_primaryTranscript.faa -->
     <!-- ├── phavu.G19833.gnm2.ann1.PB8d.transcript_primaryTranscript.fna -->
+    <!-- ├── phavu.G19833.gnm2.ann1.PB8d.legfed_v1_0.M65K.gfa.tsv -->
     <source name="phavu.G19833.gnm2.ann1-cds-fasta" type="lis-fasta" dump="true">
       <property name="lis-fasta.dataSetDescription" value="CDS models for the phavu.G19833.gnm2 genome"/>
       <property name="lis-fasta.dataSetVersion" value="gnm2.ann1"/>
@@ -230,6 +263,11 @@
       <property name="lis-fasta.includes" value="phavu.G19833.gnm2.ann1.PB8d.transcript_primaryTranscript.fna"/>
       <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/G19833.gnm2.ann1.PB8d"/>
     </source>
+    <source name="phavu.G19833.gnm2.ann1-gfa" type="lis-gfa" dump="true"> 
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/G19833.gnm2.ann1.PB8d/"/>
+      <property name="dataSetDescription" value="Gene family assignments for Phaseolus vulgaris G19833 genes and proteins."/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/G19833.gnm2.ann1.PB8d"/>
+    </source>
 
     <!-- G19833.gnm2.ann1.syn1.DVDW -->
     <!-- ├── phavu.G19833.v2.x.aradu.V14167.v1.gff -->
@@ -274,6 +312,7 @@
     <!-- ├── phavu.UI111.gnm1.ann1.8L4N.info_annot.txt -->
     <!-- ├── phavu.UI111.gnm1.ann1.8L4N.protein_primaryTranscript.faa -->
     <!-- ├── phavu.UI111.gnm1.ann1.8L4N.transcript_primaryTranscript.fna -->
+    <!-- ├── phavu.UI111.gnm1.ann1.8L4N.legfed_v1_0.M65K.gfa.tsv -->
     <source name="phavu.UI111.gnm1.ann1-cds-fasta" type="lis-fasta" dump="true">
       <property name="lis-fasta.dataSetDescription" value="CDS models for the phavu.UI111.gnm1 genome"/>
       <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
@@ -334,6 +373,113 @@
       <property name="lis-fasta.includes" value="phavu.UI111.gnm1.ann1.8L4N.transcript_primaryTranscript.fna"/>
       <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/UI111.gnm1.ann1.8L4N"/>
     </source>
+    <source name="phavu.UI111.gnm1.ann1-gfa" type="lis-gfa" dump="true"> 
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/UI111.gnm1.ann1.8L4N/"/>
+      <property name="dataSetDescription" value="Gene family assignments for Phaseolus vulgaris UI111 genes and proteins."/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/UI111.gnm1.ann1.8L4N"/>
+    </source>
+
+    <!-- ################# -->
+    <!-- Phaseolus lunatus -->
+    <!-- ################# -->
+
+    <!-- about_this_collection -->
+    <!-- ├── description_Phaseolus_lunatus.yml -->
+    <!-- └── strains_Phaseolus_lunatus.yml -->
+    <source name="phalu-about" type="lis-about" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/about_this_collection/"/>
+      <property name="dataSetDescription" value="Phaseolus lunatus organism and strain information."/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/about_this_collection"/>
+    </source>
+
+    <!-- G27455.gnm1.7NXX -->
+    <!-- ├── phalu.G27455.gnm1.7NXX.genome_main.fna -->
+    <source name="phalu.G27455.gnm1-chromosome-fasta" type="lis-fasta" dump="true">
+      <property name="lis-fasta.dataSetDescription" value="LIS datastore genomic FASTA file for Phaseolus lunatus G27455"/>
+      <property name="lis-fasta.dataSetVersion" value="gnm1"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/G27455.gnm1.7NXX/"/>
+      <property name="lis-fasta.taxonId" value="3884"/>
+      <property name="lis-fasta.strainIdentifier" value="G27455"/>
+      <property name="lis-fasta.sequenceType" value="dna"/>
+      <property name="lis-fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="lis-fasta.includes" value="phalu.G27455.gnm1.7NXX.genome_main.fna"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/G27455.gnm1.7NXX"/>
+    </source>
+    
+    <!-- G27455.gnm1.ann1.JD7C -->
+    <!-- ├── phalu.G27455.gnm1.ann1.JD7C.cds_primaryTranscript.fna -->
+    <!-- ├── phalu.G27455.gnm1.ann1.JD7C.gene_models_main.gff3 -->
+    <!-- ├── phalu.G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.gfa.tsv -->
+    <!-- ├── phalu.G27455.gnm1.ann1.JD7C.protein_primaryTranscript.faa -->
+    <!-- ├── phalu.G27455.gnm1.ann1.JD7C.transcript_primaryTranscript.fna -->
+    <!-- ├── phalu.G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.gfa.tsv -->
+    <source name="phalu.G27455.gnm1.ann1-cds-fasta" type="lis-fasta" dump="true">
+      <property name="lis-fasta.dataSetDescription" value="CDS models for the phalu.G27455.gnm1 genome"/>
+      <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="lis-fasta.taxonId" value="3884"/>
+      <property name="lis-fasta.strainIdentifier" value="G27455"/>
+      <property name="lis-fasta.sequenceType" value="dna"/>
+      <property name="lis-fasta.className" value="org.intermine.model.bio.CDS"/>
+      <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="lis-fasta.geneAttribute" value="locus"/>
+      <property name="lis-fasta.includes" value="phalu.G27455.gnm1.ann1.JD7C.cds_primaryTranscript.fna"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C"/>
+    </source>
+    <source name="phalu.G27455.gnm1.ann1-gff" type="lis-gff" dump="true">
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/public/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.dataSetTitle" value="phalu.G27455.gnm1.ann1.JD7C.gene_models_main.gff3"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="gff3.dataSetDescription" value="Gene model annotation for the phalu.G27455.gnm1 genome"/>
+      <property name="gff3.dataSetVersion" value="gnm1.ann1"/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3884"/>
+      <property name="gff3.strainIdentifier" value="G27455"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C"/>
+    </source>
+    <!-- <source name="phalu.G27455.gnm1.ann1-info-annot" type="lis-info-annot" dump="true">  -->
+    <!--   <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C/"/> -->
+    <!--   <property name="dataSetDescription" value="Phaseolus lunatus gene, protein and mRNA ontology annotations."/> -->
+    <!--   <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C"/> -->
+    <!-- </source> -->
+    <source name="phalu.G27455.gnm1.ann1-protein-fasta" type="lis-fasta" dump="true">
+      <property name="lis-fasta.dataSetDescription" value="Protein models for the phalu.G27455.gnm1 genome"/>
+      <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="lis-fasta.taxonId" value="3884"/>
+      <property name="lis-fasta.strainIdentifier" value="G27455"/>
+      <property name="lis-fasta.sequenceType" value="protein"/>
+      <property name="lis-fasta.className" value="org.intermine.model.bio.Protein"/>
+      <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="lis-fasta.geneAttribute" value="locus"/>
+      <property name="lis-fasta.includes" value="phalu.G27455.gnm1.ann1.JD7C.protein_primaryTranscript.faa"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C"/>
+    </source>
+    <source name="phalu.G27455.gnm1.ann1-mrna-fasta" type="lis-fasta" dump="true">
+      <property name="lis-fasta.dataSetDescription" value="mRNA models for the phalu.G27455.gnm1 genome"/>
+      <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="lis-fasta.taxonId" value="3884"/>
+      <property name="lis-fasta.strainIdentifier" value="G27455"/>
+      <property name="lis-fasta.sequenceType" value="dna"/>
+      <property name="lis-fasta.className" value="org.intermine.model.bio.MRNA"/>
+      <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="lis-fasta.geneAttribute" value="locus"/>
+      <property name="lis-fasta.includes" value="phalu.G27455.gnm1.ann1.JD7C.transcript_primaryTranscript.fna"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C"/>
+    </source>
+    <source name="phalu.G27455.gnm1.ann1-gfa" type="lis-gfa" dump="true"> 
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="dataSetDescription" value="Gene family assignments for Phaseolus lunatus G27455 genes and proteins."/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C"/>
+    </source>
 
     <!-- ############### -->
     <!-- ONTOLOGIES ETC. -->
@@ -364,17 +510,35 @@
     </source>
 
     <!-- plant ontology -->
-    <source name="plant-ontology" type="plant-ontology">
+    <source name="plant-ontology" type="obo">
       <property name="src.data.file" location="/data/plant-ontology/po.obo"/>
       <property name="ontology.prefix" value="PO"/>
+      <property name="obo.ontology.name" value="Plant Ontology"/>
+      <property name="obo.ontology.url" value="http://planteome.org/"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="The Plant Ontology (PO) is a community resource consisting of standardized terms, definitions, and logical relations describing plant structures and development stages, augmented by a large database of annotations from genomic and phenomic studies."/>
     </source>
 
     <!-- plant trait ontology -->
-    <source name="plant-trait-ontology" type="plant-trait-ontology">
+    <source name="plant-trait-ontology" type="obo">
       <property name="src.data.file" location="/data/plant-trait-ontology/to.obo"/>
       <property name="ontology.prefix" value="TO"/>
+      <property name="obo.ontology.name" value="Plant Trait Ontology"/>
+      <property name="obo.ontology.url" value="http://www.obofoundry.org/ontology/to.html"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="A controlled vocabulary of describe phenotypic traits in plants."/>
     </source>
 
+    <!-- common bean crop ontology -->
+    <source name="crop-ontology" type="obo">
+      <property name="src.data.file" location="/data/crop-ontology/CO_335.obo"/>
+      <property name="ontology.prefix" value="CO_335"/>
+      <property name="obo.ontology.name" value="Common Bean Crop Ontology"/>
+      <property name="obo.ontology.url" value="https://www.cropontology.org/ontology/CO_335/Common%20Bean"/>
+      <property name="obo.ontology.licence" value="https://creativecommons.org/licenses/by/4.0/"/>
+      <property name="obo.ontology.description" value="A controlled vocabulary to describe crop traits in common bean."/>
+    </source>
+    
   </sources>
 
   <!-- ############### -->
@@ -394,9 +558,14 @@
     <post-process name="create-gene-flanking-features"/>
 
     <!-- LIS -->
-    <post-process name="lis-create-protein-transcript-gene-references"/>
-    <post-process name="lis-create-cds-references"/>
+    <post-process name="lis-populate-cds-gene-references"/>
+    <post-process name="lis-populate-cds-protein-references"/>
+    <post-process name="lis-populate-cds-transcript-references"/>
+    <post-process name="lis-populate-gene-protein-collections"/>
+    <post-process name="lis-populate-qtl-gene-collections"/>
     <post-process name="lis-populate-publications"/>
+    <post-process name="lis-populate-transcript-gene-references"/>
+    <post-process name="lis-populate-transcript-protein-references"/>
 
     <!-- VIEWS AND INDEXES -->
     <post-process name="create-location-overlap-index"/>
