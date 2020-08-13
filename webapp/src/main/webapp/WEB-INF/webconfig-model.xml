@@ -108,6 +108,9 @@
       <fieldconfig fieldExpr="chromosomeLocation.start" label="Start" />
       <fieldconfig fieldExpr="chromosomeLocation.end" label="End" />
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true" />
+      <fieldconfig fieldExpr="geneFamily.identifier" label="Gene Family" />
+      <fieldconfig fieldExpr="geneFamilyScore" label="Gene Fam. Assign. Score" />
+      <fieldconfig fieldExpr="geneFamilyScoreMeaning" label="Assign. Score Type" />
       <fieldconfig fieldExpr="description" doNotTruncate="true" label="Description" />
     </fields>
     <!-- <bagdisplayers> -->
@@ -308,7 +311,7 @@
   <class className="org.intermine.model.bio.GeneFamily">
     <headerconfig>
       <titles>
-        <title mainTitles="description" numberOfMainTitlesToShow="1" />
+        <title mainTitles="description" numberOfMainTitlesToShow="1"/>
       </titles>
     </headerconfig>
     <fields>
