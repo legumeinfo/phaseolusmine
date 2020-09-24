@@ -29,6 +29,7 @@ echo ""
 # ./gradlew postprocess -Pprocess=lis-create-transcript-gene-references
 # ./gradlew postprocess -Pprocess=lis-create-transcript-protein-references
 # ./gradlew postprocess -Pprocess=lis-populate-publications
+# ./gradlew postprocess -Pprocess=lis-populate-protein-pathway-collections
 
 # ## VIEWS AND INDEXES
 # ./gradlew postprocess -Pprocess=create-location-overlap-index

@@ -108,10 +108,8 @@
       <fieldconfig fieldExpr="chromosomeLocation.start" label="Start" />
       <fieldconfig fieldExpr="chromosomeLocation.end" label="End" />
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true" />
-      <fieldconfig fieldExpr="geneFamily.identifier" label="Gene Family" />
-      <fieldconfig fieldExpr="geneFamilyScore" label="Gene Fam. Assign. Score" />
-      <fieldconfig fieldExpr="geneFamilyScoreMeaning" label="Assign. Score Type" />
       <fieldconfig fieldExpr="description" doNotTruncate="true" label="Description" />
+      <fieldconfig fieldExpr="geneFamily.description" label="Gene Family"/>
     </fields>
     <!-- <bagdisplayers> -->
     <!--   <displayer src="heatMap.tile" showOnLeft="true" /> -->
@@ -149,10 +147,10 @@
   <class className="org.intermine.model.bio.Protein">
     <fields>
       <fieldconfig fieldExpr="secondaryIdentifier" label="ALT identifier"/>
-      <fieldconfig fieldExpr="geneFamily.description" label="Gene family"/>
       <fieldconfig fieldExpr="primaryIdentifier" label="LIS identifier"/>
       <fieldconfig fieldExpr="description" label="Description"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
+      <fieldconfig fieldExpr="geneFamily.description" label="Gene Family"/>
     </fields>
   </class>
 
@@ -370,17 +368,17 @@
     </fields>
   </class>
 
-  <!-- <class className="org.intermine.model.bio.Pathway"> -->
-  <!--   <headerconfig> -->
-  <!--     <titles> -->
-  <!--       <title mainTitles="name" numberOfMainTitlesToShow="1" /> -->
-  <!--     </titles> -->
-  <!--   </headerconfig> -->
-  <!--   <fields> -->
-  <!--     <fieldconfig fieldExpr="identifier"/> -->
-  <!--     <fieldconfig fieldExpr="name"/> -->
-  <!--   </fields> -->
-  <!-- </class> -->
+  <class className="org.intermine.model.bio.Pathway">
+    <headerconfig>
+      <titles>
+        <title mainTitles="name" numberOfMainTitlesToShow="1" />
+      </titles>
+    </headerconfig>
+    <fields>
+      <fieldconfig fieldExpr="identifier"/>
+      <fieldconfig fieldExpr="name"/>
+    </fields>
+  </class>
 
   <!-- <class className="org.intermine.model.bio.ConsensusRegion"> -->
   <!--   <fields> -->
@@ -613,50 +611,51 @@
                     filters="organism.name=[list]"
                     startClass="SequenceFeature"
                     typeClass="SequenceFeature"
-                    categoryPath="chromosome.secondaryIdentifier"
+                    categoryPath="chromosome.primaryIdentifier"
                     seriesLabels="Actual,Expected"
                     seriesPath="ActualExpectedCriteria"
                     constraints="organism.name=[Organism]"
-                    views="primaryIdentifier, symbol, secondaryIdentifier, organism.name, chromosome.secondaryIdentifier,
-                           chromosomeLocation.start, chromosomeLocation.end, chromosomeLocation.strand" />
+                    views="primaryIdentifier, secondaryIdentifier, name, organism.name, chromosome.secondaryIdentifier, chromosomeLocation.start, chromosomeLocation.end, chromosomeLocation.strand" />
 
-
-    <!-- constraints skip biological_process, molecular_function and cellular_component GO terms -->
     <enrichmentwidgetdisplayer id="go_enrichment_for_gene"
                                title="Gene Ontology Enrichment"
                                description="GO terms enriched for items in this list."
                                label="GO Term"
-                               filterLabel="Ontology"
-                               filters="biological_process,cellular_component,molecular_function"
                                startClass="Gene"
                                typeClass="Gene"
                                startClassDisplay="primaryIdentifier"
                                enrich="ontologyAnnotations.ontologyTerm.name"
                                enrichIdentifier="ontologyAnnotations.ontologyTerm.identifier"
-                               constraints="organism.name=[list],
-                                            primaryIdentifier!=null,
-                                            ontologyAnnotations.qualifier=null,
-                                            ontologyAnnotations.ontologyTerm.parents.identifier!=go:0008150,
-                                            ontologyAnnotations.ontologyTerm.parents.identifier!=go:0003674,
-                                            ontologyAnnotations.ontologyTerm.parents.identifier!=go:0005575"
+                               constraints="ontologyAnnotations.ontologyTerm.ontology.name=GO,
+                                            organism.name=[list]"
                                views="secondaryIdentifier,symbol,primaryIdentifier,organism.name,
                                       ontologyAnnotations.ontologyTerm.identifier, ontologyAnnotations.ontologyTerm.name,
                                       ontologyAnnotations.ontologyTerm.parents.identifier, ontologyAnnotations.ontologyTerm.parents.name"
                                externalLink="http://amigo.geneontology.org/amigo/term/" />
 
-    <!-- <enrichmentwidgetdisplayer id="to_enrichment_for_qtl" -->
-    <!--                            title="Plant Trait Ontology Enrichment" -->
-    <!--                            description="TO terms enriched for items in this list." -->
-    <!--                            label="TO Term" -->
-    <!--                            startClass="QTL" -->
-    <!--                            typeClass="QTL" -->
-    <!--                            startClassDisplay="primaryIdentifier" -->
-    <!--                            enrich="ontologyAnnotations.ontologyTerm.name" -->
-    <!--                            enrichIdentifier="ontologyAnnotations.ontologyTerm.identifier" -->
-    <!--                            views="primaryIdentifier, -->
-    <!--                                   ontologyAnnotations.ontologyTerm.identifier,ontologyAnnotations.ontologyTerm.name, -->
-    <!--                                   ontologyAnnotations.ontologyTerm.parents.identifier, ontologyAnnotations.ontologyTerm.parents.name" -->
-    <!--                            externalLink="http://archive.gramene.org/db/ontology/search?id=" /> -->
+    <enrichmentwidgetdisplayer id="genefamily_enrichment"
+                               title="Gene Family Enrichment"
+                               description="Gene families enriched for genes in this list."
+                               label="GeneFamily"
+                               startClass="Gene"
+                               startClassDisplay="primaryIdentifier"
+                               enrich="geneFamily.description"
+                               enrichIdentifier="geneFamily.description"
+                               constraints="organism.name=[list]"
+                               typeClass="Gene"
+                               views="secondaryIdentifier, organism.name, geneFamily.description"/>
+
+    <enrichmentwidgetdisplayer id="pathway_enrichment"
+                               title="Pathway Enrichment"
+                               description="Pathways enriched for genes in this list."
+                               label="Pathway"
+                               startClass="Gene"
+                               startClassDisplay="primaryIdentifier"
+                               enrich="pathways.name"
+                               enrichIdentifier="pathways.name"
+                               constraints="organism.name=[list]"
+                               typeClass="Gene"
+                               views="secondaryIdentifier, organism.name, pathways.name"/>
 
   </widgets>
   
