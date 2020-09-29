@@ -32,6 +32,7 @@ echo ""
 
 ## mixed
 ./gradlew integrate -Psource=phavu.mixed-geneticmap --stacktrace
+./gradlew integrate -Psource=phavu.mixed-gwas --stacktrace
 
 ## phavu.G19833.gnm1
 ./gradlew integrate -Psource=phavu.G19833.gnm1-chromosome-fasta --stacktrace

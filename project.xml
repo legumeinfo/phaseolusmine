@@ -9,7 +9,7 @@
     <source name="lis.fam1-genefamily" type="lis-genefamily" dump="true">
       <property name="data.set.url" value="https://legumeinfo.org/data/public/Gene_families/legume.genefam.fam1.M65K/"/>
       <property name="data.set.description" value="LIS gene families"/>
-      <property name="desired.organisms" value="aradu araip arahy arath cajca cicar cucsa glyma lotja lupan medtr phalu phavu prupe solly tripr vigan vigra vigun vitvi"/>
+      <property name="desired.organisms" value="aradu araip arahy arath cajca cicar cucsa glyma glyso lotja lupan medtr phalu phavu prupe solly tripr vigan vigra vigun vitvi"/>
       <property name="src.data.dir" location="/data/LIS/Gene_families/legume.genefam.fam1.M65K"/>
     </source>
 
@@ -49,6 +49,16 @@
       <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/mixed.map.7PMp"/>
     </source>
 
+    <!-- mixed.gwas.5HCM/ -->
+    <!-- ├── phavu.mixed.gwas.5HCM.31428109.gwas.tsv -->
+    <!-- └── phavu.mixed.gwas.5HCM.31428109.phen.tsv -->
+    <source name="phavu.mixed-gwas" type="lis-gwas" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/mixed.gwas.5HCM/"/>
+      <property name="dataSetDescription" value="Phaseolus vulgaris GWAS experiments."/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/mixed.gwas.5HCM"/>
+    </source>
+
+    
     <!-- ############################## -->
     <!-- Phaseolus vulgaris G19833.gnm1 -->
     <!-- ############################## -->
@@ -149,7 +159,8 @@
     </source>
     
     <!-- G19833.gnm1.mrk.7KYW/ -->
-    <!-- └── phavu.G19833.gnm1.mrk.7KYW.PvCookUCDavis2009.gff3 -->
+    <!-- ├── phavu.G19833.gnm1.mrk.7KYW.bean_Ragi_selected_SNPs.gff3 -->
+    <!-- └── phavu.G19833.gnm1.mrk.7KYW.chado.gff3 -->
     <source name="phavu.G19833.gnm1.mrk-gff" type="lis-gff" dump="true">
       <property name="gff3.dataSetTitle" value="phavu.G19833.gnm1.mrk.7KYW.PvCookUCDavis2009.gff3"/>
       <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/G19833.gnm1.mrk.7KYW/"/>
@@ -399,7 +410,7 @@
     </source>
     <source name="phavu.UI111.gnm1.ann1-pathway" type="lis-pathway" dump="true"> 
       <property name="data.set.url" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/UI111.gnm1.ann1.8L4N/"/>
-      <property name="data.set.description" value="Plant Reactome pathway assignments for phavu.UI111.gnm1 genes."/>
+      <property name="data.set.description" value="Plant Reactome pathway assignments for phavu.UI111.gnm1 genes via gene family membership with phavu.G19833 genes."/>
       <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/UI111.gnm1.ann1.8L4N"/>
     </source>
 
@@ -505,7 +516,7 @@
     </source>
     <source name="phalu.G27455.gnm1.ann1-pathway" type="lis-pathway" dump="true"> 
       <property name="data.set.url" value="https://legumeinfo.org/data/public/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C/"/>
-      <property name="data.set.description" value="Plant Reactome assignments for Phaseolus lunatus G27455 genes, via gene families shared with Phaseolus vulgaris."/>
+      <property name="data.set.description" value="Plant Reactome assignments for Phaseolus lunatus G27455 genes, via gene familie membership with Phaseolus vulgaris genes."/>
       <property name="src.data.dir" location="/data/LIS/Phaseolus_lunatus/G27455.gnm1.ann1.JD7C"/>
     </source>
 
