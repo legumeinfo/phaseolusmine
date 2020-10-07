@@ -600,7 +600,6 @@
 
   <!-- widgets -->
   <widgets>
-
     <graphdisplayer id="chromosome_distribution_for_gene"
                     title="Chromosome Distribution"
                     description="Actual: number of items in this list found on each chromosome.  Expected: given the total number of items on the chromosome and the number of items in this list, the number of items expected to be found on each chromosome."
@@ -656,7 +655,6 @@
                                constraints="organism.name=[list]"
                                typeClass="Gene"
                                views="secondaryIdentifier, organism.name, pathways.name"/>
-
   </widgets>
   
 </webconfig>
