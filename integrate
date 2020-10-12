@@ -1,5 +1,4 @@
 #!/bin/sh
-rm -f intermine.log
 
 echo ""
 echo "##########################################################################################################################################"
@@ -15,7 +14,7 @@ echo ""
 
 ./gradlew integrate -Psource=plant-ontology --stacktrace
 ./gradlew integrate -Psource=plant-trait-ontology --stacktrace
-./gradlew integrate -Psource=crop-ontology --stacktrace
+./gradlew integrate -Psource=bean-crop-ontology --stacktrace
 
 ## InterPro
 ./gradlew integrate -Psource=interpro --stacktrace

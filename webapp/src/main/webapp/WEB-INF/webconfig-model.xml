@@ -111,9 +111,9 @@
       <fieldconfig fieldExpr="description" doNotTruncate="true" label="Description" />
       <fieldconfig fieldExpr="geneFamily.description" label="Gene Family"/>
     </fields>
-    <!-- <bagdisplayers> -->
-    <!--   <displayer src="heatMap.tile" showOnLeft="true" /> -->
-    <!-- </bagdisplayers> -->
+    <bagdisplayers>
+      <displayer src="heatMap.tile" showOnLeft="true" />
+    </bagdisplayers>
   </class>
 
   <class className="org.intermine.model.bio.GeneFlankingRegion">
@@ -127,9 +127,9 @@
       <fieldconfig fieldExpr="chromosomeLocation.start" showInInlineCollection="true" showInSummary="false" label="Start" />
       <fieldconfig fieldExpr="chromosomeLocation.end" showInInlineCollection="true" showInSummary="false" label="End" />
     </fields>
-  <!--   <bagdisplayers> -->
-  <!--     <displayer src="motifSearch.tile" showOnLeft="true"/> -->
-  <!--   </bagdisplayers> -->
+    <bagdisplayers>
+      <displayer src="motifSearch.tile" showOnLeft="true"/>
+    </bagdisplayers>
   </class>
 
   <class className="org.intermine.model.bio.IntergenicRegion">
@@ -406,7 +406,8 @@
       </titles>
     </headerconfig>
     <fields>
-      <fieldconfig fieldExpr="primaryIdentifier" label="Name"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="Identifier"/>
+      <fieldconfif fieldExpr="name" label="Name"/>
       <fieldconfig fieldExpr="description" label="Description"/>
     </fields>
   </class>

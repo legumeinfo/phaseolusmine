@@ -570,7 +570,7 @@
     </source>
 
     <!-- common bean crop ontology -->
-    <source name="crop-ontology" type="obo">
+    <source name="bean-crop-ontology" type="obo">
       <property name="src.data.file" location="/data/crop-ontology/CO_335.obo"/>
       <property name="ontology.prefix" value="CO_335"/>
       <property name="obo.ontology.name" value="Common Bean Crop Ontology"/>
