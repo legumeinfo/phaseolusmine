@@ -598,23 +598,23 @@
     <post-process name="create-gene-flanking-features"/>
 
     <!-- LIS -->
-    <post-process name="lis-populate-cds-gene-references"/>
-    <post-process name="lis-populate-cds-protein-references"/>
-    <post-process name="lis-populate-cds-transcript-references"/>
-    <post-process name="lis-populate-gene-protein-collections"/>
-    <post-process name="lis-populate-qtl-gene-collections"/>
-    <post-process name="lis-populate-publications"/>
-    <post-process name="lis-populate-transcript-gene-references"/>
-    <post-process name="lis-populate-transcript-protein-references"/>
-    <post-process name="lis-populate-protein-pathway-collections"/>
+    <post-process name="lis-populate-cds-gene-references" />
+    <post-process name="lis-populate-cds-protein-references" />
+    <post-process name="lis-populate-cds-transcript-references" />
+    <post-process name="lis-populate-gene-protein-collections" />
+    <post-process name="lis-populate-qtl-gene-collections" />
+    <post-process name="lis-populate-publications" />
+    <post-process name="lis-populate-transcript-gene-references" />
+    <post-process name="lis-populate-transcript-protein-references" />
+    <post-process name="lis-populate-protein-pathway-collections" />
 
     <!-- VIEWS AND INDEXES -->
-    <post-process name="create-location-overlap-index"/>
+    <post-process name="create-location-overlap-index" />
     <post-process name="create-overlap-view" />
-    <post-process name="create-attribute-indexes"/>
-    <post-process name="summarise-objectstore"/>
-    <post-process name="create-autocomplete-index"/>
-    <post-process name="create-search-index"/>
+    <post-process name="create-attribute-indexes" />
+    <post-process name="summarise-objectstore" />
+    <post-process name="create-autocomplete-index" />
+    <post-process name="create-search-index" />
   </post-processing>
 
 </project>
