@@ -601,12 +601,12 @@
     <post-process name="lis-populate-cds-gene-references" />
     <post-process name="lis-populate-cds-protein-references" />
     <post-process name="lis-populate-cds-transcript-references" />
-    <post-process name="lis-populate-gene-protein-collections" />
-    <post-process name="lis-populate-qtl-gene-collections" />
-    <post-process name="lis-populate-publications" />
     <post-process name="lis-populate-transcript-gene-references" />
     <post-process name="lis-populate-transcript-protein-references" />
+    <post-process name="lis-populate-gene-protein-collections" />
+    <post-process name="lis-populate-qtl-gene-collections" />
     <post-process name="lis-populate-protein-pathway-collections" />
+    <post-process name="lis-populate-publications" />
 
     <!-- VIEWS AND INDEXES -->
     <post-process name="create-location-overlap-index" />
