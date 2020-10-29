@@ -489,7 +489,7 @@
 
     <reportdisplayer javaClass="org.ncgr.intermine.bio.web.displayer.GeneBarchartDisplayer"
                      jspName="model/geneBarchartDisplayer.jsp"
-                     replacesFields="expressionValues"
+                     replacesFields=""
                      placement="summary"
                      types="Gene"/>
 
