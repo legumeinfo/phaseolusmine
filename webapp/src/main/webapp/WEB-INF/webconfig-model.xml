@@ -355,6 +355,19 @@
     </fields>
   </class>
 
+  <class className="org.intermine.model.bio.BioProject">
+    <headerconfig>
+      <titles>
+        <title mainTitles="title" numberofMainTitlesToShow="1" />
+      </titles>
+    </headerconfig>
+    <fields>
+      <fieldconfig fieldExpr="accession" label="NCBI Accession"/>
+      <fieldconfig fieldExpr="title" label="Title"/>
+      <fieldconfig fieldExpr="description" label="Description"/>
+    </fields>
+  </class>
+
   <class className="org.intermine.model.bio.ExpressionSample">
     <headerconfig>
       <titles>
@@ -378,6 +391,7 @@
       <fieldconfig fieldExpr="unit" label="Unit"/>
     </fields>
   </class>
+
 
   <class className="org.intermine.model.bio.GWAS">
     <headerconfig>
