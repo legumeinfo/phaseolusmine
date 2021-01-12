@@ -26,23 +26,17 @@
       <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/about_this_collection"/>
     </source>
 
+    <!-- mixed.qtl.7SDM/ -->
+    <!-- ├── phavu.mixed.qtl.7SDM.31486530.expt.tsv -->
+    <!-- ├── phavu.mixed.qtl.7SDM.31486530.mrk.tsv -->
+    <!-- └── phavu.mixed.qtl.7SDM.31486530.phen.tsv -->
+    <source name="phavu.mixed-qtl" type="lis-qtl" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/mixed.qtl.7SDM/"/>
+      <property name="dataSetDescription" value="Common bean QTLs"/>
+      <property name="src.data.dir" location="/data/LIS/Phaseolus_vulgaris/mixed.qtl.7SDM"/>
+    </source>
+    
     <!-- mixed.map.7PMp/ -->
-    <!-- ├── phavu.mixed.map.7PMp.BAT93_x_JALOEEP558_b.expt.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.BAT93_x_JALOEEP558_b.mrk.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.BAT93_x_JALOEEP558_c.expt.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.BAT93_x_JALOEEP558_c.mrk.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.Cerinza_x_G24404_a.expt.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.Cerinza_x_G24404_a.mrk.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.DOR364_x_BAT477_a.expt.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.DOR364_x_BAT477_a.mrk.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.PvConsensus_GaleanoFernandez2011_a.expt.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.PvConsensus_GaleanoFernandez2011_a.mrk.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.PvCookUCDavis2009.expt.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.PvCookUCDavis2009.mrk.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.PvMcCleanNDSU2007.expt.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.PvMcCleanNDSU2007.mrk.tsv -->
-    <!-- ├── phavu.mixed.map.7PMp.Stampede_x_RedHawk_F2_a.expt.tsv -->
-    <!-- └── phavu.mixed.map.7PMp.Stampede_x_RedHawk_F2_a.mrk.tsv -->
     <source name="phavu.mixed-geneticmap" type="lis-geneticmap" dump="true">
       <property name="data.set.url" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/mixed.map.7PMp/"/>
       <property name="data.set.description" value="Phaseolus vulgaris genetic maps"/>
@@ -50,8 +44,6 @@
     </source>
 
     <!-- mixed.gwas.5HCM/ -->
-    <!-- ├── phavu.mixed.gwas.5HCM.31428109.gwas.tsv -->
-    <!-- └── phavu.mixed.gwas.5HCM.31428109.phen.tsv -->
     <source name="phavu.mixed-gwas" type="lis-gwas" dump="true">
       <property name="dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/mixed.gwas.5HCM/"/>
       <property name="dataSetDescription" value="Phaseolus vulgaris GWAS experiments."/>
@@ -162,9 +154,9 @@
     <!-- ├── phavu.G19833.gnm1.mrk.7KYW.bean_Ragi_selected_SNPs.gff3 -->
     <!-- └── phavu.G19833.gnm1.mrk.7KYW.chado.gff3 -->
     <source name="phavu.G19833.gnm1.mrk-gff" type="lis-gff" dump="true">
-      <property name="gff3.dataSetTitle" value="phavu.G19833.gnm1.mrk.7KYW.PvCookUCDavis2009.gff3"/>
+      <property name="gff3.dataSetTitle" value="phavu.G19833.gnm1.mrk.7KYW"/>
       <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/public/Phaseolus_vulgaris/G19833.gnm1.mrk.7KYW/"/>
-      <property name="gff3.dataSetDescription" value="Illumina GoldenGate SNP positions on the phavu.G19833.gnm1 genome assembly"/>
+      <property name="gff3.dataSetDescription" value="Genetic marker positions on the phavu.G19833.gnm1 genome assembly"/>
       <property name="gff3.dataSetVersion" value="gnm1"/>
       <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="gff3.taxonId" value="3885"/>

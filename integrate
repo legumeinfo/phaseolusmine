@@ -89,3 +89,6 @@ echo ""
 
 ## mixed-gwas
 ./gradlew integrate -Psource=phavu.mixed-gwas --stacktrace
+
+## mixed-qtl
+./gradlew integrate -Psource=phavu.mixed-qtl --stacktrace
