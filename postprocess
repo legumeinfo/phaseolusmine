@@ -34,7 +34,7 @@ echo ""
 # ./gradlew postprocess -Pprocess=lis-populate-qtl-gene-collections
 
 ## LIS OTHER
-./gradlew postprocess -Pprocess=lis-populate-publications
+# ./gradlew postprocess -Pprocess=lis-populate-publications
 
 ## VIEWS AND INDEXES
 # ./gradlew postprocess -Pprocess=create-location-overlap-index
@@ -45,5 +45,5 @@ echo ""
 ./gradlew postprocess -Pprocess=summarise-objectstore
 
 ## SOLR
-# ./gradlew postprocess -Pprocess=create-autocomplete-index
-# ./gradlew postprocess -Pprocess=create-search-index
+./gradlew postprocess -Pprocess=create-autocomplete-index
+./gradlew postprocess -Pprocess=create-search-index

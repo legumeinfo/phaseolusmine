@@ -20,8 +20,9 @@ echo ""
 ./gradlew integrate -Psource=interpro --stacktrace
 ./gradlew integrate -Psource=interpro-go --stacktrace
 
-## LIS gene families
+## LIS gene families and phylotree
 ./gradlew integrate -Psource=lis.fam1-genefamily --stacktrace
+./gradlew integrate -Psource=lis.fam1-phylotree --stacktrace
 
 ## about
 ./gradlew integrate -Psource=phavu-about --stacktrace

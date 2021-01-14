@@ -433,6 +433,22 @@
     </fields>
   </class>
 
+  <class className="org.intermine.model.bio.Phylotree">
+    <headerconfig>
+      <titles>
+        <title mainTitles="identifier" numberOfMainTitlesToShow="1"/>
+       </titles>
+    </headerconfig>
+  </class>
+
+  <class className="org.intermine.model.bio.Phylonode">
+    <headerconfig>
+      <titles>
+        <title mainTitles="identifier" numberOfMainTitlesToShow="1"/>
+       </titles>
+    </headerconfig>
+  </class>
+
   <!-- ============================================================================================== -->
 
   <!-- exporters -->
@@ -440,6 +456,7 @@
   <tableExportConfig id="gff3" className="org.intermine.bio.web.export.GFF3HttpExporter"/>
   <tableExportConfig id="bed" className="org.intermine.bio.web.export.BEDHttpExporter"/>
 
+  <!-- ============================================================================================== -->
   <!-- report displayers -->
   <reportdisplayers>
 
@@ -468,7 +485,11 @@
                      placement="summary"
                      types="SequenceFeature"/>
 
-    <!-- ============================================================================================== -->
+    <reportdisplayer javaClass="org.ncgr.intermine.bio.web.displayer.PhylotreeDisplayer"
+                     jspName="model/phylotreeDisplayer.jsp"
+                     replacesFields=""
+                     placement="summary"
+                     types="GeneFamily,Phylotree"/>
 
     <reportdisplayer javaClass="org.ncgr.intermine.bio.web.displayer.LinkageGroupDisplayer"
                      jspName="model/linkageGroupDisplayer.jsp"
@@ -512,9 +533,10 @@
                      replacesFields=""
                      placement="summary"
                      types="GWAS"/>
-    
+
   </reportdisplayers>
 
+  <!-- ============================================================================================== -->
   <!-- widgets -->
   <widgets>
     <graphdisplayer id="chromosome_distribution_for_gene"

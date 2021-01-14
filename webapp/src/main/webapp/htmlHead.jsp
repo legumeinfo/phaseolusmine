@@ -26,6 +26,12 @@
 <link rel="stylesheet" href="css/canvasXpress-old.css" type="text/css" />
 <script type="text/javascript" src="js/canvasXpress-old.min.js"></script>
 
+<!-- phylotree.js requirements -->
+<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/phylotree.js"></script>
+<link type="text/css" href="css/phylotree.css" rel="stylesheet">
+
 <%
 /* In Safari, loading a css that doesnt exist causes weirdness */
 String pageName = (String) request.getAttribute("pageName");

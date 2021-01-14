@@ -13,6 +13,13 @@
       <property name="src.data.dir" location="/data/LIS/Gene_families/legume.genefam.fam1.M65K"/>
     </source>
 
+    <!-- Gene_families/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/ -->
+    <source name="lis.fam1-phylotree" type="lis-phylotree" dump="true">
+      <property name="data.set.url" value="https://legumeinfo.org/data/public/Gene_families/legume.genefam.fam1.M65K/"/>
+      <property name="data.set.description" value="LIS gene family phylogenetic trees"/>
+      <property name="src.data.dir" location="/data/LIS/Gene_families/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted"/>
+    </source>
+
     <!-- ################## -->
     <!-- Phaseolus vulgaris -->
     <!-- ################## -->
