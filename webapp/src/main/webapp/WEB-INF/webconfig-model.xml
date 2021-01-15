@@ -401,9 +401,9 @@
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="LIS Identifier"/>
-      <fieldconfig fieldExpr="name" label="Name"/>
-      <fieldconfig fieldExpr="platformName" label="Genotyping Platform"/>
-      <fieldconfig fieldExpr="platformDetails" label="Genotyping details"/>
+      <fieldconfig fieldExpr="name"/>
+      <fieldconfig fieldExpr="platformName"/>
+      <fieldconfig fieldExpr="platformDetails"/>
     </fields>
   </class>
 
