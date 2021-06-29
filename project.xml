@@ -405,7 +405,7 @@
     <!-- ├── phavu.UI111.gnm1.ann1.8L4N.legfed_v1_0.M65K.pathway.tsv -->
     <!-- ├── phavu.UI111.gnm1.ann1.8L4N.protein.faa -->
     <!-- ├── phavu.UI111.gnm1.ann1.8L4N.transcript.fna -->
-    <!-- └── README.8L4N.yml -->
+    <!-- └── README.UI111.gnm1.ann1.8L4N.yml -->
     <source name="UI111.gnm1.ann1.8L4N.cds" type="lis-fasta" dump="true">
       <property name="lis-fasta.dataSetTitle" value="UI111.gnm1.ann1.8L4N"/>
       <property name="lis-fasta.dataSetDescription" value="phavu.UI111.gnm1 genome annotation"/>
@@ -469,7 +469,7 @@
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.geneAttribute" value="locus"/>
       <property name="lis-fasta.includes" value="phavu.UI111.gnm1.ann1.8L4N.protein.faa"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus_vulgaris/annotations/UI111.gnm1.ann1.8L4N"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/annotations/UI111.gnm1.ann1.8L4N"/>
     </source>
     <source name="UI111.gnm1.ann1.8L4N.transcript" type="lis-fasta" dump="true">
       <property name="lis-fasta.dataSetTitle" value="UI111.gnm1.ann1.8L4N"/>
@@ -508,7 +508,7 @@
       <property name="lis-fasta.dataSetTitle" value="G27455.gnm1.7NXX"/>
       <property name="lis-fasta.dataSetDescription" value="LIS datastore genomic FASTA file for Phaseolus lunatus G27455"/>
       <property name="lis-fasta.dataSetVersion" value="gnm1"/>
-      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/G27455.gnm1.7NXX/"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/genomes/G27455.gnm1.7NXX/"/>
       <property name="lis-fasta.taxonId" value="3884"/>
       <property name="lis-fasta.strainIdentifier" value="G27455"/>
       <property name="lis-fasta.sequenceType" value="dna"/>
@@ -516,7 +516,7 @@
       <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.includes" value="phalu.G27455.gnm1.7NXX.genome_main.fna"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/G27455.gnm1.7NXX"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/genomes/G27455.gnm1.7NXX"/>
     </source>
     
     <!-- annotations/G27455.gnm1.ann1.JD7C/ -->
@@ -530,7 +530,7 @@
       <property name="lis-fasta.dataSetTitle" value="G27455.gnm1.ann1.JD7C"/>
       <property name="lis-fasta.dataSetDescription" value="phalu.G27455.gnm1.ann1 genome annotation"/>
       <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
-      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C/"/>
       <property name="lis-fasta.taxonId" value="3884"/>
       <property name="lis-fasta.strainIdentifier" value="G27455"/>
       <property name="lis-fasta.sequenceType" value="dna"/>
@@ -539,26 +539,26 @@
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.geneAttribute" value="locus"/>
       <property name="lis-fasta.includes" value="phalu.G27455.gnm1.ann1.JD7C.cds.fna"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C"/>
     </source>
-    <source name="G27455.gnm1.ann1.JD7C.gff" type="lis-gff" dump="true">
+    <source name="G27455.gnm1.ann1.JD7C.gene_models_main" type="lis-gff" dump="true">
       <property name="gff3.dataSourceName" value="LIS Datastore"/>
       <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
       <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
       <property name="gff3.dataSetName" value="G27455.gnm1.ann1.JD7C"/>
       <property name="gff3.dataSetDescription" value="phalu.G27455.gnm1.ann1 genome annotation"/>
       <property name="gff3.dataSetVersion" value="gnm1.ann1"/>
-      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C/"/>
       <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="gff3.taxonId" value="3884"/>
       <property name="gff3.strainIdentifier" value="G27455"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C"/>
     </source>
     <source name="G27455.gnm1.ann1.JD7C.protein" type="lis-fasta" dump="true">
       <property name="lis-fasta.dataSetTitle" value="G27455.gnm1.ann1.JD7C"/>
       <property name="lis-fasta.dataSetDescription" value="phalu.G27455.gnm1.ann1 genome annotation"/>
       <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
-      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C/"/>
       <property name="lis-fasta.taxonId" value="3884"/>
       <property name="lis-fasta.strainIdentifier" value="G27455"/>
       <property name="lis-fasta.sequenceType" value="protein"/>
@@ -567,13 +567,13 @@
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.geneAttribute" value="locus"/>
       <property name="lis-fasta.includes" value="phalu.G27455.gnm1.ann1.JD7C.protein.faa"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C"/>
     </source>
     <source name="G27455.gnm1.ann1.JD7C.transcript" type="lis-fasta" dump="true">
       <property name="lis-fasta.dataSetTitle" value="G27455.gnm1.ann1.JD7C"/>
       <property name="lis-fasta.dataSetDescription" value="phalu.G27455.gnm1.ann1 genome annotation"/>
       <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
-      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C/"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C/"/>
       <property name="lis-fasta.taxonId" value="3884"/>
       <property name="lis-fasta.strainIdentifier" value="G27455"/>
       <property name="lis-fasta.sequenceType" value="dna"/>
@@ -582,31 +582,31 @@
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.geneAttribute" value="locus"/>
       <property name="lis-fasta.includes" value="phalu.G27455.gnm1.ann1.JD7C.transcript.fna"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C"/>
     </source>
-    <source name="phalu.G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.gfa" type="lis-gfa" dump="true"> 
+    <source name="G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.gfa" type="lis-gfa" dump="true"> 
       <property name="dataSetName" value="G27455.gnm1.ann1.JD7C"/>
       <property name="dataSetDescription" value="phalu.G27455.gnm1.ann1 genome annotation"/>
       <property name="dataSetVersion" value="gnm1.ann1"/>
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C/"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C/"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C"/>
     </source>
-    <source name="phalu.G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.pathway" type="lis-pathway" dump="true"> 
+    <source name="G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.pathway" type="lis-pathway" dump="true"> 
       <property name="dataSetName" value="G27455.gnm1.ann1.JD7C"/>
       <property name="dataSetDescription" value="phalu.G27455.gnm1.ann1 genome annotation"/>
       <property name="dataSetVersion" value="gnm1.ann1"/>
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C/"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/G27455.gnm1.ann1.JD7C"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C/"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C"/>
     </source>
 
     <!-- genetic/BAT93_x_JALOEEP558.gen.Blair_Cortés_2018 -->
     <!-- ├── phavu.mixed.map.BAT93_x_JALOEEP558_c.lg.tsv -->
     <!-- ├── phavu.mixed.map.BAT93_x_JALOEEP558_c.mrk.tsv -->
     <!-- └── README.BAT93_x_JALOEEP558.gen.Blair_Cortés_2018.yml -->
-    <source name="BAT93_x_JALOEEP558.gen.Blair_Cortés_2018" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/BAT93_x_JALOEEP558.gen.Blair_Cortés_2018/"/>
+    <source name="BAT93_x_JALOEEP558.gen.Blair_Cortes_2018" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/BAT93_x_JALOEEP558.gen.Blair_Cortés_2018/"/>
       <property name="dataSetDescription" value="Genetic data from BAT93_x_JALOEEP558.gen.Blair_Cortés_2018"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/BAT93_x_JALOEEP558.gen.Blair_Cortés_2018"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/BAT93_x_JALOEEP558.gen.Blair_Cortés_2018"/>
     </source>
 
     <!-- genetic/BAT93_x_JALOEEP558.gen.Caldas_Blair_2009 -->
@@ -614,30 +614,30 @@
     <!-- ├── phavu.mixed.map.BAT93_x_JALOEEP558_a.obo.tsv -->
     <!-- ├── phavu.mixed.map.BAT93_x_JALOEEP558_a.qtl.tsv -->
     <!-- └── README.BAT93_x_JALOEEP558.gen.Caldas_Blair_2009.yml -->
-    <source name="BAT93_x_JALOEEP558.gen.Caldas_Blair_2009" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/BAT93_x_JALOEEP558.gen.Caldas_Blair_2009/"/>
+    <source name="BAT93_x_JALOEEP558.gen.Caldas_Blair_2009" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/BAT93_x_JALOEEP558.gen.Caldas_Blair_2009/"/>
       <property name="dataSetDescription" value="Genetic data from BAT93_x_JALOEEP558.gen.Caldas_Blair_2009"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/BAT93_x_JALOEEP558.gen.Caldas_Blair_2009"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/BAT93_x_JALOEEP558.gen.Caldas_Blair_2009"/>
     </source>
 
     <!-- genetic/BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998 -->
     <!-- ├── phavu.mixed.map.BAT93_x_JALOEEP558_b.lg.tsv -->
     <!-- ├── phavu.mixed.map.BAT93_x_JALOEEP558_b.mrk.tsv -->
     <!-- └── README.BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998.yml -->
-    <source name="BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998/"/>
+    <source name="BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998/"/>
       <property name="dataSetDescription" value="Genetic data from BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998"/>
     </source>
 
     <!-- genetic/BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010 -->
     <!-- ├── phavu.mixed.map.PvMcCleanNDSU2007.lg.tsv -->
     <!-- ├── phavu.mixed.map.PvMcCleanNDSU2007.mrk.tsv -->
     <!-- └── README.BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010.yml -->
-    <source name="BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010/"/>
+    <source name="BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010/"/>
       <property name="dataSetDescription" value="Genetic data from BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010"/>
     </source>
 
     <!-- genetic/Cerinza_x_G24404.gen.Blair_Iriarte_2006 -->
@@ -646,10 +646,10 @@
     <!-- ├── phavu.mixed.map.Cerinza_x_G24404_a.obo.tsv -->
     <!-- ├── phavu.mixed.map.Cerinza_x_G24404_a.qtl.tsv -->
     <!-- └── README.Cerinza_x_G24404.gen.Blair_Iriarte_2006.yml -->
-    <source name="Cerinza_x_G24404.gen.Blair_Iriarte_2006" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/Cerinza_x_G24404.gen.Blair_Iriarte_2006/"/>
+    <source name="Cerinza_x_G24404.gen.Blair_Iriarte_2006" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/Cerinza_x_G24404.gen.Blair_Iriarte_2006/"/>
       <property name="dataSetDescription" value="Genetic data from Cerinza_x_G24404.gen.Blair_Iriarte_2006"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/Cerinza_x_G24404.gen.Blair_Iriarte_2006"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/Cerinza_x_G24404.gen.Blair_Iriarte_2006"/>
     </source>
 
     <!-- genetic/DOR364_x_BAT477.gen.Blair_Galeano_2012 -->
@@ -658,10 +658,10 @@
     <!-- ├── phavu.mixed.map.DOR364_x_BAT477_a.obo.tsv -->
     <!-- ├── phavu.mixed.map.DOR364_x_BAT477_a.qtl.tsv -->
     <!-- └── README.DOR364_x_BAT477.gen.Blair_Galeano_2012.yml -->
-    <source name="DOR364_x_BAT477.gen.Blair_Galeano_2012" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/DOR364_x_BAT477.gen.Blair_Galeano_2012/"/>
+    <source name="DOR364_x_BAT477.gen.Blair_Galeano_2012" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/DOR364_x_BAT477.gen.Blair_Galeano_2012/"/>
       <property name="dataSetDescription" value="Genetic data from DOR364_x_BAT477.gen.Blair_Galeano_2012"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/DOR364_x_BAT477.gen.Blair_Galeano_2012"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/DOR364_x_BAT477.gen.Blair_Galeano_2012"/>
     </source>
     
     <!-- genetic/G2333_x_G19839.gen.Checa_Blair_2008 -->
@@ -669,10 +669,10 @@
     <!-- ├── phavu.mixed.map.G2333_x_G19839_a.obo.tsv -->
     <!-- ├── phavu.mixed.map.G2333_x_G19839_a.qtl.tsv -->
     <!-- └── README.G2333_x_G19839.gen.Checa_Blair_2008.yml -->
-    <source name="G2333_x_G19839.gen.Checa_Blair_2008" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/G2333_x_G19839.gen.Checa_Blair_2008/"/>
+    <source name="G2333_x_G19839.gen.Checa_Blair_2008" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/G2333_x_G19839.gen.Checa_Blair_2008/"/>
       <property name="dataSetDescription" value="Genetic data from G2333_x_G19839.gen.Checa_Blair_2008"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/G2333_x_G19839.gen.Checa_Blair_2008"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/G2333_x_G19839.gen.Checa_Blair_2008"/>
     </source>
 
     <!-- genetic/ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020 -->
@@ -680,10 +680,10 @@
     <!-- ├── phavu.ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020.qtlmrk.tsv -->
     <!-- ├── phavu.ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020.trait.tsv -->
     <!-- └── README.ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020.yml -->
-    <source name="ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020/"/>
+    <source name="ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020/"/>
       <property name="dataSetDescription" value="Genetic data from ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020"/>
     </source>
 
     <!-- genetic/mixed.gen.Blair_Cortés_2018 -->
@@ -693,52 +693,30 @@
     <!-- ├── phavu.mixed.map.PvCookUCDavis2009.mrk.tsv -->
     <!-- ├── phavu.mixed.map.PvCookUCDavis2009.source.xlsx.gz -->
     <!-- └── README.mixed.gen.Blair_Cortés_2018.yml -->
-    <source name="mixed.gen.Blair_Cortés_2018" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/mixed.gen.Blair_Cortés_2018/"/>
+    <source name="mixed.gen.Blair_Cortes_2018" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/mixed.gen.Blair_Cortés_2018/"/>
       <property name="dataSetDescription" value="Genetic data from mixed.gen.Blair_Cortés_2018"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/mixed.gen.Blair_Cortés_2018"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/mixed.gen.Blair_Cortés_2018"/>
     </source>
 
     <!-- genetic/mixed.gen.Galeano_Fernandez_2011 -->
     <!-- ├── phavu.mixed.map.PvConsensus_GaleanoFernandez2011_a.lg.tsv -->
     <!-- ├── phavu.mixed.map.PvConsensus_GaleanoFernandez2011_a.mrk.tsv -->
     <!-- └── README.mixed.gen.Galeano_Fernandez_2011.yml -->
-    <source name="mixed.gen.Galeano_Fernandez_2011" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/mixed.gen.Galeano_Fernandez_2011/"/>
+    <source name="mixed.gen.Galeano_Fernandez_2011" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/mixed.gen.Galeano_Fernandez_2011/"/>
       <property name="dataSetDescription" value="Genetic data from mixed.gen.Galeano_Fernandez_2011"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/mixed.gen.Galeano_Fernandez_2011"/>
-    </source>
-
-    <!-- genetic/mixed.gwas.Parker_BernyMierYTeran_2020 -->
-    <!-- ├── phavu.mixed.gwas.Parker_BernyMierYTeran_2020.obo.tsv -->
-    <!-- ├── phavu.mixed.gwas.Parker_BernyMierYTeran_2020.result.tsv -->
-    <!-- ├── phavu.mixed.gwas.Parker_BernyMierYTeran_2020.trait.tsv -->
-    <!-- └── README.mixed.gwas.Parker_BernyMierYTeran_2020.yml -->
-    <source name="mixed.gwas.Parker_BernyMierYTeran_2020" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/mixed.gwas.Parker_BernyMierYTeran_2020/"/>
-      <property name="dataSetDescription" value="Genetic data from mixed.gwas.Parker_BernyMierYTeran_2020"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/mixed.gwas.Parker_BernyMierYTeran_2020"/>
-    </source>
-
-    <!-- genetic/mixed.gwas.Raggi_Caproni_2019 -->
-    <!-- ├── phavu.mixed.gwas.Raggi_Caproni_2019.obo.tsv -->
-    <!-- ├── phavu.mixed.gwas.Raggi_Caproni_2019.result.tsv -->
-    <!-- ├── phavu.mixed.gwas.Raggi_Caproni_2019.trait.tsv -->
-    <!-- └── README.mixed.gwas.Raggi_Caproni_2019.yml -->
-    <source name="mixed.gwas.Raggi_Caproni_2019" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/mixed.gwas.Raggi_Caproni_2019/"/>
-      <property name="dataSetDescription" value="Genetic data from mixed.gwas.Raggi_Caproni_2019"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/mixed.gwas.Raggi_Caproni_2019"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/mixed.gen.Galeano_Fernandez_2011"/>
     </source>
 
     <!-- genetic/Stampede_x_RedHawk.gen.Song_Jia_2015 -->
     <!-- ├── phavu.mixed.map.Stampede_x_RedHawk_F2_a.lg.tsv -->
     <!-- ├── phavu.mixed.map.Stampede_x_RedHawk_F2_a.mrk.tsv -->
     <!-- └── README.Stampede_x_RedHawk.gen.Song_Jia_2015.yml -->
-    <source name="Stampede_x_RedHawk.gen.Song_Jia_2015" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/Stampede_x_RedHawk.gen.Song_Jia_2015/"/>
+    <source name="Stampede_x_RedHawk.gen.Song_Jia_2015" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/Stampede_x_RedHawk.gen.Song_Jia_2015/"/>
       <property name="dataSetDescription" value="Genetic data from Stampede_x_RedHawk.gen.Song_Jia_2015"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/Stampede_x_RedHawk.gen.Song_Jia_2015"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/Stampede_x_RedHawk.gen.Song_Jia_2015"/>
     </source>
 
     <!-- genetic/Xana_x_Cornell49242.gen.Gaitán-Solís_Duque_2002 -->
@@ -746,10 +724,32 @@
     <!-- ├── phavu.mixed.map.Xana_x_Cornell49242_a.obo.tsv -->
     <!-- ├── phavu.mixed.map.Xana_x_Cornell49242_a.qtl.tsv -->
     <!-- └── README.Xana_x_Cornell49242.gen.Gaitán-Solís_Duque_2002.yml -->
-    <source name="Xana_x_Cornell49242.gen.Gaitán-Solís_Duque_2002" type="lis-qtl" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/qtl/Xana_x_Cornell49242.gen.Gaitán-Solís_Duque_2002/"/>
+    <source name="Xana_x_Cornell49242.gen.Gaitan-Solis_Duque_2002" type="lis-genetic" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/Xana_x_Cornell49242.gen.Gaitán-Solís_Duque_2002/"/>
       <property name="dataSetDescription" value="Genetic data from Xana_x_Cornell49242.gen.Gaitán-Solís_Duque_2002"/>
-      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/Xana_x_Cornell49242.gen.Gaitán-Solís_Duque_2002"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/Xana_x_Cornell49242.gen.Gaitán-Solís_Duque_2002"/>
+    </source>
+
+    <!-- genetic/mixed.gwas.Parker_BernyMierYTeran_2020 -->
+    <!-- ├── phavu.mixed.gwas.Parker_BernyMierYTeran_2020.obo.tsv -->
+    <!-- ├── phavu.mixed.gwas.Parker_BernyMierYTeran_2020.result.tsv -->
+    <!-- ├── phavu.mixed.gwas.Parker_BernyMierYTeran_2020.trait.tsv -->
+    <!-- └── README.mixed.gwas.Parker_BernyMierYTeran_2020.yml -->
+    <source name="mixed.gwas.Parker_BernyMierYTeran_2020" type="lis-gwas" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/mixed.gwas.Parker_BernyMierYTeran_2020/"/>
+      <property name="dataSetDescription" value="Genetic data from mixed.gwas.Parker_BernyMierYTeran_2020"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/mixed.gwas.Parker_BernyMierYTeran_2020"/>
+    </source>
+
+    <!-- genetic/mixed.gwas.Raggi_Caproni_2019 -->
+    <!-- ├── phavu.mixed.gwas.Raggi_Caproni_2019.obo.tsv -->
+    <!-- ├── phavu.mixed.gwas.Raggi_Caproni_2019.result.tsv -->
+    <!-- ├── phavu.mixed.gwas.Raggi_Caproni_2019.trait.tsv -->
+    <!-- └── README.mixed.gwas.Raggi_Caproni_2019.yml -->
+    <source name="mixed.gwas.Raggi_Caproni_2019" type="lis-gwas" dump="true">
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/genetic/mixed.gwas.Raggi_Caproni_2019/"/>
+      <property name="dataSetDescription" value="Genetic data from mixed.gwas.Raggi_Caproni_2019"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/genetic/mixed.gwas.Raggi_Caproni_2019"/>
     </source>
 
 
@@ -757,19 +757,19 @@
     <!-- GENE FAMILIES -->
     <!-- ############# -->
 
-    <!-- LEGUMES/Fabaceae/genefamiles/legume.genefam.fam1.M65K/ -->
+    <!-- LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/ -->
     <source name="legume.genefam.fam1.M65K" type="lis-genefamily" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/LEGUMES/Fabaceae/genefamiles/legume.genefam.fam1.M65K/"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/"/>
       <property name="dataSetDescription" value="LIS gene families"/>
       <property name="desired.organisms" value="aradu araip arahy arath cajca cicar cucsa glyma glyso lotja lupan medtr phalu phavu prupe solly tripr vigan vigra vigun vitvi"/>
-      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamiles/legume.genefam.fam1.M65K"/>
+      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
     </source>
 
-    <!-- LEGUMES/Fabaceae/genefamiles/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/ -->
+    <!-- LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/ -->
     <source name="legume.genefam.fam1.M65K.trees_ML_rooted" type="lis-phylotree" dump="true">
-      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/LEGUMES/Fabaceae/genefamiles/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/"/>
       <property name="dataSetDescription" value="LIS gene family phylogenetic trees"/>
-      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamiles/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted"/>
+      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted"/>
     </source>
 
     <!-- ############### -->
