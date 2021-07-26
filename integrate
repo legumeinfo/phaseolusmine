@@ -37,11 +37,24 @@ echo ""
 ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.pathway
 ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.expr.4ZDQ
 ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.syn1.xQ7F
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.BARCBean6K
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Benchimol_deCampos_2007
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Blair_Pedraza_2003
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Cardoso_Oblessuc_2008
 ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Gaitan-Solis_Duque_2002
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Galeano_Cortes_2012
 ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Galeano_Fernandez_2011
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Grisi_Blair_2007
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Hanai_deCampos_2007
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Hougaard_Madsen_2008
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Kim_Kaur_2006
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.McClean_Mamidi_2010
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Murray_Larsen_2002
 ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Parker_BernyMieryTeran_2020
 ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.PvCookUCDavis2009
 ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Raggi_Caproni_2019
+./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Yu_Park_2000
+
 
 # ## SKIP THIS UNTIL WE CAN HANDLE MULTIPLE GENOME VERSIONS
 # ## phavu.G19833.gnm2

@@ -165,6 +165,66 @@
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/synteny/G19833.gnm1.ann1.syn1.xQ7F"/>
     </source>
 
+    <!-- markers/G19833.gnm1.mrk.BARCBean6K -->
+    <!-- └── phavu.G19833.gnm1.mrk.BARCBean6K.gff3 -->
+    <source name="G19833.gnm1.mrk.BARCBean6K" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.BARCBean6K"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.BARCBean6K/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.BARCBean6K"/>
+    </source>
+    <!-- markers/G19833.gnm1.mrk.Benchimol_deCampos_2007 -->
+    <!-- └── G19833.gnm1.mrk.Benchimol_deCampos_2007.gff3 -->
+    <source name="G19833.gnm1.mrk.Benchimol_deCampos_2007" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Benchimol_deCampos_2007"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Benchimol_deCampos_2007/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Benchimol_deCampos_2007"/>
+    </source>
+    <!-- markers/G19833.gnm1.mrk.Blair_Pedraza_2003 -->
+    <!-- └── G19833.gnm1.mrk.Blair_Pedraza_2003.gff3 -->
+    <source name="G19833.gnm1.mrk.Blair_Pedraza_2003" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Blair_Pedraza_2003"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Blair_Pedraza_2003/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Blair_Pedraza_2003"/>
+    </source>
+    <!-- markers/G19833.gnm1.mrk.Cardoso_Oblessuc_2008 -->
+    <!-- └── phavu.G19833.gnm1.mrk.Cardoso_Oblessuc_2008.gff3 -->
+    <source name="G19833.gnm1.mrk.Cardoso_Oblessuc_2008" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Cardoso_Oblessuc_2008"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Cardoso_Oblessuc_2008/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Cardoso_Oblessuc_2008"/>
+    </source>
     <!-- markers/G19833.gnm1.mrk.Gaitan-Solis_Duque_2002 -->
     <!-- └── phavu.G19833.gnm1.mrk.Gaitan-Solis_Duque_2002.gff3 -->
     <source name="G19833.gnm1.mrk.Gaitan-Solis_Duque_2002" type="lis-gff" dump="true">
@@ -180,7 +240,21 @@
       <property name="gff3.strainIdentifier" value="G19833"/>
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Gaitan-Solis_Duque_2002"/>
     </source>
-
+    <!-- markers/G19833.gnm1.mrk.Galeano_Cortes_2012 -->
+    <!-- └── G19833.gnm1.mrk.Galeano_Cortes_2012.gff3 -->
+    <source name="G19833.gnm1.mrk.Galeano_Cortes_2012" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Galeano_Cortes_2012"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Galeano_Cortes_2012/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Galeano_Cortes_2012"/>
+    </source>
     <!-- markers/G19833.gnm1.mrk.Galeano_Fernandez_2011 -->
     <!-- └── phavu.G19833.gnm1.mrk.Galeano_Fernandez_2011.gff3 -->
     <source name="G19833.gnm1.mrk.Galeano_Fernandez_2011" type="lis-gff" dump="true">
@@ -196,7 +270,96 @@
       <property name="gff3.strainIdentifier" value="G19833"/>
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Galeano_Fernandez_2011"/>
     </source>
-
+    <!-- markers/G19833.gnm1.mrk.Grisi_Blair_2007 -->
+    <!-- └── G19833.gnm1.mrk.Grisi_Blair_2007.gff3 -->
+    <source name="G19833.gnm1.mrk.Grisi_Blair_2007" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Grisi_Blair_2007"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Grisi_Blair_2007/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Grisi_Blair_2007"/>
+    </source>
+    <!-- markers/G19833.gnm1.mrk.Hanai_deCampos_2007 -->
+    <!-- └── G19833.gnm1.mrk.Hanai_deCampos_2007.gff3 -->
+    <source name="G19833.gnm1.mrk.Hanai_deCampos_2007" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Hanai_deCampos_2007"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Hanai_deCampos_2007/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Hanai_deCampos_2007"/>
+    </source>
+    <!-- markers/G19833.gnm1.mrk.Hougaard_Madsen_2008 -->
+    <!-- └── G19833.gnm1.mrk.Hougaard_Madsen_2008.gff3 -->
+    <source name="G19833.gnm1.mrk.Hougaard_Madsen_2008" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Hougaard_Madsen_2008"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Hougaard_Madsen_2008/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Hougaard_Madsen_2008"/>
+    </source>
+    <!-- markers/G19833.gnm1.mrk.Kim_Kaur_2006 -->
+    <!-- └── G19833.gnm1.mrk.Kim_Kaur_2006.gff3 -->
+    <source name="G19833.gnm1.mrk.Kim_Kaur_2006" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Kim_Kaur_2006"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Kim_Kaur_2006/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Kim_Kaur_2006"/>
+    </source>
+    <!-- markers/G19833.gnm1.mrk.McClean_Mamidi_2010 -->
+    <!-- └── G19833.gnm1.mrk.McClean_Mamidi_2010.gff3 -->
+    <source name="G19833.gnm1.mrk.McClean_Mamidi_2010" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.McClean_Mamidi_2010"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.McClean_Mamidi_2010/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.McClean_Mamidi_2010"/>
+    </source>
+    <!-- markers/G19833.gnm1.mrk.Murray_Larsen_2002 -->
+    <!-- └── G19833.gnm1.mrk.Murray_Larsen_2002.gff3 -->
+    <source name="G19833.gnm1.mrk.Murray_Larsen_2002" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Murray_Larsen_2002"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Murray_Larsen_2002/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Murray_Larsen_2002"/>
+    </source>
     <!-- markers/G19833.gnm1.mrk.Parker_BernyMieryTeran_2020 -->
     <!-- └── phavu.G19833.gnm1.mrk.Parker_BernyMieryTeran_2020.gff3 -->
     <source name="G19833.gnm1.mrk.Parker_BernyMieryTeran_2020" type="lis-gff" dump="true">
@@ -212,7 +375,6 @@
       <property name="gff3.strainIdentifier" value="G19833"/>
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Parker_BernyMieryTeran_2020"/>
     </source>
-
     <!-- markers/G19833.gnm1.mrk.PvCookUCDavis2009 -->
     <!-- └── phavu.G19833.gnm1.mrk.PvCookUCDavis2009.gff3 -->
     <source name="G19833.gnm1.mrk.PvCookUCDavis2009" type="lis-gff" dump="true">
@@ -228,7 +390,6 @@
       <property name="gff3.strainIdentifier" value="G19833"/>
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.PvCookUCDavis2009"/>
     </source>
-
     <!-- markers/G19833.gnm1.mrk.Raggi_Caproni_2019 -->
     <!-- └── phavu.G19833.gnm1.mrk.Raggi_Caproni_2019.gff3 -->
     <source name="G19833.gnm1.mrk.Raggi_Caproni_2019" type="lis-gff" dump="true">
@@ -244,6 +405,23 @@
       <property name="gff3.strainIdentifier" value="G19833"/>
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Raggi_Caproni_2019"/>
     </source>
+    <!-- markers/G19833.gnm1.mrk.Yu_Park_2000 -->
+    <!-- └── G19833.gnm1.mrk.Yu_Park_2000.gff3 -->
+    <source name="G19833.gnm1.mrk.Yu_Park_2000" type="lis-gff" dump="true">
+      <property name="gff3.dataSetTitle" value="G19833.gnm1.mrk.Yu_Park_2000"/>
+      <property name="gff3.dataSetDescription" value="Genetic markers mapped to phavu.G19833.gnm1"/>
+      <property name="gff3.dataSetVersion" value="gnm1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Yu_Park_2000/"/>
+      <property name="gff3.dataSourceName" value="LIS Datastore"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
+      <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
+      <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
+      <property name="gff3.taxonId" value="3885"/>
+      <property name="gff3.strainIdentifier" value="G19833"/>
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Yu_Park_2000"/>
+    </source>
+
+
     
     <!-- ############################## -->
     <!-- Phaseolus vulgaris G19833.gnm2 -->
