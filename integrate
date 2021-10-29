@@ -96,7 +96,6 @@ echo ""
 ./gradlew integrate --stacktrace -Psource=mixed.gwas.Parker_BernyMierYTeran_2020
 ./gradlew integrate --stacktrace -Psource=mixed.gwas.Raggi_Caproni_2019
 
-
 ## phalu
 ./gradlew integrate --stacktrace -Psource=phalu-about
 
