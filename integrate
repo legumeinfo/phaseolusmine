@@ -1,110 +1,139 @@
 #!/bin/sh
-
-echo ""
 echo "##########################################################################################################################################"
 echo "##########################################################################################################################################"
 echo "##################################################### BEANMINE INTEGRATE #################################################################"
 echo "##########################################################################################################################################"
 echo "##########################################################################################################################################"
-echo ""
 
-## ontologies
-./gradlew integrate -Psource=so --stacktrace
-./gradlew integrate -Psource=go --stacktrace
-./gradlew integrate -Psource=plant-ontology --stacktrace
-./gradlew integrate -Psource=plant-trait-ontology --stacktrace
-./gradlew integrate -Psource=bean-crop-ontology --stacktrace
+## phaac
+## -----
+# ./gradlew integrate --stacktrace -Psource=phaac-description
+## GENOMES
+# ./gradlew integrate --stacktrace -Psource=Frijol_Bayo.gnm1.QH8L
+# ./gradlew integrate --stacktrace -Psource=W6_15578.gnm2.L2V4
+## ANNOTATIONS
+# ./gradlew integrate --stacktrace -Psource=Frijol_Bayo.gnm1.ann1.ML22.cds
+# ./gradlew integrate --stacktrace -Psource=Frijol_Bayo.gnm1.ann1.ML22.gene_models_main
+# ./gradlew integrate --stacktrace -Psource=Frijol_Bayo.gnm1.ann1.ML22.protein
+# ./gradlew integrate --stacktrace -Psource=Frijol_Bayo.gnm1.ann1.ML22.mrna
+# ./gradlew integrate --stacktrace -Psource=Frijol_Bayo.gnm1.ann1.ML22.legfed_v1_0.M65K.gfa
+# ./gradlew integrate --stacktrace -Psource=Frijol_Bayo.gnm1.ann1.ML22.legfed_v1_0.M65K.pathway
+# ./gradlew integrate --stacktrace -Psource=W6_15578.gnm2.ann1.LVZ1.cds_primary
+# ./gradlew integrate --stacktrace -Psource=W6_15578.gnm2.ann1.LVZ1.gene_models_main
+# ./gradlew integrate --stacktrace -Psource=W6_15578.gnm2.ann1.LVZ1.protein_primary
+# ./gradlew integrate --stacktrace -Psource=W6_15578.gnm2.ann1.LVZ1.mrna_primary
+# ./gradlew integrate --stacktrace -Psource=W6_15578.gnm2.ann1.LVZ1.legfed_v1_0.M65K.gfa
+# ./gradlew integrate --stacktrace -Psource=W6_15578.gnm2.ann1.LVZ1.legfed_v1_0.M65K.pathway
 
-## InterPro
-./gradlew integrate -Psource=interpro --stacktrace
-./gradlew integrate -Psource=interpro-go --stacktrace
-
-## LIS gene families and phylotree
-./gradlew integrate -Psource=legume.genefam.fam1.M65K --stacktrace
-./gradlew integrate -Psource=legume.genefam.fam1.M65K.trees_ML_rooted --stacktrace
+## phalu
+## -----
+# ./gradlew integrate --stacktrace -Psource=phalu-description
+## GENOMES
+# ./gradlew integrate --stacktrace -Psource=G27455.gnm1.7NXX
+## ANNOTATIONS
+# ./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.cds
+# ./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.gene_models_main
+# ./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.protein
+# ./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.mrna
+# ./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.gfa
+# ./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.pathway
 
 ## phavu
-./gradlew integrate --stacktrace -Psource=phavu-about
-
-## phavu.G19833.gnm1
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.zBnF.genome_main
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.legfed_v1_0.M65K.gfa
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.cds
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.gene_models_main
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.info_annot
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.protein
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.transcript
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.pathway
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.expr.4ZDQ
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.syn1.xQ7F
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.BARCBean6K
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Benchimol_deCampos_2007
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Blair_Pedraza_2003
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Cardoso_Oblessuc_2008
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Gaitan-Solis_Duque_2002
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Galeano_Cortes_2012
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Galeano_Fernandez_2011
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Grisi_Blair_2007
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Hanai_deCampos_2007
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Hougaard_Madsen_2008
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Kim_Kaur_2006
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.McClean_Mamidi_2010
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Murray_Larsen_2002
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Parker_BernyMieryTeran_2020
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.PvCookUCDavis2009
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Raggi_Caproni_2019
-./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Yu_Park_2000
-
-
-# ## SKIP THIS UNTIL WE CAN HANDLE MULTIPLE GENOME VERSIONS
-# ## phavu.G19833.gnm2
-# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.fC0g.genome_main
-# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.legfed_v1_0.M65K.gfa
+## -----
+# ./gradlew integrate --stacktrace -Psource=phavu-description
+## GENOMES
+# ./gradlew integrate --stacktrace -Psource=5-593.gnm1.1P7P
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.zBnF
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.fC0g
+# ./gradlew integrate --stacktrace -Psource=LaborOvalle.gnm1.VZZS
+# ./gradlew integrate --stacktrace -Psource=UI111.gnm1.3VTM
+## ANNOTATIONS
+# ./gradlew integrate --stacktrace -Psource=5-593.gnm1.ann1.3FBJ.cds
+# ./gradlew integrate --stacktrace -Psource=5-593.gnm1.ann1.3FBJ.gene_models_main
+# ./gradlew integrate --stacktrace -Psource=5-593.gnm1.ann1.3FBJ.info_annot
+# ./gradlew integrate --stacktrace -Psource=5-593.gnm1.ann1.3FBJ.protein
+# ./gradlew integrate --stacktrace -Psource=5-593.gnm1.ann1.3FBJ.mrna
+# ./gradlew integrate --stacktrace -Psource=5-593.gnm1.ann1.3FBJ.legfed_v1_0.M65K.gfa
+# ./gradlew integrate --stacktrace -Psource=5-593.gnm1.ann1.3FBJ.legfed_v1_0.M65K.pathway
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.cds
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.gene_models_main
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.info_annot
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.protein
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.mrna
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.legfed_v1_0.M65K.gfa
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.pScz.pathway
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.expr.4ZDQ
 # ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.cds
 # ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.gene_models_main
 # ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.info_annot
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.legfed_v1_0.M65K.gfa
 # ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.pathway
 # ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.protein
-# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.transcript
-# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.syn1.DVDW
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.PB8d.mrna
+# ./gradlew integrate --stacktrace -Psource=LaborOvalle.gnm1.ann1.L1DY.cds
+# ./gradlew integrate --stacktrace -Psource=LaborOvalle.gnm1.ann1.L1DY.gene_models_main
+# ./gradlew integrate --stacktrace -Psource=LaborOvalle.gnm1.ann1.L1DY.legfed_v1_0.M65K.gfa
+# ./gradlew integrate --stacktrace -Psource=LaborOvalle.gnm1.ann1.L1DY.legfed_v1_0.M65K.pathway
+# ./gradlew integrate --stacktrace -Psource=LaborOvalle.gnm1.ann1.L1DY.protein
+# ./gradlew integrate --stacktrace -Psource=LaborOvalle.gnm1.ann1.L1DY.mrna
+# ./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.cds
+# ./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.gene_models_main
+# ./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.legfed_v1_0.M65K.gfa
+# ./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.legfed_v1_0.M65K.pathway
+# ./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.protein
+# ./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.mrna
+## GENETIC
+# ./gradlew integrate --stacktrace -Psource=BAT93_x_JALOEEP558.gen.Blair_Cortes_2018
+# ./gradlew integrate --stacktrace -Psource=BAT93_x_JALOEEP558.gen.Caldas_Blair_2009
+# ./gradlew integrate --stacktrace -Psource=BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998
+# ./gradlew integrate --stacktrace -Psource=BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010
+# ./gradlew integrate --stacktrace -Psource=Cerinza_x_G24404.gen.Blair_Iriarte_2006
+# ./gradlew integrate --stacktrace -Psource=DOR364_x_BAT477.gen.Blair_Galeano_2012
+# ./gradlew integrate --stacktrace -Psource=G2333_x_G19839.gen.Checa_Blair_2008
+# ./gradlew integrate --stacktrace -Psource=ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020
+# ./gradlew integrate --stacktrace -Psource=mixed.gen.Blair_Cortes_2018
+# ./gradlew integrate --stacktrace -Psource=mixed.gen.Galeano_Fernandez_2011
+# ./gradlew integrate --stacktrace -Psource=mixed.gwas.DiVittori_Bitocchi_2021
+# ./gradlew integrate --stacktrace -Psource=mixed.gwas.Jain_Poromarto_2019
+# ./gradlew integrate --stacktrace -Psource=mixed.gwas.Myers_Wallace_2019
+# ./gradlew integrate --stacktrace -Psource=mixed.gwas.Parker_BernyMierYTeran_2020
+# ./gradlew integrate --stacktrace -Psource=mixed.gwas.Raggi_Caproni_2019
+# ./gradlew integrate --stacktrace -Psource=mixed.gwas.Shi_Gepts_2021
+# ./gradlew integrate --stacktrace -Psource=mixed.gwas.Zitnick-Anderson_Oladzad_2020
+# ./gradlew integrate --stacktrace -Psource=Stampede_x_RedHawk.gen.Song_Jia_2015
+# ./gradlew integrate --stacktrace -Psource=Xana_x_Cornell49242.gen.Gaitan-Solis_Duque_2002
+## MARKERS
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.BARCBean6K
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Benchimol_deCampos_2007
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Blair_Pedraza_2003
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Cardoso_Oblessuc_2008
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Gaitan-Solis_Duque_2002
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Galeano_Cortes_2012
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Galeano_Fernandez_2011
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Grisi_Blair_2007
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Hanai_deCampos_2007
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Hougaard_Madsen_2008
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Kim_Kaur_2006
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.McClean_Mamidi_2010
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Murray_Larsen_2002
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Parker_BernyMierYTeran_2020
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.PvCookUCDavis2009
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Raggi_Caproni_2019
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.mrk.Yu_Park_2000
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.mrk.DiVittori_Bitocchi_2021
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.mrk.Zitnick-Anderson_Oladzad_2020
+## SYNTENY
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm1.ann1.syn.xQ7F
+# ./gradlew integrate --stacktrace -Psource=G19833.gnm2.ann1.syn.DVDW
 
-## phavu.UI111.gnm1
-./gradlew integrate --stacktrace -Psource=UI111.gnm1.3VTM.genome_main
-./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.legfed_v1_0.M65K.gfa
-./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.cds
-./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.gene_models_main
-./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.info_annot
-./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.legfed_v1_0.M65K.pathway
-./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.protein
-./gradlew integrate --stacktrace -Psource=UI111.gnm1.ann1.8L4N.transcript
 
-## phavu genetic
-./gradlew integrate --stacktrace -Psource=BAT93_x_JALOEEP558.gen.Blair_Cortes_2018
-./gradlew integrate --stacktrace -Psource=BAT93_x_JALOEEP558.gen.Caldas_Blair_2009
-./gradlew integrate --stacktrace -Psource=BAT93_x_JALOEEP558.gen.Freyre_Skroch_1998
-./gradlew integrate --stacktrace -Psource=BAT93_x_JALOEEP558.gen.McConnell_Mamidi_2010
-./gradlew integrate --stacktrace -Psource=Cerinza_x_G24404.gen.Blair_Iriarte_2006
-./gradlew integrate --stacktrace -Psource=DOR364_x_BAT477.gen.Blair_Galeano_2012
-./gradlew integrate --stacktrace -Psource=G2333_x_G19839.gen.Checa_Blair_2008
-./gradlew integrate --stacktrace -Psource=ICABunsi_x_SXB405.gen.Parker_BernyMierYTeran_2020
-./gradlew integrate --stacktrace -Psource=mixed.gen.Blair_Cortes_2018
-./gradlew integrate --stacktrace -Psource=mixed.gen.Galeano_Fernandez_2011
-./gradlew integrate --stacktrace -Psource=Stampede_x_RedHawk.gen.Song_Jia_2015
-./gradlew integrate --stacktrace -Psource=Xana_x_Cornell49242.gen.Gaitan-Solis_Duque_2002
-
-## phavu gwas
-./gradlew integrate --stacktrace -Psource=mixed.gwas.Parker_BernyMierYTeran_2020
-./gradlew integrate --stacktrace -Psource=mixed.gwas.Raggi_Caproni_2019
-
-## phalu
-./gradlew integrate --stacktrace -Psource=phalu-about
-
-## phalu.G27455.gnm1
-./gradlew integrate --stacktrace -Psource=G27455.gnm1.7NXX.genome_main
-./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.gfa
-./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.cds
-./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.gene_models_main
-./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.protein
-./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.transcript
-./gradlew integrate --stacktrace -Psource=G27455.gnm1.ann1.JD7C.legfed_v1_0.M65K.pathway
-
+## ONTOLOGIES, ETC.
+# ./gradlew integrate --stacktrace -Psource=legume.genefam.fam1.M65K
+# ./gradlew integrate --stacktrace -Psource=legume.genefam.fam1.M65K.trees_ML_rooted
+# ./gradlew integrate --stacktrace -Psource=interpro
+# ./gradlew integrate --stacktrace -Psource=interpro-go
+# ./gradlew integrate --stacktrace -Psource=go
+# ./gradlew integrate --stacktrace -Psource=so
+# ./gradlew integrate --stacktrace -Psource=plant-ontology
+# ./gradlew integrate --stacktrace -Psource=plant-trait-ontology
+# ./gradlew integrate --stacktrace -Psource=bean-crop-ontology

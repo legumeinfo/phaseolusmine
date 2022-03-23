@@ -21,29 +21,21 @@ echo ""
 # ./gradlew postprocess -Pprocess=populate-child-features
 # ./gradlew postprocess -Pprocess=create-gene-flanking-features
 
-## LIS GENOMIC
-# ./gradlew postprocess -Pprocess=lis-populate-cds-gene-references
-# ./gradlew postprocess -Pprocess=lis-populate-cds-protein-references
-# ./gradlew postprocess -Pprocess=lis-populate-cds-transcript-references
-# ./gradlew postprocess -Pprocess=lis-populate-gene-protein-collections
-# ./gradlew postprocess -Pprocess=lis-populate-transcript-gene-references
-# ./gradlew postprocess -Pprocess=lis-populate-transcript-protein-references
-# ./gradlew postprocess -Pprocess=lis-populate-protein-pathway-collections
-
-## LIS GENETIC
-# ./gradlew postprocess -Pprocess=lis-populate-qtl-gene-collections
-
-## LIS OTHER
+# ## LIS
 # ./gradlew postprocess -Pprocess=lis-populate-publications
+# ./gradlew postprocess -Pprocess=lis-populate-gwas-marker-collections
+# ./gradlew postprocess -Pprocess=lis-populate-linkagegroup-marker-collections
+# ./gradlew postprocess -Pprocess=lis-populate-qtl-marker-collections
+# ./gradlew postprocess -Pprocess=lis-populate-gene-protein-collections
+# ./gradlew postprocess -Pprocess=lis-populate-protein-pathway-collections
+# ./gradlew postprocess -Pprocess=lis-populate-qtl-gene-collections
 
 ## VIEWS AND INDEXES
 # ./gradlew postprocess -Pprocess=create-location-overlap-index
 # ./gradlew postprocess -Pprocess=create-overlap-view
 # ./gradlew postprocess -Pprocess=create-attribute-indexes
 
-## DO THIS AFTER EACH UPDATE
+## DO THESE AFTER UPDATES
 ./gradlew postprocess -Pprocess=summarise-objectstore
-
-## SOLR
 ./gradlew postprocess -Pprocess=create-autocomplete-index
 ./gradlew postprocess -Pprocess=create-search-index

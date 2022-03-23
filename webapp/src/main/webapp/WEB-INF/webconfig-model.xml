@@ -63,7 +63,7 @@
   <class className="org.intermine.model.bio.Comment">
     <fields>
       <fieldconfig fieldExpr="type"/>
-      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
     </fields>
   </class>
 
@@ -76,7 +76,7 @@
     <fields>
       <fieldconfig fieldExpr="name"/>
       <fieldconfig fieldExpr="url" doNotTruncate="true"/>
-      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
       <fieldconfig fieldExpr="licence"/>
       <fieldconfig fieldExpr="dataSource.name" label="DataSource"/>
     </fields>
@@ -91,7 +91,7 @@
     <fields>
       <fieldconfig fieldExpr="name"/>
       <fieldconfig fieldExpr="url" doNotTruncate="true"/>
-      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
     </fields>
     <tabledisplayer src="/model/dataSourceShort.jsp"/>
   </class>
@@ -149,7 +149,7 @@
       <fieldconfig fieldExpr="name" label="Name"/>
       <fieldconfig fieldExpr="organism.name" label="Organism" />
       <fieldconfig fieldExpr="strain.identifier" label="Strain" />
-      <fieldconfig fieldExpr="description" label="Description"/>
+      <fieldconfig fieldExpr="description"  label="Description" doNotTruncate="true"/>
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
       <fieldconfig fieldExpr="assemblyVersion" label="Assembly" />
       <fieldconfig fieldExpr="annotationVersion" label="Annotation" />
@@ -168,7 +168,7 @@
       <fieldconfig fieldExpr="subject.primaryIdentifier" label="Subject"/>
       <fieldconfig fieldExpr="ontologyTerm.name" label="Term"/>
       <fieldconfig fieldExpr="ontologyTerm.identifier" label="Term Identifier"/>
-      <fieldconfig fieldExpr="ontologyTerm.description" label="Description"/>
+      <fieldconfig fieldExpr="ontologyTerm.description"  label="Description" doNotTruncate="true"/>
     </fields>
   </class>
 
@@ -274,7 +274,7 @@
       </titles>
     </headerconfig>
     <fields>
-      <fieldconfig fieldExpr="description" label="Description"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
       <fieldconfig fieldExpr="identifier" label="LIS identifier"/>
     </fields>
   </class>
@@ -323,7 +323,7 @@
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="LIS identifier" />
-      <fieldconfig fieldExpr="description" label="Description" />
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
     </fields>
   </class>
 
@@ -344,11 +344,12 @@
   <class className="org.intermine.model.bio.ExpressionSource">
     <headerconfig>
       <titles>
-        <title mainTitles="identifier" numberofMainTitlesToShow="1" />
+        <title mainTitles="primaryIdentifier" numberofMainTitlesToShow="1" />
       </titles>
     </headerconfig>
     <fields>
-      <fieldconfig fieldExpr="identifier" label="Name"/>
+      <fieldconfig fieldExpr="primaryIdentifier" label="LIS identifier"/>
+      <fieldconfig fieldExpr="synopsis" label="Synopsis" doNotTruncate="true"/>
       <fieldconfig fieldExpr="geoSeries" label="NCBI GEO Accession"/>
       <fieldconfig fieldExpr="bioProject.accession" label="NCBI BioProject"/>
       <fieldconfig fieldExpr="sra" label="NCBI SRA"/>
@@ -364,7 +365,7 @@
     <fields>
       <fieldconfig fieldExpr="accession" label="NCBI Accession"/>
       <fieldconfig fieldExpr="title" label="Title"/>
-      <fieldconfig fieldExpr="description" label="Description"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
     </fields>
   </class>
 
@@ -377,7 +378,7 @@
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="LIS Identifier"/>
       <fieldconfig fieldExpr="name" label="Name"/>
-      <fieldconfig fieldExpr="description" label="Description"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
       <fieldconfig fieldExpr="bioSample" label="NCBI BioSample"/>
     </fields>
   </class>
@@ -399,23 +400,23 @@
       </titles>
     </headerconfig>
     <fields>
-      <fieldconfig fieldExpr="primaryIdentifier" label="LIS Identifier"/>
-      <fieldconfig fieldExpr="subject" label="Subject"/>
-      <fieldconfig fieldExpr="genotypingPlatform" label="Genotyping Platform"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true" />
+      <fieldconfig fieldExpr="genotypingPlatform" label="Genotyping Platform" />
+      <fieldconfig fieldExpr="population" label="Population" />
+      <fieldconfig fieldExpr="synopsis" label="Synopsis" />
     </fields>
   </class>
 
   <class className="org.intermine.model.bio.GWASResult">
     <headerconfig>
       <titles>
-        <title mainTitles="trait.primaryIdentifier|marker.secondaryIdentifier" numberofMainTitlesToShow="2" />
+        <title mainTitles="trait.primaryIdentifier|markerName" numberofMainTitlesToShow="2" />
       </titles>
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="gwas.primaryIdentifier" label="GWAS"/>
       <fieldconfig fieldExpr="trait.primaryIdentifier" label="Trait"/>
-      <fieldconfig fieldExpr="marker.secondaryIdentifier" label="Marker"/>
-      <fieldconfig fieldExpr="marker.chromosome.secondaryIdentifier" label="Chromosome"/>
+      <fieldconfig fieldExpr="markerName" label="Marker"/>
       <fieldconfig fieldExpr="pValue" label="p-value"/>
     </fields>
   </class>
@@ -428,12 +429,9 @@
     </headerconfig>
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="LIS Identifier"/>
-      <fieldconfig fieldExpr="name" label="LIS Name"/>
-      <fieldconfig fieldExpr="description" label="Description"/>
+      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
     </fields>
   </class>
-
-
 
   <class className="org.intermine.model.bio.Phylotree">
     <headerconfig>
