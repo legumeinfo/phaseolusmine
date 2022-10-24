@@ -27,6 +27,11 @@
   </class>
 
   <class className="org.intermine.model.bio.SequenceFeature">
+    <headerconfig>
+      <titles>
+        <title mainTitles="name|primaryIdentifier" numberOfMainTitlesToShow="1" subTitles="*organism.shortName*|strain.identifier"/>
+       </titles>
+    </headerconfig>
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier" label="Identifier"/>
       <fieldconfig fieldExpr="secondaryIdentifier" label="Alt.identifier"/>
@@ -140,19 +145,6 @@
 
   <!-- has bagdisplayer and widgets -->
   <class className="org.intermine.model.bio.Gene">
-    <fields>
-      <fieldconfig fieldExpr="primaryIdentifier" label="Identifier"/>
-      <fieldconfig fieldExpr="secondaryIdentifier" label="Alt.identifier"/>
-      <fieldconfig fieldExpr="name" label="Name"/>
-      <fieldconfig fieldExpr="organism.name" label="Organism"/>
-      <fieldconfig fieldExpr="strain.identifier" label="Strain"/>
-      <fieldconfig fieldExpr="assemblyVersion" label="Assembly"/>
-      <fieldconfig fieldExpr="annotationVersion" label="Annotation"/>
-      <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" showInInlineCollection="true" showInSummary="true"/>
-      <fieldconfig fieldExpr="description" label="Description" doNotTruncate="true"/>
-      <fieldconfig fieldExpr="geneFamilyScore" label="Gene family score"/>
-      <fieldconfig fieldExpr="geneFamily.description" label="Gene family"/>
-    </fields>
     <bagdisplayers>
       <displayer src="heatMap.tile" showOnLeft="true"/>
     </bagdisplayers>
