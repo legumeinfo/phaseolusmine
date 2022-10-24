@@ -1,4 +1,7 @@
 *~
 *.log
+*.sh
 .gradle
 build
+integrate-*
+

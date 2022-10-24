@@ -52,7 +52,8 @@
 <!-- Heat Map -->
 <action path="/initHeatMap" type="org.ncgr.intermine.web.HeatMapController" />
 
-<!-- <action path="/heatMap" forward="heatMap.page" /> -->
+<!-- Annotation -->
+<action path="/initAnnotation" type="org.ncgr.intermine.web.AnnotationController" />
 
 <!-- Linkage Group Diagram -->
 <action path="/initLinkageGroupDiagram" type="org.ncgr.intermine.web.LinkageGroupDiagramController" />
