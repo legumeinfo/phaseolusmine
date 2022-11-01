@@ -530,7 +530,7 @@
     </source>
 
     <!-- PANTHER terms -->
-    <source name="panther-term-9" type="panther-term">
+    <source name="panther-term" type="panther-term">
       <property name="src.data.dir" location="/data/PANTHER/"/>
     </source>
     
@@ -593,10 +593,10 @@
     <post-process name="create-gene-flanking-features"/>
 
     <!-- LIS -->
+    <post-process name="lis-populate-publications"/>
     <post-process name="lis-create-genefamilytally"/>
     <post-process name="lis-populate-gwasresult-markers"/>
     <post-process name="lis-populate-marker-linkagegrouppositions"/>
-    <post-process name="lis-populate-publications"/>
     <post-process name="lis-populate-qtl-genes"/>
     <post-process name="lis-populate-qtl-markers"/>
     
