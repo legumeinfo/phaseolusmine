@@ -1,2 +1,2 @@
-# beanmine
-An InterMine for common bean
+# phaseolusmine
+An InterMine for Phaseolus species
