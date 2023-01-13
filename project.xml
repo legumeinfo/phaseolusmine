@@ -7,7 +7,7 @@
 
     <!-- Phaseolus/acutifolius/about_this_collection -->
     <source name="Phaseolus-acutifolius-description" type="lis-description" dump="true" >
-      <property name="dataSetName" value="Phaseolus/acutifolius/about_this_collection" />
+      <property name="dataSetName" value="Phaseolus-acutifolius-description" />
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/acutifolius/about_this_collection/" />
       <property name="dataSetDescription" value="Phaseolus acutifolius organism and strain information." />
       <property name="src.data.dir" location="/data/v2/Phaseolus/acutifolius/about_this_collection" />
@@ -39,7 +39,7 @@
 
     <!-- Phaseolus/lunatus/about_this_collection -->
     <source name="Phaseolus-lunatus-description" type="lis-description" dump="true" >
-      <property name="dataSetName" value="Phaseolus/lunatus/about_this_collection" />
+      <property name="dataSetName" value="Phaseolus-lunatus-description" />
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/lunatus/about_this_collection/" />
       <property name="dataSetDescription" value="Phaseolus lunatus organism and strain information." />
       <property name="src.data.dir" location="/data/v2/Phaseolus/lunatus/about_this_collection" />
@@ -59,7 +59,7 @@
 
     <!-- Phaseolus/vulgaris/about_this_collection -->
     <source name="Phaseolus-vulgaris-description" type="lis-description" dump="true" >
-      <property name="dataSetName" value="Phaseolus/vulgaris/about_this_collection" />
+      <property name="dataSetName" value="Phaseolus-vulgaris-description" />
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/about_this_collection/" />
       <property name="dataSetDescription" value="Phaseolus vulgaris organism and strain information." />
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/about_this_collection" />
@@ -209,7 +209,7 @@
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Benchimol_deCampos_2007" />
     </source>
     <!-- Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Blair_Cortés_2013 -->
-    <source name="G19833.gnm1.mrk.Blair_Cortes_2013" type="lis-markers" dump="true">
+    <source name="G19833.gnm1.mrk.Blair_Cortés_2013" type="lis-markers" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Blair_Cortés_2013/" />
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Blair_Cortés_2013" />
     </source>
@@ -224,12 +224,12 @@
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Cardoso_Oblessuc_2008" />
     </source>
     <!-- Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Gaitán-Solís_Duque_2002 -->
-    <source name="G19833.gnm1.mrk.Gaitan-Solis_Duque_2002" type="lis-markers" dump="true">
+    <source name="G19833.gnm1.mrk.Gaitán-Solís_Duque_2002" type="lis-markers" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Gaitán-Solís_Duque_2002/" />
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Gaitán-Solís_Duque_2002" />
     </source>
     <!-- Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Galeano_Cortés_2012 -->
-    <source name="G19833.gnm1.mrk.Galeano_Cortes_2012" type="lis-markers" dump="true">
+    <source name="G19833.gnm1.mrk.Galeano_Cortés_2012" type="lis-markers" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Galeano_Cortés_2012/" />
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Galeano_Cortés_2012" />
     </source>
@@ -293,8 +293,13 @@
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/markers/G19833.gnm2.mrk.Andean_MidAmer_GBS/" />
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm2.mrk.Andean_MidAmer_GBS" />
     </source>
+    <!-- Phaseolus/vulgaris/markers/G19833.gnm2.mrk.Bassett_Kamfwa_2021 -->
+    <source name="G19833.gnm2.mrk.Bassett_Kamfwa_2021" type="lis-markers" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/markers/G19833.gnm2.mrk.Bassett_Kamfwa_2021/" />
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm2.mrk.Bassett_Kamfwa_2021" />
+    </source>
     <!-- Phaseolus/vulgaris/markers/G19833.gnm2.mrk.Blair_Cortés_2013 -->
-    <source name="G19833.gnm2.mrk.Blair_Cortes_2013" type="lis-markers" dump="true">
+    <source name="G19833.gnm2.mrk.Blair_Cortés_2013" type="lis-markers" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/markers/G19833.gnm2.mrk.Blair_Cortés_2013/" />
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/markers/G19833.gnm2.mrk.Blair_Cortés_2013" />
     </source>
@@ -366,6 +371,11 @@
       <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/qtl/Xana_x_Cornell49242.qtl.Pérez-Vega_Trabanco_2013" />
     </source>
 
+    <!-- Phaseolus/vulgaris/gwas/mixed.gwas.Bassett_Kamfwa_2021 -->
+    <source name="mixed.gwas.Bassett_Kamfwa_2021" type="lis-gwas" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/gwas/mixed.gwas.Bassett_Kamfwa_2021/" />
+      <property name="src.data.dir" location="/data/v2/Phaseolus/vulgaris/gwas/mixed.gwas.Bassett_Kamfwa_2021" />
+    </source>
     <!-- Phaseolus/vulgaris/gwas/mixed.gwas.DiVittori_Bitocchi_2021 -->
     <source name="mixed.gwas.DiVittori_Bitocchi_2021" type="lis-gwas" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/gwas/mixed.gwas.DiVittori_Bitocchi_2021/" />
@@ -441,55 +451,55 @@
 
     <!-- other species from synteny -->
     <source name="Arachis-duranensis-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Arachis/duranensis/about_this_collection"/>
+      <property name="dataSetName" value="Arachis-duranensis-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Arachis/duranensis/about_this_collection/" />
       <property name="dataSetDescription" value="Glycine max organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Arachis/duranensis/about_this_collection"/>
     </source>
     <source name="Arachis-ipaensis-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Arachis/ipaensis/about_this_collection"/>
+      <property name="dataSetName" value="Arachis-ipaensis-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Arachis/ipaensis/about_this_collection/" />
       <property name="dataSetDescription" value="Arachis ipaensis organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Arachis/ipaensis/about_this_collection"/>
     </source>
     <source name="Cajanus-cajan-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Cajanus/cajan/about_this_collection"/>
+      <property name="dataSetName" value="Cajanus-cajan-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Cajanus/cajan/about_this_collection/" />
       <property name="dataSetDescription" value="Cajanus cajan organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Cajanus/cajan/about_this_collection"/>
     </source>
     <source name="Glycine-max-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Glycine/max/about_this_collection"/>
+      <property name="dataSetName" value="Glycine-max-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Glycine/max/about_this_collection/" />
       <property name="dataSetDescription" value="Glycine max organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Glycine/max/about_this_collection"/>
     </source>
     <source name="Lotus-japonicus-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Lotus/japonicus/about_this_collection"/>
+      <property name="dataSetName" value="Lotus-japonicus-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Lotus/japonicus/about_this_collection/" />
       <property name="dataSetDescription" value="Lotus japonicus organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Lotus/japonicus/about_this_collection"/>
     </source>
     <source name="Lupinus-angustifolius-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Lupinus/angustifolius/about_this_collection"/>
+      <property name="dataSetName" value="Lupinus-angustifolius-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Lupinus/angustifolius/about_this_collection/" />
       <property name="dataSetDescription" value="Lupinus angustifolius organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Lupinus/angustifolius/about_this_collection"/>
     </source>
     <source name="Medicago-truncatula-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Medicago/truncatula/about_this_collection"/>
+      <property name="dataSetName" value="Medicago-truncatula-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Medicago/truncatula/about_this_collection/" />
       <property name="dataSetDescription" value="Medicago truncatula organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Medicago/truncatula/about_this_collection"/>
     </source>
     <source name="Vigna-angularis-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Vigna/angularis/about_this_collection"/>
+      <property name="dataSetName" value="Vigna-angularis-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Vigna/angularis/about_this_collection/" />
       <property name="dataSetDescription" value="Vigna angularis organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Vigna/angularis/about_this_collection"/>
     </source>
     <source name="Vigna-unguiculata-description" type="lis-description" dump="true">
-      <property name="dataSetName" value="Vigna/unguiculata/about_this_collection"/>
+      <property name="dataSetName" value="Vigna-unguiculata-description"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Vigna/unguiculata/about_this_collection/" />
       <property name="dataSetDescription" value="Vigna unguiculata organism and strain information."/>
       <property name="src.data.dir" location="/data/v2/Vigna/unguiculata/about_this_collection"/>
@@ -501,17 +511,13 @@
     
     <!-- LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/ -->
     <source name="legume.genefam.fam1.M65K" type="lis-genefamily" dump="true">
-      <property name="dataSetName" value="legume.genefam.fam1.M65K"/>
       <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/" />
-      <property name="dataSetDescription" value="LIS gene families"/>
       <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
     </source>
     <!-- LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/ -->
     <source name="legume.genefam.fam1.M65K.trees_ML_rooted" type="lis-phylotree" dump="true">
-      <property name="dataSetName" value="legume.genefam.fam1.M65K.trees_ML_rooted"/>
-      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/" />
-      <property name="dataSetDescription" value="LIS gene family phylogenetic trees"/>
-      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted"/>
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/" />
+      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies"/>
     </source>
 
     <!-- INTERPRO -->
