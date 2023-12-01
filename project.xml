@@ -12,6 +12,22 @@
       <property name="dataSetDescription" value="Phaseolus acutifolius organism and strain information." />
       <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/acutifolius/about_this_collection" />
     </source>
+    <!-- Phaseolus/lunatus/about_this_collection -->
+    <source name="Phaseolus-lunatus-description" type="lis-description" dump="true" >
+      <property name="dataSetName" value="Phaseolus-lunatus-description" />
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/lunatus/about_this_collection/" />
+      <property name="dataSetDescription" value="Phaseolus lunatus organism and strain information." />
+      <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/lunatus/about_this_collection" />
+    </source>
+    <!-- Phaseolus/vulgaris/about_this_collection -->
+    <source name="Phaseolus-vulgaris-description" type="lis-description" dump="true" >
+      <property name="dataSetName" value="Phaseolus-vulgaris-description" />
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/about_this_collection/" />
+      <property name="dataSetDescription" value="Phaseolus vulgaris organism and strain information." />
+      <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/vulgaris/about_this_collection" />
+    </source>
+
+
     <!-- Phaseolus/acutifolius/genomes/Frijol_Bayo.gnm1.QH8L -->
     <source name="Frijol_Bayo.gnm1.QH8L" type="lis-genome" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/acutifolius/genomes/Frijol_Bayo.gnm1.QH8L/" />
@@ -37,13 +53,6 @@
       <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/acutifolius/annotations/W6_15578.gnm2.ann1.LVZ1"/>
     </source>
 
-    <!-- Phaseolus/lunatus/about_this_collection -->
-    <source name="Phaseolus-lunatus-description" type="lis-description" dump="true" >
-      <property name="dataSetName" value="Phaseolus-lunatus-description" />
-      <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/lunatus/about_this_collection/" />
-      <property name="dataSetDescription" value="Phaseolus lunatus organism and strain information." />
-      <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/lunatus/about_this_collection" />
-    </source>
     <!-- Phaseolus/lunatus/genomes/G27455.gnm1.7NXX -->
     <source name="G27455.gnm1.7NXX" type="lis-genome" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/lunatus/genomes/G27455.gnm1.7NXX/" />
@@ -55,14 +64,6 @@
     <source name="G27455.gnm1.ann1.JD7C" type="lis-annotation" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C/" />
       <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/lunatus/annotations/G27455.gnm1.ann1.JD7C"/>
-    </source>
-
-    <!-- Phaseolus/vulgaris/about_this_collection -->
-    <source name="Phaseolus-vulgaris-description" type="lis-description" dump="true" >
-      <property name="dataSetName" value="Phaseolus-vulgaris-description" />
-      <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/about_this_collection/" />
-      <property name="dataSetDescription" value="Phaseolus vulgaris organism and strain information." />
-      <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/vulgaris/about_this_collection" />
     </source>
 
     <!-- Phaseolus/vulgaris/genomes/5-593.gnm1.1P7P -->
@@ -518,10 +519,10 @@
       <property name="src.data.dir" location="/home/shokin/v2/LEGUMES/Fabaceae/genefamilies"/>
     </source>
 
-    <!-- Phaseolus/GENUS/pangenes/Phaseolus.pan1.X2PC -->
-    <source name="Phaseolus.pan1.X2PC" type="lis-pangene" dump="true">
-      <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/GENUS/pangenes/Phaseolus.pan1.X2PC/"/>
-      <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/GENUS/pangenes/Phaseolus.pan1.X2PC"/>
+    <!-- Phaseolus/GENUS/pangenes/Phaseolus.pan2.G5HV -->
+    <source name="Phaseolus.pan2.G5HV" type="lis-pangene" dump="true">
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/GENUS/pangenes/Phaseolus.pan2.G5HV/"/>
+      <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/GENUS/pangenes/Phaseolus.pan2.G5HV"/>
     </source>
 
     <!-- ################################ NON-LIS ################################ -->
@@ -601,9 +602,9 @@
     <post-process name="make-spanning-locations"/>
     <post-process name="create-chromosome-locations-and-lengths"/>
     <post-process name="create-intergenic-region-features"/>
-    <post-process name="transfer-sequences"/>
     <post-process name="populate-child-features"/>
     <post-process name="create-gene-flanking-features"/>
+    <post-process name="transfer-sequences"/>
 
     <!-- LIS -->
     <post-process name="lis-create-genefamilytally"/>
