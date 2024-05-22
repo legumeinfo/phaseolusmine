@@ -227,7 +227,7 @@
       <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Cardoso_Oblessuc_2008" />
     </source>
     <!-- Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Gaitán-Solís_Duque_2002 -->
-    <source name="G19833.gnm1.mrk.Gaitán-Solís_Duque_2002" type="lis-markers" dump="true">
+    <source name="G19833.gnm1.mrk.Gaitan-Solis_Duque_2002" type="lis-markers" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Gaitán-Solís_Duque_2002/" />
       <property name="src.data.dir" location="/home/shokin/v2/Phaseolus/vulgaris/markers/G19833.gnm1.mrk.Gaitán-Solís_Duque_2002" />
     </source>
